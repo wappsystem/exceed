@@ -1,0 +1,18 @@
+<section>
+    VmInclude:__COMPONENT__/g/grid.01.html
+  <script>
+      function F__ID(){
+          //-------------------------------------
+          /*VmInclude:__COMPONENT__/g/grid.01.js*/
+          /*VmInclude:__HOST__/assets/js/shared-data.js*/
+        //-------------------------------------
+        $('#title__ID').text('Demographic');
+          //-------------------------------------
+          var fields="DOB,gender,height,weight,postcode,employment,education,partner,tobacco,alcohol,caffeine,exercised,smartphone";
+          m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+          //-------------------------------------
+      }
+  </script>
+  <style>
+      /*VmInclude:__COMPONENT__/g/grid.01.css*/
+  </style>

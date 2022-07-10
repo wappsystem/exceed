@@ -1,0 +1,76 @@
+<div id=D__ID>
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div id="participant_div__ID">
+                    <div class="form-group box">
+                        <fieldset class="subquestions">
+                            <label><span class="">Participant</span>
+                                <input type=text name="Participant" class=form-control id=Participant__ID
+                                    data-id="Participant" />
+                            </label><br><br>
+                            <label><span class="">Participant ID</span>
+                                <input type=text name="Participant_uid" class=form-control readonly />
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h2 id="title__ID"></h2>
+                </div>
+                <div class="form-group box">
+                    <div class="questiongroup ">
+                        <fieldset class="">
+                            <label style="width:100%"><span class="">Address</span>
+                                <input class="form-control" type="text" name="address" required >
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="questiongroup ">
+                        <fieldset class="subquestions">
+                            <label><span class="">Suburb</span>
+                                <input class="form-control" type="text" name="suburb" required >
+                            </label><br>
+                            <label><span class="">Postcode</span>
+                                <input class="form-control" type="text" name="postcode" required >
+                            </label><br>
+                            <label><span class="">State</span>
+                                <select name="state" class="form-control" required >
+                                        <option value="NSW">NSW</option>
+                                        <option value="NT">NT</option>
+                                        <option value="SA">SA</option>
+                                        <option value="QLD">QLD</option>
+                                        <option value="TAS">TAS</option>
+                                        <option value="VIC">VIC</option>
+                                        <option value="WA">WA</option>
+                                  </select>                            
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+  <div class="box" style="text-align:right">
+                    <div class="box-item">
+                        <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  <script>
+      function F__ID(){
+          //-------------------------------------
+          /*VmInclude:__COMPONENT__/f/form.01.js*/
+          /*VmInclude:__HOST__/assets/js/shared-form.js*/
+          //-------------------------------------
+      }
+  </script>
+  <style>
+    #submit_box__ID {
+        text-align: right;
+    }
+    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    /*VmInclude:__HOST__/assets/css/style.css*/
+</style>
+</div>

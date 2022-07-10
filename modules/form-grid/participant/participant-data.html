@@ -1,0 +1,158 @@
+<div id=D__ID>
+    <div>
+        VmInclude:__COMPONENT__/g/grid.01.html
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js       
+            //-------------------------------------
+            $('#title__ID').text('Participants');            
+            //-------------------------------------
+            var fields="_Participant_ID,partA,Randomisation_Number,Group,first_name,last_name,phone,email,contact,Access Code|access_code,_Data_Entry,_Quest_BL,_Quest_W0,_Quest_W3,_Quest_W8,_Quest_W16,_Quest_W26,_Login_ID,_Password";
+            m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
+            //-------------------------------------
+            m.load=function(){
+                //m.query={"Data.first_name": {"$ne" : ""}}
+                
+            }
+            m.cell_render=function(records,I,field,td,set_value,source){
+                switch(field){
+                    case 'contact':
+                        if(records[I].Data.contact==1) td.html("Text");
+                        else if(records[I].Data.contact==2) td.html("Email");
+                        else if(records[I].Data.contact==3) td.html("Both");
+                        break;
+                    case '_Participant_ID':
+                        td.html(records[I].UID);
+                        break;
+                    case '_Data_Entry':
+                        td.html("<u style='cursor:pointer'>Data Entry</u>");
+                        td.find('u').on('click',function(){
+                            //console.log(JSON.stringify(records[I]))
+    						$vm.load_module(m.child_panel,'',{record:records[I]});
+                        });
+                        break;
+                    case '_Setup':
+                        td.html("<u style='cursor:pointer'>Setup</u>");
+                        td.find('u').on('click',function(){
+    						$vm.load_module(m.questionnaire_setup,'',{record:records[I]});
+                        });
+                        break;
+                    case '_Quest_BL':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Baseline</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+records[I].UID+"&password="+records[I].Data._Password;
+                            var q_url=$vm.module_list[m.online_questionnaire_bl].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                        case '_Quest_W0':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Week 0</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+records[I].UID+"&password="+records[I].Data._Password;
+                            var q_url=$vm.module_list[m.online_questionnaire_w0].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                        case '_Quest_W3':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Week 3</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+records[I].UID+"&password="+records[I].Data._Password;
+                            var q_url=$vm.module_list[m.online_questionnaire_w3].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                        case '_Quest_W8':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Week 8</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+records[I].UID+"&password="+records[I].Data._Password;
+                            var q_url=$vm.module_list[m.online_questionnaire_w8].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                        case '_Quest_W16':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Week 16</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+records[I].UID+"&password="+records[I].Data._Password;
+                            var q_url=$vm.module_list[m.online_questionnaire_w16].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                        case '_Quest_W26':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Week 26</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+records[I].UID+"&password="+records[I].Data._Password;
+                            var q_url=$vm.module_list[m.online_questionnaire_w26].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                    case '_Login_ID':
+                        td.html(records[I].UID);
+                        break;
+                }
+            }
+            //-------------------------------------
+            m.export_records=function(){
+                tabledata=m.Table;
+                m.Table=$vm.module_list['participant-data'].Table;
+                var participant_rec={};
+                var req={cmd:"export",table:m.Table,I1:m.I1,search:$('#keyword__ID').val()}
+                open_model__ID();
+                $vm.request(req,function(N,i,txt){
+                    //console.log(i+"/"+N);
+                    $('#msg__ID').text((100*i/N).toFixed(0)+"%");
+                    if(i==-1){
+                        var len=txt.length;
+                        n_txt="["+txt.substring(5,len-9)+"]";
+                        //console.log(n_txt)
+                        participant_rec=JSON.parse(n_txt);
+                        //Order by m.fields
+                        var fields_ex=m.fields.replace("_Participant_ID","ID").replace("Randomisation_Number|I1","Randomisation_Number")
+                        var export_fields=fields_ex.split(',');
+                        console.log(export_fields);
+                        //console.log(participant_rec);
+                        export_fields=export_fields.slice(1,export_fields.length-8);
+                        export_fields.push("_Password");
+                        export_fields.push("_Login_ID");
+                        export_fields.push("Submitted_by");
+                        console.log(export_fields);
+                        var oo=JSON.parse(JSON.stringify(participant_rec,export_fields));
+                        var tmp=JSON.stringify(oo).replace(/\bID\b/g,"Participant ID")
+                        oo=JSON.parse(tmp);
+                        //console.log(JSON.stringify(oo))
+                        $vm.download_csv(m.Table+".csv",oo);
+                        close_model__ID();
+                    }
+                }); 
+            }
+        }
+    </script>
+    <style>
+        /*VmInclude:__COMPONENT__/g/grid.01.css*/
+    </style>
+</div>

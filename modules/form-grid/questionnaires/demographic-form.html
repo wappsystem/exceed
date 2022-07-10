@@ -1,0 +1,335 @@
+<div id=D__ID>
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id="participant_div__ID">
+                <div class="form-group box">
+                    <fieldset class="subquestions">
+                        <label><span class="">Participant</span>
+                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                data-id="Participant" />
+                        </label><br><br>
+                        <label><span class="">Participant ID</span>
+                            <input type=text name="Participant_uid" class=form-control readonly />
+                        </label><br>
+                    </fieldset>
+                </div>
+            </div>
+            <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;' >
+                <div class="form-group box">
+                    <h2 id="title__ID"></h2>
+                </div>
+                <div class="form-group box">
+                    <h3>1. What is your date of birth?</h3>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <input type="date" name="DOB" class="form-control" placeholder="" required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>2. What is your biological gender?</h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">
+                                <input type="radio" name="gender" value="Male" required>
+                                <span class="checkmark"></span> Male</label>
+                            <label class="radiobuttons">
+                                <input type="radio" name="gender" value="Female">
+                                <span class="checkmark"></span> Female </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h3>3. What is your height (cm)?</h3>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <input type="number" max="200" min="0" name="height" class="form-control" placeholder="cm" required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h3>4. What is your weight (kg)?</h3>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <input type="number" max="300" min="0" name="weight" class="form-control" placeholder="kg" required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h3>5. What is your postcode?</h3>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <input type="number" max="9999" min="1000" name="postcode" class="form-control" placeholder="" required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>6. What is your current employment status?
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">
+                                <input type="radio" name="employment" value="retired" required>
+                                <span class="checkmark"></span>Retired
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="employment" value="full-time">
+                                <span class="checkmark"></span>Full-time employment 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="employment" value="part-time">
+                                <span class="checkmark"></span>Casually or Part-time employment 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="employment" value="student">
+                                <span class="checkmark"></span>Student 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="employment" value="carer">
+                                <span class="checkmark"></span>Full-time homemaker or carer 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="employment" value="unemployment">
+                                <span class="checkmark"></span>Unemployment 
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>7. What is your highest level of education?
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">Less than Year 12 or equivalent
+                                <input type="radio" name="education" value="y12-" required>
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Year 12 or equivalent
+                                <input type="radio" name="education" value="y12">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Vocational Qualification i.e. TAFE
+                                <input type="radio" name="education" value="vocational">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Associate diploma
+                                <input type="radio" name="education" value="associate">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Undergraduate diploma
+                                <input type="radio" name="education" value="undergraduate">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Bachelor degree (including honours)
+                                <input type="radio" name="education" value="bachelor">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Postgraduate diploma
+                                <input type="radio" name="education" value="postgraduate">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Master’s degree
+                                <input type="radio" name="education" value="master">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="radiobuttons">Doctorate
+                                <input type="radio" name="education" value="doctorate">
+                                <span class="checkmark"></span>
+                            </label><br>
+                    </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>8. Do you currently have a partner?</h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">
+                                <input type="radio" name="partner" value="No" required>
+                                <span class="checkmark"></span>No
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="partner" value="together">
+                                <span class="checkmark"></span>Yes, living together 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="partner" value="apart">
+                                <span class="checkmark"></span>Yes, living apart
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>9. Over the past 2 weeks, how often have you smoked tobacco?</h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">
+                                <input type="radio" name="tobacco" value="never" required>
+                                <span class="checkmark"></span>Never, and I have never smoked before
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="tobacco" value="before">
+                                <span class="checkmark"></span>Never, but I have smoked before 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="tobacco" value="rarely">
+                                <span class="checkmark"></span>Rarely 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="tobacco" value="1-10">
+                                <span class="checkmark"></span>1-10 time a day 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="tobacco" value="11-20">
+                                <span class="checkmark"></span>11 - 20 times a day 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="tobacco" value="21+">
+                                <span class="checkmark"></span>21+ times a day
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>10. Over the past 2 weeks, how often have you consumed alcohol?</h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">
+                                <input type="radio" name="alcohol" value="0" required>
+                                <span class="checkmark"></span>Never
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="alcohol" value="less 1">
+                                <span class="checkmark"></span>Less than once a week
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="alcohol" value="1">
+                                <span class="checkmark"></span>Once a week 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="alcohol" value="2-3">
+                                <span class="checkmark"></span>2 - 3 times a week
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="alcohol" value="4+">
+                                <span class="checkmark"></span>4+ times a week
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>11. Over the past 2 weeks, how often have you consumed caffeinated drinks?</h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">
+                                <input type="radio" name="caffeine" value="0" required>
+                                <span class="checkmark"></span>Never
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="caffeine" value="less 1">
+                                <span class="checkmark"></span>Less than once a day
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="caffeine" value="1">
+                                <span class="checkmark"></span>Once a day 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="caffeine" value="2-3">
+                                <span class="checkmark"></span>2 - 3 times a day
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="caffeine" value="4+">
+                                <span class="checkmark"></span>4+ times a day
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>12. Over the past 2 weeks, how often have you exercised for at least 30 minutes?</h3>
+                        </div>
+                    </div>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons">
+                                <input type="radio" name="exercised" value="0" required>
+                                <span class="checkmark"></span>Never
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="exercised" value="less 1">
+                                <span class="checkmark"></span>Less than once a week
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="exercised" value="1">
+                                <span class="checkmark"></span>Once a week 
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="exercised" value="2-3">
+                                <span class="checkmark"></span>2 - 3 times a week
+                            </label><br>
+                            <label class="radiobuttons">
+                                <input type="radio" name="exercised" value="4+">
+                                <span class="checkmark"></span>4+ times a week
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h3>13. What Smartphone Device do you use?</h3>
+                    <div class="questiongroup">
+                        <fieldset class="pl-4">
+                            <input type="text"  name="smartphone" class="form-control" placeholder="" required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="box" style="text-align:right">
+                    <div class="box-item">
+                        <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function F__ID() {
+            /*VmInclude: '__COMPONENT__/f/form.01.js'*/
+             /*VmInclude:__HOST__/assets/js/shared-form.js*/
+            //---------------------------------------
+        }
+    </script>
+    <style>
+        #submit_box__ID {
+            text-align: right;
+        }
+        /*VmInclude:__HOST__/assets/css/style.css*/
+        /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    </style>
+</div>

@@ -1,0 +1,164 @@
+<div id=D__ID>
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div class="form-group box">
+                    <h3>Participant's Details</h3>
+                    <fieldset class="subquestions">
+                        <label><span class="">Participant ID</span>
+                            <input type=text class=form-control id=record__ID readonly>
+                        </label>
+                    </fieldset>
+
+                    <div class='row px-4'>
+                        <div class="col-sm-12 col-lg-4 ">
+                            <label class=''><span class=''>Password</span>
+                                <input type=text class=form-control name=_Password>
+                            </label>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 ">
+                            <label class=''><span class=''>Access Code</span>
+                                <input type=text class=form-control name=access_code>
+                            </label>
+                        </div>
+                    </div>
+                    <div class='row px-4'>
+                        <div class="col-sm-12 col-lg-4 row_participant__ID">
+                            <label class=''><span class=''>Randomisation Number</span>
+                                <input type=text class=form-control name=Randomisation_Number readonly placeholder='click here to randomise'>
+                            </label>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 row_participant__ID">
+                            <label class=''><span class=''>Group</span>
+                                <input type=text class=form-control name=Group readonly>
+                            </label>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 row_participant__ID">
+                            <label class=''><span class=''>Randomised by</span>
+                                <input type=text class=form-control name=Randomised_by readonly>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="box" style="text-align:right">
+                        <div class="box-item">
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+	<script>
+		function F__ID() {
+			//-------------------------------------
+			/*VmInclude: __HOST__/assets/js/form.01.js*/
+			//-------------------------------------
+			var load = m.load;
+			m.load = function () {
+				load();
+				if (m.input.record == undefined) {
+					$('.row_participant__ID').hide()
+					$('#F__ID input[name=_Password').val($vm.vm_password(8, false));
+				}
+				else {
+					$('.row_participant__ID').show()
+					$('#record__ID').val(m.input.record.UID)
+				}
+			}
+			//-------------------------------------
+			$('#F__ID input[name=Randomisation_Number]').on('click', function () {
+				var I1 = $('#F__ID input[name=Randomisation_Number').val();
+				if (I1 == '') {
+					$vm.request({ cmd: "find", table: m.Table, sort: { I1: -1 }, skip: 0, limit: 1 }, function (res) {
+						if (res.sys.permission == false) {
+							$vm.alert("No permission. Private database table, ask the table's owner for permissions.");
+							return;
+						}
+						var max_I1 = 0;
+						if (res.result.length > 0) {
+							if (res.result[0].I1 !== undefined) max_I1 = res.result[0].I1
+						}
+						max_I1++;
+						$('#F__ID input[name=Randomisation_Number').val(max_I1);
+						$('#F__ID input[name=Randomised_by').val($vm.user_name);
+					})
+				}
+			})
+			//-------------------------------------
+			m.before_submit = function (data, index) {
+				var I1 = $('#F__ID input[name=Randomisation_Number').val(); if (I1 != '' && I1 != '-') index.I1 = parseInt(I1);
+				var nd=new Date()
+				index.I2=nd.getFullYear()+"-"+$vm.pad(nd.getMonth()+1,2)+"-"+$vm.pad(nd.getDate(),2);
+                jQuery.ajaxSetup({ async: false });
+                    var tb = $vm.module_list["randomisation-table-data"].Table;
+                    var query={UID:index.I1}
+                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                        if (res.result.length != 0) {
+                            //console.log(JSON.stringify(res.result[0].Data.Group))
+                            data.Group=res.result[0].Data.Group;
+                            index.I3=res.result[0].Data.Group;
+                            //if(index.I3=="Control") data.Start_Date=index.I2;
+                        }
+                    });
+                    var tb = $vm.module_list["access-code-data"].Table;
+                    var query={UID:index.I1}
+                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                        if (res.result.length != 0) {
+                            //console.log(JSON.stringify(res.result[0].Data.Group))
+                            data.access_code=res.result[0].Data.access_code;
+                        }
+                    });
+                jQuery.ajaxSetup({ async: true });
+			}
+			//-------------------------------------
+            m.after_update = function (data,index) {
+                //console.log('Data: '+JSON.stringify(data));
+                //console.log(index.result.UID)
+                var pid=(index.result.UID).toString();
+                var record={};
+                var tb = $vm.module_list["progress-mod-form"].Table;
+                query={'Data.Participant':pid}
+                //console.log(query);
+                jQuery.ajaxSetup({async:false});
+                $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                    if(res.permission==false){
+                        alert("No permission");
+                        return;
+                    }
+                    if(res.result.length==0){
+                    }
+                    else{
+                        record=res.result[0]
+                        record.Data.group=data.Group;
+                        //record.Data.Start_date=index.result.I2;
+                        record.Data.access_code=data.access_code;
+                        //console.log(JSON.stringify(record))
+                        $vm.request({cmd:'update',id:record._id,table:tb,data:record.Data},function(res){
+                            //-----------------------------
+                            if(res.status=="lk"){
+                                $vm.alert("This record is locked.");
+                                return;
+                            }
+                            //-----------------------------
+                            if(res.status=="np"){
+                                alert("No permission to update this record.");
+                                return;
+                            }
+                        })
+                    }
+                })
+                jQuery.ajaxSetup({async:true});
+                $vm.refresh=1;
+                m.change_status++;
+                window.history.go(-1);   
+            }
+		}
+	</script>
+	<style>
+		#D__ID .mt-95 {
+			max-width: 800px;
+		}
+    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    /*VmInclude:__HOST__/assets/css/style.css*/
+</style>
+</div>
