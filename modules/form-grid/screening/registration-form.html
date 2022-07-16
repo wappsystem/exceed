@@ -1,11 +1,11 @@
 <div id=D__ID>
     <div class="bg-light">
         <form id=F__ID>
-            <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
+            <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
                 <div class="col-lg-1 col-sm-0 "></div>
                 <div class="col-lg-9 col-sm-12 text-center text-white">
-                    <span style="color:#888"></span>
-                    <h2>ExCEED Registration</h2>
+                    <span style="color:#888">&nbsp;</span>
+                    <h2>ExCEED Registration Form</h2>
                 </div>
                 <div class="col-lg-1 col-sm-0 "></div>
             </div>
@@ -42,10 +42,10 @@
                     <div class="questiongroup ">
                         <fieldset class="subquestions">
                             <label><span class="">First name</span>
-                                    <input class="form-control" type="text" name="first_name" >
+                                    <input class="form-control" type="text" name="first_name" required >
                             </label><br>
                             <label><span class="">Family name</span>
-                                    <input class="form-control" type="text" name="last_name" >
+                                    <input class="form-control" type="text" name="last_name" required >
                             </label><br>
                         </fieldset>
                         <fieldset class="subquestions">
@@ -55,7 +55,7 @@
                         </fieldset>
                         <fieldset class="subquestions">
                             <label style="width:100%"><span class="">Email Address</span>
-                                <input class="form-control" type="email" name="email" >
+                                <input class="form-control" type="email" name="email" required >
                             </label><br>
                         </fieldset>
                         <div class="questiongroup box">
@@ -160,7 +160,7 @@
                 data.List='demographic-form,psqi-bl-form,gad7-bl-form,ffs-bl-form,ess-bl-form,bc-cci-bl-form,eq-5d-bl-form,eheals-bl-form'
             }
             //---------------------------------------
-            m.after_insert = function (data,index) {
+           /* m.after_insert = function (data,index) {
                 var db=""; 
                 //console.log(JSON.stringify(index) + " - "+index.result.ops[0].UID)
                 if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
@@ -259,7 +259,7 @@
                     sms_xmlHttp.send(JSON.stringify(sms_data));
                     //alert("Registration sms sent" +JSON.stringify(sms_data))
 				}
-			}
+			}*/
             //--------------------------------
 
         }

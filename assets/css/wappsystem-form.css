@@ -120,8 +120,8 @@
     padding-right: 25px
 }
 #D__ID .btn-outline-light:hover {
-    color: #13B51F;*/
-}
+    color: #13B51F;
+}*/
 #D__ID p.note {
     font-family: 'Asap';
     font-weight: lighter;
@@ -158,10 +158,10 @@
     color:#fff;
 }
 #D__ID .radiobuttons:hover input ~ .checkmark {
-    background-color: #8b81ca;
+    background-color: #7db7ca;
 }
 #D__ID .radiobuttons input:checked ~ .checkmark {
-    background-color: #6e64ad;
+    background-color: #205f7b;
 }
 #D__ID .checkmark:after {
     content: "";
@@ -211,10 +211,10 @@
     border-radius: 0%;
 }
 #D__ID .checkboxes:hover input ~ .check_checkmark {
-    background-color: #8b81ca;
+    background-color: #7db7ca;
 }
 #D__ID .checkboxes input:checked ~ .check_checkmark {
-    background-color: #6e64ad;
+    background-color: #205f7b;
 }
 #D__ID .check_checkmark:after {
     content: "";
@@ -301,39 +301,4 @@
 }
 @media (min-width: 576px) {
     #D__ID .container {max-width:900px}
-}
-@font-face {
-    font-family: Asap;
-    src: url(../fonts/Asap-Medium.woff2) format("woff2"), url(../fonts/Asap-Medium.woff) format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: Asap;
-    src: url(../fonts/Asap-Bold.woff2) format("woff2"), url(../fonts/Asap-Bold.woff) format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: Asap;
-    src: url(../fonts/Asap-Regular.woff2) format("woff2"), url(../fonts/Asap-Regular.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: Asap;
-    src: url(../fonts/Asap-SemiBold.woff2) format("woff2"), url(../fonts/Asap-SemiBold.woff) format("woff");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: Tiempos Headline;
-    src: url(../fonts/TiemposHeadline-Bold.woff2) format("woff2"), url(../fonts/TiemposHeadline-Bold.woff) format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
 }

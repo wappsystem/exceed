@@ -2,22 +2,20 @@
     <div class="bg-light">
         <form id=F__ID>
             <div id=S1__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#DE9F2B;">
+                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
                     <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center text-white" style="background-color:#DE9F2B;">
+                    <div class="col-lg-9 col-sm-12 text-center text-white">
                         <span style="color:#888">1 of 5 </span>
                         <h2>ExCEED Screening Question</h2>
                     </div>
                     <div class="col-lg-1 col-sm-0 "></div>
                 </div>
-                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;' >
                     <div class="form-group box">
                         <h3>1. What is your age?</h3>
                         <div class="questiongroup">
                             <fieldset class="pl-4">
-                                <input type="number" name="age" min=18 max=99 class="form-control" placeholder="Age"
-                                    required>
-                            </fieldset>
+                                <input type="number" name="age" class="form-control" placeholder="Age" required>
                         </div>
                     </div>
                     <div class="form-group box">
@@ -56,6 +54,36 @@
                             </fieldset>
                         </div>
                     </div>
+                    <div id="q_smartphone__ID" style="display:none">
+                        <div class="form-group box">
+                            <div class="row">
+                                <div class="col-sm control-group">
+                                    <h3>3a. What type of smartphone do you have?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="questiongroup">
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="smartphone_type" value="ios" required>
+                                        <span class="checkmark"></span>iOS (iPhone)</label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="smartphone_type" value="android">
+                                        <span class="checkmark"></span>Android</label>
+                                </fieldset>
+                            </div>
+                        </div>    
+                        <div id="q_smartphone_text__ID" style="display:none">
+                            <div class="form-group box" style="background-color:khaki" >
+                                <div class="row">
+                                    <div class="col-sm control-group">
+                                        <h3>You are not eligible for this study at this point but if you would like to be considered for our future android release, please email your contact details to woolcock.ExCEED@sydney.edu.au
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>    
+                    </div>
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
@@ -87,7 +115,8 @@
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>5. Have you travelled to a destination with 2 hours time difference last 30 days?
+                                <h3>5. Have you travelled to a destination with a time difference of more than 2 hours
+                                    in the past month?
                                 </h3>
                             </div>
                         </div>
@@ -101,117 +130,43 @@
                                     <span class="checkmark"></span>No </label>
                             </fieldset>
                         </div>
+                        <div class="box" style="text-align:right">
+                            <div class="box-item">
+                                <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
+                            </div>
+                        </div>    
                     </div>
+                </div>
+            </div>
+            <div id=S2__ID>
+                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
+                    <div class="col-lg-1 col-sm-0 "></div>
+                    <div class="col-lg-9 col-sm-12 text-center text-white">
+                        <span style="color:#888">2 of 5 </span>
+                        <h2>ExCEED Screening Question</h2>
+                    </div>
+                    <div class="col-lg-1 col-sm-0 "></div>
+                </div>
+                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;' >    
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
                                 <h3>6. Have you been diagnosed with any one or more of the following medical and/or
                                     psychiatric illnesses/disorders?
                                 </h3>
+                                <h4>Major Depressive Disorder, Heart failure, Epilepsy, Bi-polar disorder, Dementia,
+                                    Mild Cognitive Impairment</h4>
                             </div>
                         </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Major Depressive Disorder
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Depressive" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Depressive" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Heart failure</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Heart_failure" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Heart_failure" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Epilepsy</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Epilepsy" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Epilepsy" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Bi-polar disorder</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Bipolar" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Bipolar" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Dementia</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Dementia" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Dementia" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Mild Cognitive Impairment</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Cognitive_Impairment" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Cognitive_Impairment" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="disorders" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="disorders" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
                         </div>
                     </div>
                     <div class="form-group box">
@@ -219,110 +174,20 @@
                             <div class="col-sm control-group">
                                 <h3>7. Have you been diagnosed with any one or more of the following sleep disorders?
                                 </h3>
+                                <h4>Obstructive Sleep Apnoea, Sleep Behaviour Disorder (i.e sleep talking/walking, REM),
+                                    Circadian Rhythm Disorder, Restless leg syndrome, Narcolepsy or Bruxism (teeth
+                                    grinding)</h4>
                             </div>
                         </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Obstructive Sleep Apnoea
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="OSA" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="OSA" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Sleep Behaviour Disorder (i.e sleep talking/walking, REM)</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="SBD" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="SBD" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Circadian Rhythm Disorder</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="CRD" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="CRD" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Restless leg syndrome</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="RLS" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="RLS" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Narcolepsy</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Narcolepsy" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Narcolepsy" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Bruxism (teeth grinding)</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Bruxism" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Bruxism" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="sleep_disorders" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="sleep_disorders" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
                         </div>
                     </div>
                     <div class="form-group box">
@@ -331,407 +196,95 @@
                                 <h3>8. Are you currently taking any of the following medications or therapies regularly
                                     (>2 times a week)?
                                 </h3>
+                                <h4>Prescribed sleep medication (e.g. Temaze, Imovane, Stilnox, Restavit),
+                                    Over-the-counter sleep medication (e.g. melatonin, valerian), CPAP machine, Dental
+                                    snoring device</h4>
                             </div>
                         </div>
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="medications" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="medications" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group box">
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h3>9. Does your job require you to regularly drive or operate heavy machinery?
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="heavy_machinery" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="heavy_machinery" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group box">
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h3>10. Are you currently receiving or have previously received (within the last 12
+                                    months) psychotherapy for insomnia including Cognitive Behavioural Therapy (CBT)?
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="cbt" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="cbt" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group box">
+                        <fieldset class="subquestions">
+                            <h4>Over the last <u>2 weeks</u>, how often have you been bothered by the following problem?</h4>
+                        </fieldset>
+                        <h3>11. Thoughts that you would be better off dead or of hurting yourself in some way</h3>
+                        <div class="questiongroup">
+                            <fieldset class="subquestions">
+                                <label class="radiobuttons">Not at all
+                                    <input type="radio" name="PHQ_9" value="0" required>
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label class="radiobuttons">Several days
+                                    <input type="radio" name="PHQ_9" value="1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label class="radiobuttons">More than half the days
+                                    <input type="radio" name="PHQ_9" value="2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label class="radiobuttons">Nearly every day
+                                    <input type="radio" name="PHQ_9" value="3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div id=phq9__ID>
                         <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Prescribed sleep medication (e.g. Temaze, Imovane, StilNox, Restavit)
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Prescribed_medication" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Prescribed_medication" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Over-the-counter sleep medication (e.g. melatonin, valerian)</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Over_the_counter_medication" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Over_the_counter_medication" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>CPAP machine</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="CPAP" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="CPAP" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Dental snoring device</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Dental" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Dental" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="form-group box">
-                            <div class="row">
-                                <div class="col-sm control-group">
-                                    <h4>Psychological therapy at least once a week (specifically for insomnia; excludes
-                                        counselling services)</h4>
-                                </div>
-                            </div>
-                            <div class="questiongroup">
-                                <fieldset class="pl-4">
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Psychological_therapy" value="Y" required>
-                                        <span class="checkmark"></span>Yes</label>
-                                    <label class="radiobuttons ">
-                                        <input type="radio" name="Psychological_therapy" value="N">
-                                        <span class="checkmark"></span>No </label>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box" style="text-align:right">
-                        <div class="box-item">
-                            <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id=S2__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#DE9F2B;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center text-white" style="background-color:#DE9F2B;">
-                        <span style="color:#888">2 of 5 </span>
-                        <h2>ExCEED Screening Question</h2>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
-                </div>
-                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group box">
-                        <h3>Thinking about a typical night in the last month...</h3>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>9. How long does it take you to fall asleep?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="fall_asleep" value="0" required>
-                                    <span class="checkmark"></span>a. [0-15 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="fall_asleep" value="1">
-                                    <span class="checkmark"></span>b. [16-30 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="fall_asleep" value="2">
-                                    <span class="checkmark"></span>c. [31-45 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="fall_asleep" value="3">
-                                    <span class="checkmark"></span>d. [46-60 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="fall_asleep" value="4">
-                                    <span class="checkmark"></span>e. [&ge;61 min]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>10. If you then wake up during the night, how long are you awake for in total? (Add
-                                    all the awakenings up)
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="awake" value="0" required>
-                                    <span class="checkmark"></span>a. [0-15 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="awake" value="1">
-                                    <span class="checkmark"></span>b. [16-30 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="awake" value="2">
-                                    <span class="checkmark"></span>c. [31-45 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="awake" value="3">
-                                    <span class="checkmark"></span>d. [46-60 min]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="awake" value="4">
-                                    <span class="checkmark"></span>e. [&ge;61 min]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>11. If your final wake up time occurs before you intend to wake up, how much earlier
-                                    is this?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="final_wake" value="0" required>
-                                    <span class="checkmark"></span>a. [No it’s Not too early/Up to 15 min too early]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="final_wake" value="1">
-                                    <span class="checkmark"></span>b. [16-30 min too early]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="final_wake" value="2">
-                                    <span class="checkmark"></span>c. [31-45 min too early]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="final_wake" value="3">
-                                    <span class="checkmark"></span>d. [46-60 min too early]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="final_wake" value="4">
-                                    <span class="checkmark"></span>e. [More than an hour too early]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>12. How many nights a week do you have a problem with your sleep?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="nights_problem" value="0" required>
-                                    <span class="checkmark"></span>a. [0-1]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="nights_problem" value="1">
-                                    <span class="checkmark"></span>b. [2]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="nights_problem" value="2">
-                                    <span class="checkmark"></span>c. [3]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="nights_problem" value="3">
-                                    <span class="checkmark"></span>d. [4]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="nights_problem" value="4">
-                                    <span class="checkmark"></span>e. [5-7]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>13. How would you rate your sleep quality?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="sleep_quality" value="0" required>
-                                    <span class="checkmark"></span>a. [Very good]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="sleep_quality" value="1">
-                                    <span class="checkmark"></span>b. [Good]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="sleep_quality" value="2">
-                                    <span class="checkmark"></span>c. [Average]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="sleep_quality" value="3">
-                                    <span class="checkmark"></span>d. [Poor]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="sleep_quality" value="4">
-                                    <span class="checkmark"></span>e. [Very poor]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>Thinking about the past month, to what extent has poor sleep...</h3>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>14. Affected your mood, energy, or relationships?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="mood" value="0" required>
-                                    <span class="checkmark"></span>a. [Not at all]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="mood" value="1">
-                                    <span class="checkmark"></span>b. [A little]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="mood" value="2">
-                                    <span class="checkmark"></span>c. [Somewhat]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="mood" value="3">
-                                    <span class="checkmark"></span>d. [Much]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="mood" value="4">
-                                    <span class="checkmark"></span>e. [Very much]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>15. Affected your concentration, productivity, or ability to stay awake?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="concentration" value="0" required>
-                                    <span class="checkmark"></span>a. [Not at all]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="concentration" value="1">
-                                    <span class="checkmark"></span>b. [A little]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="concentration" value="2">
-                                    <span class="checkmark"></span>c. [Somewhat]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="concentration" value="3">
-                                    <span class="checkmark"></span>d. [Much]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="concentration" value="4">
-                                    <span class="checkmark"></span>e. [Very much]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>16. Troubled you in general?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="general" value="0" required>
-                                    <span class="checkmark"></span>a. [Not at all]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="general" value="1">
-                                    <span class="checkmark"></span>b. [A little]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="general" value="2">
-                                    <span class="checkmark"></span>c. [Somewhat]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="general" value="3">
-                                    <span class="checkmark"></span>d. [Much]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="general" value="4">
-                                    <span class="checkmark"></span>e. [Very much]
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>17. How long have you had a problem with your sleep?
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="problem" value="0" required>
-                                    <span class="checkmark"></span>a. [I don’t have a problem/less than 1 month]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="problem" value="1">
-                                    <span class="checkmark"></span>b. [1-2 months]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="problem" value="2">
-                                    <span class="checkmark"></span>c. [3-6 months]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="problem" value="3">
-                                    <span class="checkmark"></span>d. [7-12 months]
-                                </label><br>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="problem" value="4">
-                                    <span class="checkmark"></span>e. [More than 1 year]
-                                </label><br>
-                            </fieldset>
+                            <h4 style='color:red;text-align: center;'>If you are feeling depressed, anxious, or suicidal
+                                please do not hesitate to contact mental wellbeing
+                                support services.<br>
+                                Lifeline Australia | 13 11 14 | <a href='https://lifeline.org.au'
+                                    target=_blank>lifeline.org.au</a><br>
+                                Beyond Blue | 1300 22 4636 | <a href='https://beyondblue.org.au'
+                                    target=_blank>beyondblue.org.au</a><br>
+                                If you or someone you know needs immediate help, please call 000</h4>
                         </div>
                     </div>
                     <div class="box" style="text-align:right">
@@ -742,30 +295,10 @@
                 </div>
             </div>
             <div id=S3__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#DE9F2B;">
+                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
                     <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center text-white" style="background-color:#DE9F2B;">
+                    <div class="col-lg-9 col-sm-12 text-center text-white">
                         <span style="color:#888">3 of 5 </span>
-                        <h2>ExCEED Screening Question</h2>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
-                </div>
-                <div id=quest2__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group box">
-                        <h3>Potential sleep disorder screen</h3>
-                    </div>
-                    <div class="box" style="text-align:right">
-                        <div class="box-item">
-                            <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id=S4__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#DE9F2B;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center text-white" style="background-color:#DE9F2B;">
-                        <span style="color:#888">4 of 5 </span>
                         <h2>ExCEED Screening Question</h2>
                     </div>
                     <div class="col-lg-1 col-sm-0 "></div>
@@ -928,190 +461,621 @@
                     </div>
                 </div>
             </div>
-            <div id=S5__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#DE9F2B;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center text-white" style="background-color:#DE9F2B;">
-                        <span style="color:#888">5 of 5 </span>
-                        <h2>ExCEED Screening Question</h2>
+            <div id=S4__ID>
+                <div id=page4__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
+                    <div class="col-lg-1 col-sm-0 ">
                     </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
+                    <div class="col-lg-10 col-sm-12 text-center">
+                        <span style="color:#888">4 of 5 </span>
+                        <h2 style="color:#fff">ExCEED Screening Question</h2>
+                    </div>
+                    <div class="col-lg-1 col-sm-0 ">
+                    </div>
                 </div>
-                <div id=quest2__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group box">
-                        <h3>Self-reported cognitive impairment question set</h3>
-                    </div>
+                <div id=quest4__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>Q1. Over the past five years, have you been concerned about your thinking and/ or memory?
+                                <h3>1. Do you sometimes fall asleep in the daytime completely without warning? 
                                 </h3>
                             </div>
-                        </div>
+                        </div>                      
                         <div class="questiongroup">
                             <fieldset class="pl-4">
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q1" value="Y" required>
-                                    <span class="checkmark"></span>Yes
-                                </label>
+                                    <input type="radio" name="fall_asleep" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q1" value="N">
-                                    <span class="checkmark"></span>No
-                                </label>
+                                    <input type="radio" name="fall_asleep" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
+                        </div>
+                        <div id=s4q1__ID >
+                            <div class="questiongroup box">
+                                <h3>Is it literally impossible to resist ‘sleep attacks’ during the day?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleep_attacks" id=sleep_attacks__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleep_attacks" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleep_attacks" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you have collapses or extreme muscle weakness triggered by extreme emotion?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="muscle_weakness" id=muscle_weakness__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="muscle_weakness" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="muscle_weakness" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you have visual hallucinations, either just as you fall asleep or when you wake in the morning?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="hallucinations" id=hallucinations__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="hallucinations" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="hallucinations" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Are you paralyzed and unable to move when you wake up from your sleep? </h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="paralyzed" id=paralyzed__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="paralyzed" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="paralyzed" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>Q2. Over the past five years, have you been able to remember things as well as you used to? That is, is your memory the same as it was earlier in your life?
+                                <h3>2. Are you a very heavy snorer? 
                                 </h3>
                             </div>
-                        </div>
+                        </div>                      
                         <div class="questiongroup">
                             <fieldset class="pl-4">
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q2" value="Y" required>
-                                    <span class="checkmark"></span>Yes
-                                </label>
+                                    <input type="radio" name="heavy_snorer" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q2" value="N">
-                                    <span class="checkmark"></span>No
-                                </label>
+                                    <input type="radio" name="heavy_snorer" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
                         </div>
+                        <div id=s4q2__ID >
+                            <div class="questiongroup box">
+                                <h3>Does your partner say that you sometimes stop breathing?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="stop_breathing" id=stop_breathing__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="stop_breathing" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="stop_breathing" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you often wake up gasping for breath?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="gasping" id=gasping__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="gasping" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="gasping" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Are you often excessively sleepy during the day or fall asleep without wanting to?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleepy" id=sleepy__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleepy" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleepy" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>Q3. Are there other aspects of your thinking that have changed over the last five years? (Select all that apply)
+                                <h3>3. Do your legs often twitch or jerk or can’t keep still in bed? 
                                 </h3>
                             </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_1" value="1">
-                                <span class="check_checkmark"></span> Slowed thinking when completing tasks 
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_2" value="1">
-                                <span class="check_checkmark"></span>  Word finding problems (e.g., finding words in conversation, names of objects and familiar people) 
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_3" value="1">
-                                <span class="check_checkmark"></span>  Distractibility/ inattention
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_4" value="1">
-                                <span class="check_checkmark"></span>  Getting lost in familiar places
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_5" value="1">
-                                <span class="check_checkmark"></span>   Increased trouble with planning and organisation
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_6" value="1">
-                                <span class="check_checkmark"></span>  More difficulty performing familiar tasks in home, social, and/ or work settings
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_7" value="1">
-                                <span class="check_checkmark"></span>  Confusion about the time or place
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_8" value="1">
-                                <span class="check_checkmark"></span>  Difficulties with problem-solving
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_9" value="1">
-                                <span class="check_checkmark"></span>  Trouble understanding visual images and spatial relationships
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_10" value="1">
-                                <span class="check_checkmark"></span>  Impulsivity and/ or disinhibition
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_11" value="1">
-                                <span class="check_checkmark"></span>  Confusion in usual situations or environments
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_12" value="1">
-                                <span class="check_checkmark"></span>  Poorer judgment than usual (e.g., making bad decisions)
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_13" value="1">
-                                <span class="check_checkmark"></span>  Difficulty making decisions (e.g., impulsive or irrational decisions, unable to make a decision)
-                            </label><br>
-                            <label class="checkboxes">
-                                <input type="checkbox" name="CIQ_Q4_14" value="0">
-                                <span class="check_checkmark"></span>   I have Not experienced any of the above changes
-                            </label><br>
-                            <fieldset>
-                        </div>                              
-                    </div>
-    
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>Q4. Do you think your thinking and memory skills are worse than other people your age?
-                                </h3>
-                            </div>
-                        </div>
+                        </div>                      
                         <div class="questiongroup">
                             <fieldset class="pl-4">
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q4" value="Y" required>
-                                    <span class="checkmark"></span>Yes
-                                </label>
+                                    <input type="radio" name="legs_twitch" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q4" value="N">
-                                    <span class="checkmark"></span>No
-                                </label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q4" value="DK">
-                                    <span class="checkmark"></span>Don't know
-                                </label>
+                                    <input type="radio" name="legs_twitch" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
+                        </div>
+                        <div id=s4q3__ID >
+                            <div class="questiongroup box">
+                                <h3>Is it very difficult to get to sleep because of repeated muscle jerks?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="muscle_jerks" id=muscle_jerks__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="muscle_jerks" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="muscle_jerks" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you frequently wake from sleep with sudden jerky movements or with a compulsion to move your legs?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="wake_leg_jerk" id=wake_leg_jerk__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="wake_leg_jerk" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="wake_leg_jerk" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you simply have to get out of bed and pace around to get rid of these feelings?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="pace_around" id=pace_around__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="pace_around" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="pace_around" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="form-group box">
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h3>4. Do you tend to sleep well but just at the ‘‘wrong times’’? 
+                                </h3>
+                            </div>
+                        </div>                      
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="wrong_times" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="wrong_times" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
+                        </div>
+                        <div id=s4q4__ID >
+                            <div class="questiongroup box">
+                                <h3>Can you sleep well enough, but only if you stay up very late?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="stay_up_late" id=stay_up_late__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="stay_up_late" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="stay_up_late" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Are you in a very sound sleep at normal waking time and could sleep on for hours more?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleep_longer" id=sleep_longer__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleep_longer" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleep_longer" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Can you sleep well enough, but only if you go to bed very early?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="bed_early" id=bed_early__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="bed_early" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="bed_early" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you wake very early, bright and alert and no longer sleepy?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="wake_early" id=wake_early__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="wake_early" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="wake_early" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>Q5. Do these problems with thinking and memory interfere in any way with your day-to-day life?
+                                <h3>5. Do you have unusual behaviours associated with your sleep that trouble you or that are dangerous? 
                                 </h3>
                             </div>
-                        </div>
+                        </div>                      
                         <div class="questiongroup">
                             <fieldset class="pl-4">
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q5" value="Y" required>
-                                    <span class="checkmark"></span>Yes
-                                </label>
+                                    <input type="radio" name="unusual_behaviours" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q5" value="N">
-                                    <span class="checkmark"></span>No
-                                </label>
+                                    <input type="radio" name="unusual_behaviours" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
+                        </div>
+                        <div id=s4q5__ID >
+                            <div class="questiongroup box">
+                                <h3>Do you sleepwalk frequently and run the risk of injuring yourself or others?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleepwalk" id=sleepwalk__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleepwalk" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="sleepwalk" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you have frequent night terrors when you are extremely distressed but not properly awake?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="night_terrors" id=night_terrors__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="night_terrors" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="night_terrors" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you act out your dreams and risk injuring yourself or others?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="act_out" id=act_out__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="act_out" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="act_out" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="questiongroup box">
+                                <h3>Do you have terrible recurring nightmares?</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="nightmares" id=nightmares__ID value="Y" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="nightmares" value="N">
+                                        <span class="checkmark"></span>No 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="nightmares" value="DK">
+                                        <span class="checkmark"></span>Don't know 
+                                    </label>
+                                </fieldset>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>Q6. Have family members expressed concerns about your thinking and/ or memory?
-                                </h3>
+                    <div class="box" style="text-align:right">
+                        <div class="box-item">
+                            <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="S5__ID">
+                <div id=page4__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
+                    <div class="col-lg-1 col-sm-0 ">
+                    </div>
+                    <div class="col-lg-10 col-sm-12 text-center">
+                        <span style="color:#888">5 of 5 </span>
+                        <h2 style="color:#fff">ExCEED Screening Question</h2>
+                    </div>
+                    <div class="col-lg-1 col-sm-0 ">
+                    </div>
+                </div>
+                <div id=quest4__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                    <div id=quest2__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                        <div class="form-group box">
+                            <h3>Self-reported cognitive impairment question set</h3>
+                        </div>
+                        <div class="form-group box">
+                            <div class="row">
+                                <div class="col-sm control-group">
+                                    <h3>Q1. Over the past five years, have you been concerned about your thinking and/ or memory?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="questiongroup">
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="CIQ_Q1" value="1" required>
+                                        <span class="checkmark"></span>Yes
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="CIQ_Q1" value="0">
+                                        <span class="checkmark"></span>No
+                                    </label>
+                                </fieldset>
                             </div>
                         </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q6" value="Y" required>
-                                    <span class="checkmark"></span>Yes
-                                </label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="CIQ_Q6" value="N">
-                                    <span class="checkmark"></span>No
-                                </label>
-                            </fieldset>
+                        <div id="s5q2__ID">
+                            <div class="form-group box">
+                                <div class="row">
+                                    <div class="col-sm control-group">
+                                        <h3>Q2. Over the past five years, have you been able to remember things as well as you used to? That is, is your memory the same as it was earlier in your life?
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="questiongroup">
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q2" value="1" id=CIQ_Q2__ID  required>
+                                            <span class="checkmark"></span>Yes
+                                        </label>
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q2" value="0">
+                                            <span class="checkmark"></span>No
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group box">
+                                <div class="row">
+                                    <div class="col-sm control-group">
+                                        <h3>Q3. Are there other aspects of your thinking that have changed over the last five years? (Select all that apply)
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="questiongroup">
+                                    <fieldset>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_1" value="1">
+                                        <span class="check_checkmark"></span> Slowed thinking when completing tasks 
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_2" value="1">
+                                        <span class="check_checkmark"></span>  Word finding problems (e.g., finding words in conversation, names of objects and familiar people) 
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_3" value="1">
+                                        <span class="check_checkmark"></span>  Distractibility/ inattention
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_4" value="1">
+                                        <span class="check_checkmark"></span>  Getting lost in familiar places
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_5" value="1">
+                                        <span class="check_checkmark"></span>   Increased trouble with planning and organisation
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_6" value="1">
+                                        <span class="check_checkmark"></span>  More difficulty performing familiar tasks in home, social, and/ or work settings
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_7" value="1">
+                                        <span class="check_checkmark"></span>  Confusion about the time or place
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_8" value="1">
+                                        <span class="check_checkmark"></span>  Difficulties with problem-solving
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_9" value="1">
+                                        <span class="check_checkmark"></span>  Trouble understanding visual images and spatial relationships
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_10" value="1">
+                                        <span class="check_checkmark"></span>  Impulsivity and/ or disinhibition
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_11" value="1">
+                                        <span class="check_checkmark"></span>  Confusion in usual situations or environments
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_12" value="1">
+                                        <span class="check_checkmark"></span>  Poorer judgment than usual (e.g., making bad decisions)
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_13" value="1">
+                                        <span class="check_checkmark"></span>  Difficulty making decisions (e.g., impulsive or irrational decisions, unable to make a decision)
+                                    </label><br>
+                                    <label class="checkboxes">
+                                        <input type="checkbox" name="CIQ_Q3_14" value="0">
+                                        <span class="check_checkmark"></span>   I have Not experienced any of the above changes
+                                    </label><br>
+                                    <fieldset>
+                                </div>                              
+                            </div>
+            
+                            <div class="form-group box">
+                                <div class="row">
+                                    <div class="col-sm control-group">
+                                        <h3>Q4. Do you think your thinking and memory skills are worse than other people your age?
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="questiongroup">
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q4" value="1" id=CIQ_Q4__ID required>
+                                            <span class="checkmark"></span>Yes
+                                        </label>
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q4" value="0">
+                                            <span class="checkmark"></span>No
+                                        </label>
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q4" value="DK">
+                                            <span class="checkmark"></span>Don't know
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group box">
+                                <div class="row">
+                                    <div class="col-sm control-group">
+                                        <h3>Q5. Do these problems with thinking and memory interfere in any way with your day-to-day life?
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="questiongroup">
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q5" value="1" id=CIQ_Q5__ID required>
+                                            <span class="checkmark"></span>Yes
+                                        </label>
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q5" value="0">
+                                            <span class="checkmark"></span>No
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group box">
+                                <div class="row">
+                                    <div class="col-sm control-group">
+                                        <h3>Q6. Have family members expressed concerns about your thinking and/ or memory?
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="questiongroup">
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q6" value="1" id=CIQ_Q6__ID required>
+                                            <span class="checkmark"></span>Yes
+                                        </label>
+                                        <label class="radiobuttons ">
+                                            <input type="radio" name="CIQ_Q6" value="0">
+                                            <span class="checkmark"></span>No
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="box" style="text-align:right">
@@ -1123,6 +1087,13 @@
             </div>
             <input type="text" name="Participant" style="display:none" />
             <input type="text" name="Participant_uid" style="display:none" />
+            <div class="hover_bkgr_fricc">
+                <span class="helper"></span>
+                <div>
+                    <div class="popupCloseButton">&times;</div>
+                    <p>At least one of checkboxes in <br />Q3 must be ticked!</p>
+                </div>
+            </div>
         </form>
     </div>
     <script>
@@ -1131,10 +1102,12 @@
             //---------------------------------------
             var N = 5;
             var current_I = 1;
+            var registration_ready=false;
             //---------------------------------------
             m.before_submit = function (data, index) {
                 data.ISI = scores.ISI;
                 data.ISI_1 = scores.ISI_1;
+                data.Cognition_HBA = scores.Cognition_HBA;
                 //-------------------------------------
                 return true;
             }
@@ -1142,35 +1115,188 @@
             $('#D__ID').on('load', function () {
 
                 //$('#header').css('opacity', '1');
-                /*
+                $('#s4q1__ID').hide();
+                $('#phq9__ID').hide();
                 $('#sleep_attacks__ID').removeAttr('required');
                 $('#muscle_weakness__ID').removeAttr('required');
                 $('#hallucinations__ID').removeAttr('required');
                 $('#paralyzed__ID').removeAttr('required');
                 $('#s4q2__ID').hide();
-                */
+                $('#stop_breathing__ID').removeAttr('required');
+                $('#gasping__ID').removeAttr('required');
+                $('#sleepy__ID').removeAttr('required');
+                $('#s4q3__ID').hide();
+                $('#muscle_jerks__ID').removeAttr('required');
+                $('#wake_leg_jerk__ID').removeAttr('required');
+                $('#pace_around__ID').removeAttr('required');
+                $('#s4q4__ID').hide();
+                $('#stay_up_late__ID').removeAttr('required');
+                $('#sleep_longer__ID').removeAttr('required');
+                $('#bed_early__ID').removeAttr('required');
+                $('#wake_early__ID').removeAttr('required');
+                $('#s4q5__ID').hide();
+                $('#sleepwalk__ID').removeAttr('required');
+                $('#night_terrors__ID').removeAttr('required');
+                $('#act_out__ID').removeAttr('required');
+                $('#nightmares__ID').removeAttr('required');
+                $("#D__ID input[name=smartphone_type]").removeAttr('required');
+                $('#s5q2__ID').hide();
+                $('#CIQ_Q2__ID').removeAttr('required');
+                $('#CIQ_Q4__ID').removeAttr('required');
+                $('#CIQ_Q5__ID').removeAttr('required');
+                $('#CIQ_Q6__ID').removeAttr('required');
+
                 show_section(1);
                 //console.log(JSON.stringify(m))
             });
             //---------------------------------------
-            /*
             $("#D__ID input[name=fall_asleep]").on('change', function () {
-                if ($("#D__ID input[name=fall_asleep]:checked").val() == 'Y') {
-                    $('#s4q1__ID').show();
-                    $('#sleep_attacks__ID').prop('required', 'true');
-                    $('#muscle_weakness__ID').prop('required', 'true');
-                    $('#hallucinations__ID').prop('required', 'true');
-                    $('#paralyzed__ID').prop('required', 'true');
+                if($("#D__ID input[name=fall_asleep]:checked").val()=='Y'){
+                    $('#s4q1__ID').show(); 
+                    $('#sleep_attacks__ID').prop('required','true');
+                    $('#muscle_weakness__ID').prop('required','true');
+                    $('#hallucinations__ID').prop('required','true');
+                    $('#paralyzed__ID').prop('required','true');
                 }
-                else {
-                    $('#s4q1__ID').hide();
+                else{
+                    $('#s4q1__ID').hide(); 
                     $('#sleep_attacks__ID').removeAttr('required');
                     $('#muscle_weakness__ID').removeAttr('required');
                     $('#hallucinations__ID').removeAttr('required');
                     $('#paralyzed__ID').removeAttr('required');
                 }
             });
-            */
+            //---------------------------------------
+            $("#D__ID input[name=heavy_snorer]").on('change', function () {
+                if($("#D__ID input[name=heavy_snorer]:checked").val()=='Y'){
+                    $('#s4q2__ID').show(); 
+                    $('#stop_breathing__ID').prop('required','true');
+                    $('#gasping__ID').prop('required','true');
+                    $('#sleepy__ID').prop('required','true');
+                }
+                else{
+                    $('#s4q2__ID').hide(); 
+                    $('#stop_breathing__ID').removeAttr('required');
+                    $('#gasping__ID').removeAttr('required');
+                    $('#sleepy__ID').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=legs_twitch]").on('change', function () {
+                if($("#D__ID input[name=legs_twitch]:checked").val()=='Y'){
+                    $('#s4q3__ID').show(); 
+                    $('#muscle_jerks__ID').prop('required','true');
+                    $('#wake_leg_jerk__ID').prop('required','true');
+                    $('#pace_around__ID').prop('required','true');
+                }
+                else{
+                    $('#s4q3__ID').hide(); 
+                    $('#muscle_jerks__ID').removeAttr('required');
+                    $('#wake_leg_jerk__ID').removeAttr('required');
+                    $('#pace_around__ID').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=wrong_times]").on('change', function () {
+                if($("#D__ID input[name=wrong_times]:checked").val()=='Y'){
+                    $('#s4q4__ID').show(); 
+                    $('#stay_up_late__ID').prop('required','true');
+                    $('#sleep_longer__ID').prop('required','true');
+                    $('#bed_early__ID').prop('required','true');
+                    $('#wake_early__ID').prop('required','true');
+                }
+                else{
+                    $('#s4q4__ID').hide(); 
+                    $('#stay_up_late__ID').removeAttr('required');
+                    $('#sleep_longer__ID').removeAttr('required');
+                    $('#bed_early__ID').removeAttr('required');
+                    $('#wake_early__ID').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=unusual_behaviours]").on('change', function () {
+                if($("#D__ID input[name=unusual_behaviours]:checked").val()=='Y'){
+                    $('#s4q5__ID').show(); 
+                    $('#sleepwalk__ID').prop('required','true');
+                    $('#night_terrors__ID').prop('required','true');
+                    $('#act_out__ID').prop('required','true');
+                    $('#nightmares__ID').prop('required','true');
+                }
+                else{
+                    $('#s4q5__ID').hide(); 
+                    $('#sleepwalk__ID').removeAttr('required');
+                    $('#night_terrors__ID').removeAttr('required');
+                    $('#act_out__ID').removeAttr('required');
+                    $('#nightmares__ID').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=smartphone]").on('change', function () {
+                if($("#D__ID input[name=smartphone]:checked").val()=='Y'){
+                    $('#q_smartphone__ID').show(); 
+                    $("#D__ID input[name=smartphone_type]").prop('required','true');
+                }
+                else{
+                    $('#q_smartphone__ID').hide(); 
+                    $("#D__ID input[name=smartphone_type]").removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=smartphone_type]").on('change', function () {
+                if($("#D__ID input[name=smartphone_type]:checked").val()=='android'){
+                    $('#q_smartphone_text__ID').show(); 
+                }
+                else{
+                    $('#q_smartphone_text__ID').hide(); 
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=PHQ_9]").on('change', function () {
+                if ($("#D__ID input[name=PHQ_9]:checked").val() != '0') {
+                    $('#phq9__ID').show();
+                }
+                else {
+                    $('#phq9__ID').hide();
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=CIQ_Q1]").on('change', function () {
+                if ($("#D__ID input[name=CIQ_Q1]:checked").val() == '1') {
+                    $('#s5q2__ID').show();
+                    $('#CIQ_Q2__ID').prop('required','true');
+                    $('#CIQ_Q4__ID').prop('required','true');
+                    $('#CIQ_Q5__ID').prop('required','true');
+                    $('#CIQ_Q6__ID').prop('required','true');
+                }
+                else{
+                    $('#s5q2__ID').hide();
+                    $('#CIQ_Q2__ID').removeAttr('required');
+                    $('#CIQ_Q4__ID').removeAttr('required');
+                    $('#CIQ_Q5__ID').removeAttr('required');
+                    $('#CIQ_Q6__ID').removeAttr('required');
+
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=CIQ_Q3_14]").on('change', function () {
+                if($("#D__ID input[name=CIQ_Q3_14]:checked").val()=="0"){
+                    $("#D__ID input[name=CIQ_Q3_1]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_2]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_3]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_4]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_5]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_6]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_7]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_8]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_9]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_10]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_11]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_12]").prop("checked",false) 
+                    $("#D__ID input[name=CIQ_Q3_13]").prop("checked",false) 
+
+                }
+            });
+
             //---------------------------------------
             $('#F__ID button').on('click', function (event) {
                 var d = $(this).attr("d");
@@ -1220,44 +1346,97 @@
                 ).toString();
                 //ISI-------------------
             }
+            var calc_scores_CIQ = function () {
+                //cognitive impairment------------
+                scores.Cognition_HBA="";
+                console.log($("#D__ID input[name=CIQ_Q1]:checked").val())
+                console.log($("#D__ID input[name=CIQ_Q2]:checked").val())
+                console.log($("#D__ID input[name=CIQ_Q4]:checked").val())
+                console.log($("#D__ID input[name=CIQ_Q5]:checked").val())
+                console.log($("#D__ID input[name=CIQ_Q6]:checked").val())
+                if($("#D__ID input[name=CIQ_Q1]:checked").val()=="0") scores.Cognition_HBA="Low";
+                else{
+                    var q2=0;
+                    if($("#D__ID input[name=CIQ_Q2]:checked").val()=="1") q2++;
+                    var q3=0;
+                    if($("#D__ID input[name=CIQ_Q3_1]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_2]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_3]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_4]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_5]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_6]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_7]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_8]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_9]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_10]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_11]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_12]:checked").val()=="1") q3++; 
+                    if($("#D__ID input[name=CIQ_Q3_13]:checked").val()=="1") q3++; 
+                    var q4=0;
+                    if($("#D__ID input[name=CIQ_Q4]:checked").val()=="1") q4++;
+                    var q5=0;
+                    if($("#D__ID input[name=CIQ_Q5]:checked").val()=="1") q5++;
+                    var q6=0;
+                    if($("#D__ID input[name=CIQ_Q6]:checked").val()=="1") q6++;
+                    console.log("Q2:"+q2+" Q3:"+q3+" Q4:"+q4+" Q5:"+q5+" Q6:"+q6)
+                    if(q2+q3+q4+q5+q6==0) scores.Cognition_HBA="Low";
+                    if(q2+q3+q4>0) scores.Cognition_HBA="Moderate ";
+                    if((q2+q3>0) && (q5+q6>0)) scores.Cognition_HBA="High ";
+                }
+                console.log(scores.Cognition_HBA)
+                //cognitive impairment------------
+            }
             //---------------------------------------
             var old_submit = m.submit;
             m.submit = function (event) {
+                console.log("SUBMITS")
                 event.preventDefault();
                 if (current_I == 1) {
+                    console.log("Page 1")
                     //calc_scores();
                     //console.log("All scores: " + JSON.stringify(scores))
-                    console.log("All scores: " + JSON.stringify(scores))
                     if (parseInt($("input[name='age']").val()) < 60 ||
                         $("input[name='englishfluency']:checked").val() == 'N' ||
                         $("input[name='smartphone']:checked").val() == 'N' ||
                         $("input[name='shiftworker']:checked").val() != 'N' ||
                         $("input[name='travel2hours']:checked").val() == 'Y' ||
-                        $("input[name='disorders']:checked").val() == 'Y' ||
-                        $("input[name='sleep_disorders']:checked").val() == 'Y' ||
-                        $("input[name='medications']:checked").val() == 'Y' ||
-                        $("input[name='heavy_machinery']:checked").val() == 'Y' ||
-                        $("input[name='cbt']:checked").val() == 'Y' ||
-                        $("input[name='PHQ_9']:checked").val() != '0' ||
-                        $("input[name='smartphone_type']:checked").val() != 'ios') {
+                        $("input[name='smartphone_type']:checked").val()!= 'ios' ){
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
-                        if (m.prefix == undefined) {
-                            if ($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
-                            else if ($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligiosb', '', {});
-                            else $vm.load_module('not_elig1', '', {});
-                        }
-                        else {
-                            if ($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
-                            else if ($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligiosb', '', {});
-                            else $vm.load_module(m.prefix + 'not_elig1', '', {})
-                        }
+                        if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                        else{ $vm.load_module(m.prefix + 'not_elig1', '', {}); } 
                     }
                     else {
                         show_section(current_I + 1);
                     }
                 }
-                else if (current_I == 2) {
+                else if (current_I==2){
+                    console.log("Page 2")
+                    if($("input[name='disorders']:checked").val() == 'Y' ||
+                        $("input[name='sleep_disorders']:checked").val() == 'Y' ||
+                        $("input[name='medications']:checked").val() == 'Y' ||
+                        $("input[name='heavy_machinery']:checked").val() == 'Y' ||
+                        $("input[name='cbt']:checked").val() == 'Y' ||
+                        $("input[name='PHQ_9']:checked").val() != '0'){
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                        if (m.prefix == undefined){
+                            if($("input[name='PHQ_9']:checked").val() != '0') { $vm.load_module('not_eligphq9', '', {});}
+                            else if($("input[name='smartphone_type']:checked").val() != 'ios') {$vm.load_module('not_eligios', '', {});}
+                            else {$vm.load_module('not_elig1', '', {});}
+                        }
+                        else{ 
+                            if($("input[name='PHQ_9']:checked").val() != '0') {$vm.load_module(m.prefix + 'not_eligphq9', '', {});}
+                            else if($("input[name='smartphone_type']:checked").val() != 'ios') {$vm.load_module(m.prefix + 'not_eligios', '', {});}
+                            else {$vm.load_module(m.prefix + 'not_elig1', '', {})}
+                        } 
+                    }
+                    else {
+                        show_section(current_I + 1);
+                    }
+                }
+                else if (current_I == 3) {
+                    console.log("Page 3")
                     calc_scores();
                     //console.log("All scores: " + JSON.stringify(scores))
                     if ((parseFloat(scores.ISI) < 10) ||
@@ -1271,53 +1450,127 @@
                         show_section(current_I + 1);
                     }
                 }
-                else if (current_I == 3) {
-                    if (($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='sleep_attacks']:checked").val() == 'Y') ||
-                        ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='muscle_weakness']:checked").val() == 'Y') ||
-                        ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='hallucinations']:checked").val() == 'Y') ||
-                        ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='paralyzed']:checked").val() == 'Y') ||
-                        ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='stop_breathing']:checked").val() == 'Y') ||
-                        ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='gasping']:checked").val() == 'Y') ||
-                        ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='sleepy']:checked").val() == 'Y') ||
-                        ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='muscle_jerks']:checked").val() == 'Y') ||
-                        ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='wake_leg_jerk']:checked").val() == 'Y') ||
-                        ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='pace_around']:checked").val() == 'Y') ||
-                        ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='stay_up_late']:checked").val() == 'Y') ||
-                        ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='sleep_longer']:checked").val() == 'Y') ||
-                        ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='bed_early']:checked").val() == 'Y') ||
-                        ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='wake_early']:checked").val() == 'Y') ||
-                        ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='sleepwalk']:checked").val() == 'Y') ||
-                        ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='night_terrors']:checked").val() == 'Y') ||
-                        ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='act_out']:checked").val() == 'Y') ||
-                        ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='nightmares']:checked").val() == 'Y')) {
+                else if (current_I == 4) {
+                    console.log("Page 4")
+                    if (($("input[name='fall_asleep']:checked").val() == 'Y') ||
+                    ($("input[name='heavy_snorer']:checked").val() == 'Y') ||
+                    ($("input[name='legs_twitch']:checked").val() == 'Y') ||
+                    ($("input[name='wrong_times']:checked").val() == 'Y') ||
+                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' )) {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                         else $vm.load_module(m.prefix + 'not_elig1', '', {});
                     }
                     else {
+                        show_section(current_I + 1);
+                    }
+                }
+                else if (current_I == 5) {
+                    console.log("Page 5")
+                    calc_scores_CIQ();
+                    if($("#D__ID input[name=CIQ_Q1]:checked").val()=="1") {
+                        var q3=0;
+                        if($("#D__ID input[name=CIQ_Q3_1]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_2]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_3]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_4]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_5]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_6]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_7]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_8]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_9]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_10]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_11]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_12]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_13]:checked").val()=="1") q3++; 
+                        if($("#D__ID input[name=CIQ_Q3_14]:checked").val()=="0") q3++;
+                        if (q3==0) {/*$vm.alert("You must tick one of the boxes in Q3");*/$('.hover_bkgr_fricc').show(); return;}
+                        registration_ready=true;
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
+                    }
+                    else {
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                        if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {});
                     }
                 }
                 else show_section(current_I + 1);
             }
             //--------------------------------
-            m.after_insert = function (data, index) {
-                console.log(JSON.stringify(index) + " - " + index.result.ops[0]._id)
-                if (data.unusual_behaviours != undefined) {
-                    if (m.prefix == undefined) { $vm.load_module('registration-form', '', { rec_id: index.result.ops[0]._id }); }
-                    else $vm.load_module(m.prefix + 'registration-form', '', { screen_data: index.result.ops[0].Data, rec_id: index.result.ops[0]._id });
+            m.after_insert = function (data,index) {
+                console.log(JSON.stringify(index) + " - "+index.result.ops[0]._id)
+                if(registration_ready){
+                    if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:index.result.ops[0]._id}); }
+                    else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:index.result.ops[0].Data,rec_id:index.result.ops[0]._id});
                 }
             }
             //--------------------------------
+            $('#D__ID .hover_bkgr_fricc').click(function(){
+                $('#D__ID .hover_bkgr_fricc').hide();
+            });
+            $('#D__ID .popupCloseButton').click(function(){
+                $('.hover_bkgr_fricc').hide();
+            });
+
         }
     </script>
     <style>
         #submit_box__ID {
             text-align: right;
         }
-
+        /* Popup box BEGIN */
+        #D__ID .hover_bkgr_fricc{
+            background:rgba(0,0,0,.4);
+            cursor:pointer;
+            display:none;
+            height:100%;
+            position:fixed;
+            text-align:center;
+            top:0;
+            width:100%;
+            z-index:10000;
+        }
+        #D__ID .hover_bkgr_fricc .helper{
+            display:inline-block;
+            height:100%;
+            vertical-align:middle;
+        }
+        #D__ID .hover_bkgr_fricc > div {
+            background-color: #fff;
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 551px;
+            min-height: 100px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+        #D__ID .popupCloseButton {
+            background-color: #fff;
+            border: 3px solid #999;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            font-family: arial;
+            font-weight: bold;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 25px;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+        #D__ID .popupCloseButton:hover {
+            background-color: #ccc;
+        }        
         /*VmInclude:__HOST__/assets/css/style.css*/
         /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
     </style>
