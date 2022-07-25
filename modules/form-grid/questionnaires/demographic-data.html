@@ -6,7 +6,7 @@
           /*VmInclude:__COMPONENT__/g/grid.01.js*/
           /*VmInclude:__HOST__/assets/js/shared-data.js*/
         //-------------------------------------
-        $('#title__ID').text('Demographic');
+        $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
           //-------------------------------------
           var fields="DOB,gender,height,weight,postcode,employment,education,partner,tobacco,alcohol,caffeine,exercised,smartphone";
           m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";

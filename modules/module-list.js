@@ -34,7 +34,6 @@
     m[p+"oq-w3"] ={url:I+"/w3_quest_qxe.html"},
     m[p+"oq-w8"] ={url:I+"/w8_quest_pkn.html"},
     m[p+"oq-w16"] ={url:I+"/w16_quest_ihs.html"},
-    m[p+"oq-w26"] ={url:I+"/w26_quest_bwj.html"},
     m[p+"oq"] ={url:I+"/participant.html"},
     m[p+"shm1-w0"] ={url:I+"/nfuo.html"},
     m[p+"shm2-w3"] ={url:I+"/ktpa.html"},
@@ -43,12 +42,12 @@
 
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"exceed-screening",router:1 };
+    m[p+"panel-child"]  ={url:H+"/panels/child.html"}
     m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html"};
     m[p+"w0-panel"]     ={url:H+"/panels/w0_quest.html"};
     m[p+"w3-panel"]     ={url:H+"/panels/w3_quest.html"};
     m[p+"w8-panel"]     ={url:H+"/panels/w8_quest.html"};
     m[p+"w16-panel"]     ={url:H+"/panels/w16_quest.html"};
-    m[p+"w26-panel"]     ={url:H+"/panels/w26_quest.html"};
 
     m[p+"adverse-event-data"] ={url:H+"/form-grid/unscheduled/adverse-event-data.html",Table:"exceed-adverse-event",form_module:"adverse-event-form", task_name:"Adverse event" };
     m[p+"adverse-event-form"] ={url:H+"/form-grid/unscheduled/adverse-event-form.html",Table:"exceed-adverse-event", task_name:"Adverse event" };
@@ -66,26 +65,33 @@
     m[p+"address-data"] ={url:H+"/form-grid/questionnaires/address-data.html",Table:"exceed-address",form_module:"address-form", task_name:"Address for sending Fitbit" };
     m[p+"address-form"] ={url:H+"/form-grid/questionnaires/address-form.html",Table:"exceed-address", task_name:"Address for sending Fitbit" };
 
-     
-    m[p+"isi-bl-data"]      ={url:H+"/form-grid/questionnaires/isi-bl-data.html",Table:"exceed-screening",form_module:"isi-bl-form", task_name:"Baseline - Insomnia Severity Index" };
-    m[p+"isi-bl-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"exceed-screening", task_name:"Baseline - Insomnia Severity Index" };
-
+    
+    m[p+"sdmt-bl-data"]      ={url:H+"/form-grid/questionnaires/neurocog/sdmt-data.html",Table:"exceed-sdmt-bl",form_module:"sdmt-bl-form", task_name:"Baseline - Symbol Digit Modality Test"};
+    m[p+"sdmt-bl-form"]      ={url:H+"/form-grid/questionnaires/neurocog/sdmt-form.html",Table:"exceed-sdmt-bl", task_name:"Baseline - Symbol Digit Modality Test" };
+    m[p+"stroop-colour-bl-data"]      ={url:H+"/form-grid/questionnaires/neurocog/stroop-colour-data.html",Table:"exceed-stroop-colour-bl",form_module:"stroop-colour-bl-form", task_name:"Baseline - Stroop Colour" };
+    m[p+"stroop-colour-bl-form"]      ={url:H+"/form-grid/questionnaires/neurocog/stroop-colour-form.html",Table:"exceed-stroop-colour-bl", task_name:"Baseline - Stroop Colour" };
+    m[p+"stroop-text-bl-data"]      ={url:H+"/form-grid/questionnaires/neurocog/stroop-text-data.html",Table:"exceed-stroop-text-bl",form_module:"stroop-text-bl-form", task_name:"Baseline - Stroop Text" };
+    m[p+"stroop-text-bl-form"]      ={url:H+"/form-grid/questionnaires/neurocog/stroop-text-form.html",Table:"exceed-stroop-text-bl", task_name:"Baseline - Stroop Text" };
+    m[p+"lct-bl-data"]      ={url:H+"/form-grid/questionnaires/neurocog/letter-cancellation-data.html",Table:"exceed-lct-bl",form_module:"lct-bl-form", task_name:"Baseline - Letter Cancellation Task" };
+    m[p+"lct-bl-form"]      ={url:H+"/form-grid/questionnaires/neurocog/letter-cancellation-form.html",Table:"exceed-lct-bl", task_name:"Baseline - Letter Cancellation Task" };
+    m[p+"nback2-bl-data"]      ={url:H+"/form-grid/questionnaires/neurocog/nback2-data.html",Table:"exceed-nback2-bl",form_module:"nback2-bl-form", task_name:"Baseline - N-Back 2" };
+    m[p+"nback2-bl-form"]      ={url:H+"/form-grid/questionnaires/neurocog/nback2-form.html",Table:"exceed-nback2-bl", task_name:"Baseline - N-Back 2" };
+    m[p+"isi-bl-data"]      ={url:H+"/form-grid/questionnaires/isi-data.html",Table:"exceed-isi-bl",form_module:"isi-bl-form", task_name:"Baseline - Insomnia Severity Index" };
+    m[p+"isi-bl-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"exceed-isi-bl", task_name:"Baseline - Insomnia Severity Index" };
     m[p+"psqi-bl-data"]      ={url:H+"/form-grid/questionnaires/psqi-data.html",Table:"exceed-psqi-bl",form_module:"psqi-bl-form", task_name:"Baseline - Pittsburgh Sleep Quality Index" };
     m[p+"psqi-bl-form"]      ={url:H+"/form-grid/questionnaires/psqi-form.html",Table:"exceed-psqi-bl", task_name:"Baseline - Pittsburgh Sleep Quality Index" };
-    m[p+"phq-bl-data"]      ={url:H+"/form-grid/questionnaires/phq-data.html",Table:"exceed-phq-bl",form_module:"phq-bl-form", task_name:"Baseline - Patient Health Questionnaire" };
-    m[p+"phq-bl-form"]      ={url:H+"/form-grid/questionnaires/phq-form.html",Table:"exceed-phq-bl", task_name:"Baseline - Patient Health Questionnaire" };
-    m[p+"gad7-bl-data"]      ={url:H+"/form-grid/questionnaires/gad7-data.html",Table:"exceed-gad7-bl",form_module:"gad7-bl-form", task_name:"Baseline - Generalized Anxiety Disorder" };
-    m[p+"gad7-bl-form"]      ={url:H+"/form-grid/questionnaires/gad7-form.html",Table:"exceed-gad7-bl", task_name:"Baseline - Generalized Anxiety Disorder" };
-    m[p+"ffs-bl-data"]      ={url:H+"/form-grid/questionnaires/ffs-data.html",Table:"exceed-ffs-bl",form_module:"ffs-bl-form", task_name:"Baseline - Flinders Fatigue Scale" };
-    m[p+"ffs-bl-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-bl", task_name:"Baseline - Flinders Fatigue Scale" };
     m[p+"ess-bl-data"]      ={url:H+"/form-grid/questionnaires/ess-data.html",Table:"exceed-ess-bl",form_module:"ess-bl-form", task_name:"Baseline - Epworth Sleepiness Scale" };
     m[p+"ess-bl-form"]      ={url:H+"/form-grid/questionnaires/ess-form.html",Table:"exceed-ess-bl", task_name:"Baseline - Epworth Sleepiness Scale" };
-    m[p+"bc-cci-bl-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"exceed-bc-cci-bl",form_module:"bc-cci-bl-form", task_name:"Baseline - British Columbia Cognitive Complaints Inventory" };
-    m[p+"bc-cci-bl-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"exceed-bc-cci-bl", task_name:"Baseline - British Columbia Cognitive Complaints Inventory" };
-    m[p+"eq-5d-bl-data"]      ={url:H+"/form-grid/questionnaires/eq-5d-data.html",Table:"exceed-eq-5d-bl",form_module:"eq-5d-bl-form", task_name:"Baseline - European Quality of Life" };
-    m[p+"eq-5d-bl-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"exceed-eq-5d-bl", task_name:"Baseline - European Quality of Life" };
+    m[p+"gas-bl-data"]      ={url:H+"/form-grid/questionnaires/gas-data.html",Table:"exceed-gas-bl",form_module:"gas-bl-form", task_name:"Baseline - Geriatric Anxiety Scale" };
+    m[p+"gas-bl-form"]      ={url:H+"/form-grid/questionnaires/gas-form.html",Table:"exceed-gas-bl", task_name:"Baseline - Geriatric Anxiety Scale" };
+    m[p+"gad7-bl-data"]      ={url:H+"/form-grid/questionnaires/gad7-data.html",Table:"exceed-gad7-bl",form_module:"gad7-bl-form", task_name:"Baseline - Generalized Anxiety Disorder" };
+    m[p+"gad7-bl-form"]      ={url:H+"/form-grid/questionnaires/gad7-form.html",Table:"exceed-gad7-bl", task_name:"Baseline - Generalized Anxiety Disorder" };
     m[p+"eheals-bl-data"]      ={url:H+"/form-grid/questionnaires/eheals-data.html",Table:"exceed-eheals-bl",form_module:"eheals-bl-form", task_name:"Baseline - eHealth Literacy Scale" };
     m[p+"eheals-bl-form"]      ={url:H+"/form-grid/questionnaires/eheals-form.html",Table:"exceed-eheals-bl", task_name:"Baseline - eHealth Literacy Scale" };
+    m[p+"eq-5d-bl-data"]      ={url:H+"/form-grid/questionnaires/eq-5d-data.html",Table:"exceed-eq-5d-bl",form_module:"eq-5d-bl-form", task_name:"Baseline - European Quality of Life" };
+    m[p+"eq-5d-bl-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"exceed-eq-5d-bl", task_name:"Baseline - European Quality of Life" };
+    m[p+"ffs-bl-data"]      ={url:H+"/form-grid/questionnaires/ffs-data.html",Table:"exceed-ffs-bl",form_module:"ffs-bl-form", task_name:"Baseline - Flinders Fatigue Scale" };
+    m[p+"ffs-bl-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-bl", task_name:"Baseline - Flinders Fatigue Scale" };
 
     m[p+"adverse-event-w3-data"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-data.html",Table:"exceed-adverse-event-w3",form_module:"adverse-event-w3-form", task_name:"Week 3 - Adverse Event Check-in" };
     m[p+"adverse-event-w3-form"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-form.html",Table:"exceed-adverse-event-w3", task_name:"Week 3 - Adverse Event Check-in" };

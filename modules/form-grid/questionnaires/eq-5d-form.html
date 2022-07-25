@@ -9,7 +9,7 @@
                         <!-- form start -->
                         <form id="F__ID">
                             <div>
-                                <img src='assets/images/eq-5d-5l.png' style='padding:10px' />
+                                <img src='__CURRENT_PATH__/eq-5d-5l.png' style='padding:10px' />
                             </div>
                             <!-- participant part for all tsak forms -------------------->
                             <div id="participant_div__ID" >
@@ -208,7 +208,7 @@
                             <div id='page6__ID'>
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class=col-sm-8>
+                                        <div class="col-md-8 col-sm-7">
                                             <div class="form-group" style=border:0!important>
                                                 <div class="questiongroup ">
                                                     <fieldset class="">
@@ -218,7 +218,7 @@
                                                             <li>100 means the <u>best</u> health you can imagine.<br>0 means the <u>worst</u> health you can imagine.</li>
                                                             <li>Please click on the scale to indicate how your health is TODAY.</li>
                                                         </ul>    
-                                                        <div style='text-align: right;padding-top:35px'>
+                                                        <div style='text-align: right;' id="yht__ID">
                                                             <label><span class="">YOUR HEALTH TODAY</span>
                                                                 <input class="form-control" type="number" min=0 max=100
                                                                     name="EQ_5D_6" required readonly>
@@ -363,10 +363,10 @@
     </div>
     <script>
         function F__ID() {
-          //-------------------------------------
-          /*VmInclude:__COMPONENT__/f/form.01.js*/
-          /*VmInclude:__HOST__/assets/js/shared-form.js*/
-          //-------------------------------------
+            //-------------------------------------
+            /*VmInclude: __COMPONENT__/f/form.01.js*/
+            /*VmInclude: __HOST__/assets/js/shared-form.js*/
+            //-------------------------------------
             var N = 6;
             var current_I = 1;
             //---------------------------------------
@@ -397,7 +397,7 @@
                 event.preventDefault();
                 if (current_I == N) {
                     $('#F__ID *').removeAttr('disabled');
-                    $('#submit__ID').hide();
+                    $('#submit1__ID').hide();
                     old_submit(event);
                 }
                 else {
@@ -452,36 +452,7 @@
                 return before_submit(data, index);
             }
             //-------------------------------------
-            m.after_insert = function (data,index) {
-                var timepoint=(index.result.ops[0].Table).split('-');
-                timepoint=timepoint[timepoint.length-1];
-                console.log(timepoint)
-                var records={};
-                if(timepoint=='w16' || timepoint=='w26' ){
-                    jQuery.ajaxSetup({async:false});
-                    $vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
-                        if(res.permission==false){
-                            alert("No permission");
-                            return;
-                        }
-                        if(res.result.length==0){
-                        }
-                        else{
-                            if(timepoint=='w16') res.result[0].Data.w16='10';
-                            else if(timepoint=='w26') res.result[0].Data.w26='10';
-                            records=res.result[0]
-                        }
-                    })
-                    if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1}); }
-                    else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1});}
-                    jQuery.ajaxSetup({async:true});
-                }
-                else {    
-                    $vm.refresh=1;
-                    window.history.go(-1); 
-                }
-            }
-            //-------------------------------------
+
         }
       //------------------------------------
     </script>
@@ -591,8 +562,14 @@
     width: 15px;
     height: 1px;
 }
-    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
-    /*VmInclude:__HOST__/assets/css/style.css*/
-
+#yht__ID{
+        padding-top:0;
+    }
+@media (min-width: 1024x) {
+    #yht__ID{
+        padding-top:35px;
+    }
+}
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
     </style>
 </div>

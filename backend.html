@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.css" />
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/redmond/jquery-ui.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.5.0/jsoneditor.css" />
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Roboto+Slab' />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
@@ -31,7 +32,7 @@
         <!----------------------------------------------->
         <script app code>
             //---------------------------------------------
-            $VmAPI={};$vm.ver=[0.27,0.03]; $vm['jquery-ui-min-js']=1;
+            $VmAPI={};$vm.ver=[0.02,0.03]; $vm['jquery-ui-min-js']=1;
             $vm.flexindex=new FlexSearch({  doc: {id: "id",field: ["title","contents"]}    });
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
@@ -83,8 +84,8 @@
                 
                 if(m_name!=undefined){ $vm.active_id=$vm.module_list[m_name].id; $vm.active_name=m_name; }
                 if($vm.active_id!='') $('#D'+$vm.active_id).css('min-height',$vm.min_height+"px");
-                if(m_name=='home') {$("#header").css("background","rgba(28,35,80,0.8)"); $('#midi_buttons').show(); $('#g_nav').hide(); }
-                else               {$("#header").css("background","rgba(28,35,80,0.8)");  $('#midi_buttons').hide(); $('#g_nav').show();}
+                if(m_name=='home') {$("#header").css("background","rgba(32,95,123,0.8)"); $('#midi_buttons').show(); $('#g_nav').hide(); }
+                else               {$("#header").css("background","rgba(32,95,123,0.8)");  $('#midi_buttons').hide(); $('#g_nav').show();}
             }
             //---------------------------------------------
             document.getElementById('layout').onscroll = function(){

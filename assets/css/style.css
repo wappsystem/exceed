@@ -377,6 +377,7 @@ template {
 #D__ID input[type="email"],
 #D__ID input[type="tel"],
 #D__ID input[type="text"],
+#D__ID input[type="password"],
 #D__ID textarea {
     transition: border-color 0.35s cubic-bezier(0.3, 0.86, 0.36, 0.95);
     padding: 16px;
@@ -458,6 +459,43 @@ template {
     flex-direction: column;
     overflow: hidden;
 }
+#D__ID .qbtn {
+    justify-content: center;
+    min-width: 300px;
+    display: inline-flex;
+    padding: 5px 6px;
+    border-radius: 4px;
+    background-color: #4e8da6;
+    border: 0;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.2;
+    cursor: pointer;
+    margin-top: 3px;
+}
+#D__ID .qbtn.hover,
+#D__ID .qbtn:hover {
+    background-color: #4e8da6;
+    color: #fff;
+}
+#D__ID .qbtn.active,
+#D__ID .qbtn:active {
+    background-color: #4e8da6;
+    color: #fff;
+}
+#D__ID .qbtn.disabled,
+#D__ID .qbtn:disabled {
+    background-color: rgba(173, 93, 129, 0.2);
+    color: #fff;
+    pointer-events: none;
+}
+#D__ID .qbtn.done{
+    background-color: #66ad5d;
+    color: #fff;
+}
+
 #D__ID .main {
     flex-grow: 1;
 }
