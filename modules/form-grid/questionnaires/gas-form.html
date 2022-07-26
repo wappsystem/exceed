@@ -1,0 +1,908 @@
+<div id=D__ID>
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div id="participant_div__ID">
+                    <div class="form-group box">
+                        <fieldset class="subquestions">
+                            <label><span class="">Participant</span>
+                                <input type=text name="Participant" class=form-control id=Participant__ID
+                                    data-id="Participant" />
+                            </label><br><br>
+                            <label><span class="">Participant ID</span>
+                                <input type=text name="Participant_uid" class=form-control readonly />
+                            </label><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h2 id="title__ID"></h2>
+                </div>
+                  <div class="form-group box">
+                      <fieldset class="subquestions">
+                          <h4>Below is a list of common symptoms of anxiety or stress. Please read each item in the list carefully. 
+                            Indicate how often you have experienced each symptom during the PAST WEEK, INCLUDING TODAY 
+                            by checking under the corresponding answer.</h4>
+                      </fieldset>
+                  </div>
+                  <div class="form-group sticky-top shadow-sm bg-light">
+                      <div id=legend__ID class="questiongroup " >
+                          <fieldset class="">
+                              <label class="radiobuttons" style='cursor:default!important'>
+                                  <span class="checkmark no-dot">0</span>= Not at all
+                              </label><br>
+                              <label class="radiobuttons" style='cursor:default!important'>
+                                  <span class="checkmark no-dot">1</span>= Sometimes
+                              </label><br>
+                              <label class="radiobuttons" style='cursor:default!important'>
+                                  <span class="checkmark no-dot">2</span>= Most of the time
+                              </label><br>
+                              <label class="radiobuttons" style='cursor:default!important'>
+                                  <span class="checkmark no-dot">3</span>= All of the time
+                              </label><br>
+                           </fieldset>
+                       </div>
+                       <button type="button" id="btn_legend__ID" class="btn btn-primary mb-1 mt-0 mx-0 p-1">Hide legend</button>
+                  </div>
+                  <div class="form-group box">
+                      <h4>1. My heart raced or beat strongly</h4>
+      				  <div class="questiongroup">
+                          <fieldset class="subquestions">
+                              <label class="radiobuttons" title="Not at all">
+                                <input type="radio" name="GAS_1" value="0" required>
+                                <span class="checkmark no-dot">0</span></label>
+                              <label class="radiobuttons" title="Sometimes">
+                                <input type="radio" name="GAS_1" value="1">
+                                <span class="checkmark no-dot">1</span></label>
+                              <label class="radiobuttons" title="Most of the time">
+                                <input type="radio" name="GAS_1" value="2">
+                                <span class="checkmark no-dot">2</span></label>
+                              <label class="radiobuttons" title="All of the time">
+                                <input type="radio" name="GAS_1" value="3">
+                                <span class="checkmark no-dot">3</span></label>
+                          </fieldset>
+                          <label id=gas_sel_1>&nbsp;</label>
+                     </div>
+      		      </div>
+                  <div class="form-group box">
+                     <h4>2. My breath was short.</h4>
+                     <div class="questiongroup">
+                         <fieldset>
+                             <label class="radiobuttons" title="Not at all">
+                               <input type="radio" name="GAS_2" value="0" required>
+                               <span class="checkmark no-dot">0</span></label>
+                             <label class="radiobuttons" title="Sometimes">
+                               <input type="radio" name="GAS_2" value="1">
+                               <span class="checkmark no-dot">1</span></label>
+                             <label class="radiobuttons" title="Most of the time">
+                               <input type="radio" name="GAS_2" value="2">
+                               <span class="checkmark no-dot">2</span></label>
+                             <label class="radiobuttons" title="All of the time">
+                               <input type="radio" name="GAS_2" value="3">
+                               <span class="checkmark no-dot">3</span></label>
+                         </fieldset>
+                         <label id=gas_sel_2>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                     <h4>3. I had an upset stomach.</h4>
+                     <div class="questiongroup">
+                        <fieldset>
+                            <label class="radiobuttons" title="Not at all">
+                              <input type="radio" name="GAS_3" value="0" required>
+                              <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Sometimes">
+                              <input type="radio" name="GAS_3" value="1">
+                              <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="Most of the time">
+                              <input type="radio" name="GAS_3" value="2">
+                              <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="All of the time">
+                              <input type="radio" name="GAS_3" value="3">
+                              <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=gas_sel_3>&nbsp;</label>
+                     </div>
+                  </div>
+                  <div class="form-group box">
+                       <h4>4. I felt like things were not real or like I was 
+                        outside of myself.</h4>
+                     <div class="questiongroup">
+                           <fieldset>
+                               <label class="radiobuttons" title="Not at all">
+                                 <input type="radio" name="GAS_4" value="0" required>
+                                 <span class="checkmark no-dot">0</span></label>
+                               <label class="radiobuttons" title="Sometimes">
+                                 <input type="radio" name="GAS_4" value="1">
+                                 <span class="checkmark no-dot">1</span></label>
+                               <label class="radiobuttons" title="Most of the time">
+                                 <input type="radio" name="GAS_4" value="2">
+                                 <span class="checkmark no-dot">2</span></label>
+                               <label class="radiobuttons" title="All of the time">
+                                 <input type="radio" name="GAS_4" value="3">
+                                 <span class="checkmark no-dot">3</span></label>
+                           </fieldset>
+                           <label id=gas_sel_4>&nbsp;</label>
+                      </div>
+                  </div>
+                  <div class="form-group box">
+                      <h4>5. I felt like I was losing control.</h4>
+                    <div class="questiongroup">
+                          <fieldset>
+                              <label class="radiobuttons" title="Not at all">
+                                <input type="radio" name="GAS_5" value="0" required>
+                                <span class="checkmark no-dot">0</span></label>
+                              <label class="radiobuttons" title="Sometimes">
+                                <input type="radio" name="GAS_5" value="1">
+                                <span class="checkmark no-dot">1</span></label>
+                              <label class="radiobuttons" title="Most of the time">
+                                <input type="radio" name="GAS_5" value="2">
+                                <span class="checkmark no-dot">2</span></label>
+                              <label class="radiobuttons" title="All of the time">
+                                <input type="radio" name="GAS_5" value="3">
+                                <span class="checkmark no-dot">3</span></label>
+                          </fieldset>
+                          <label id=gas_sel_5>&nbsp;</label>
+                     </div>
+                  </div>
+                  <div class="form-group box">
+                     <h4>6. I was afraid of being judged by others.</h4>
+                   <div class="questiongroup">
+                         <fieldset>
+                             <label class="radiobuttons" title="Not at all">
+                               <input type="radio" name="GAS_6" value="0" required>
+                               <span class="checkmark no-dot">0</span></label>
+                             <label class="radiobuttons" title="Sometimes">
+                               <input type="radio" name="GAS_6" value="1">
+                               <span class="checkmark no-dot">1</span></label>
+                             <label class="radiobuttons" title="Most of the time">
+                               <input type="radio" name="GAS_6" value="2">
+                               <span class="checkmark no-dot">2</span></label>
+                             <label class="radiobuttons" title="All of the time">
+                               <input type="radio" name="GAS_6" value="3">
+                               <span class="checkmark no-dot">3</span></label>
+                         </fieldset>
+                         <label id=gas_sel_6>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                      <h4>7. I was afraid of being humiliated or 
+                        embarrassed.</h4>
+                      <div class="questiongroup">
+                            <fieldset>
+                                <label class="radiobuttons" title="Not at all">
+                                  <input type="radio" name="GAS_7" value="0" required>
+                                  <span class="checkmark no-dot">0</span></label>
+                                <label class="radiobuttons" title="Sometimes">
+                                  <input type="radio" name="GAS_7" value="1">
+                                  <span class="checkmark no-dot">1</span></label>
+                                <label class="radiobuttons" title="Most of the time">
+                                  <input type="radio" name="GAS_7" value="2">
+                                  <span class="checkmark no-dot">2</span></label>
+                                <label class="radiobuttons" title="All of the time">
+                                  <input type="radio" name="GAS_7" value="3">
+                                  <span class="checkmark no-dot">3</span></label>
+                            </fieldset>
+                            <label id=gas_sel_7>&nbsp;</label>
+                       </div>
+                   </div>
+                  <div class="form-group box">
+                        <h4>8. I had difficulty falling asleep.</h4>
+                      <div class="questiongroup">
+                            <fieldset>
+                                <label class="radiobuttons" title="Not at all">
+                                  <input type="radio" name="GAS_8" value="0" required>
+                                  <span class="checkmark no-dot">0</span></label>
+                                <label class="radiobuttons" title="Sometimes">
+                                  <input type="radio" name="GAS_8" value="1">
+                                  <span class="checkmark no-dot">1</span></label>
+                                <label class="radiobuttons" title="Most of the time">
+                                  <input type="radio" name="GAS_8" value="2">
+                                  <span class="checkmark no-dot">2</span></label>
+                                <label class="radiobuttons" title="All of the time">
+                                  <input type="radio" name="GAS_8" value="3">
+                                  <span class="checkmark no-dot">3</span></label>
+                            </fieldset>
+                            <label id=gas_sel_8>&nbsp;</label>
+                       </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>9. I had difficulty staying asleep.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_9" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_9" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_9" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_9" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_9>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>10. I was irritable.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_10" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_10" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_10" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_10" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_10>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>11. I had outbursts of anger.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_11" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_11" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_11" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_11" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_11>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>12. I had difficulty concentrating.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_12" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_12" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_12" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_12" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_12>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>13. I was easily startled or upset.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_13" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_13" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_13" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_13" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_13>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>14. I was less interested in doing something I 
+                      typically enjoy.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_14" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_14" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_14" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_14" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_14>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>15. I felt detached or isolated from others.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_15" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_15" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_15" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_15" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_15>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>16. I felt like I was in a daze.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_16" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_16" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_16" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_16" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_16>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>17. I had a hard time sitting still.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_17" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_17" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_17" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_17" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_17>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>18. I worried too much.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_18" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_18" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_18" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_18" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_18>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>19. I could not control my worry.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_19" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_19" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_19" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_19" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_19>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>20. I felt restless, keyed up, or on edge.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_20" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_20" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_20" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_20" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_20>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>21. I felt overly tired.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_21" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_21" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_21" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_21" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_21>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>22. My muscles were tense.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_22" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_22" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_22" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_22" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_22>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>23. I had back pain, neck pain, or muscle 
+                      cramps.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_23" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_23" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_23" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_23" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_23>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>24. I felt like I had no control over my life.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_24" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_24" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_24" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_24" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_24>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>25. I felt like something terrible was going to 
+                      happen to me.
+                     </h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_25" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_25" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_25" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_25" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_25>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>26. I was concerned about my finances.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_26" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_26" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_26" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_26" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_26>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>27. I was concerned about my health.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_27" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_27" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_27" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_27" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_27>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>28. I was concerned about my family or
+                      children.
+                     </h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_28" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_28" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_28" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_28" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_28>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>29. I was afraid of dying.</h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_29" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_29" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_29" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_29" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_29>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="form-group box">
+                    <h4>30. I was afraid of becoming a burden to my
+                      family or children.
+                     </h4>
+                    <div class="questiongroup">
+                      <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                          <input type="radio" name="GAS_30" value="0" required>
+                          <span class="checkmark no-dot">0</span>
+                        </label>
+                        <label class="radiobuttons" title="Sometimes">
+                          <input type="radio" name="GAS_30" value="1">
+                          <span class="checkmark no-dot">1</span>
+                        </label>
+                        <label class="radiobuttons" title="Most of the time">
+                          <input type="radio" name="GAS_30" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label>
+                        <label class="radiobuttons" title="All of the time">
+                          <input type="radio" name="GAS_30" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label>
+                      </fieldset>
+                      <label id=gas_sel_30>&nbsp;</label>
+                    </div>
+                  </div>
+                  <div class="box" style="text-align:right">
+                    <div class="box-item">
+                        <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                  </div>
+            </div>
+        </form>
+    </div>
+  <script>
+      function F__ID(){
+          //-------------------------------------
+          /*VmInclude:__COMPONENT__/f/form.01.js*/
+          /*VmInclude:__HOST__/assets/js/shared-form.js*/
+          //-------------------------------------
+          $('#btn_legend__ID').on('click',function(){
+              if($('#btn_legend__ID').text()=='Hide legend'){
+                $('#btn_legend__ID').text('Show legend');
+                $('#legend__ID').hide();
+            }
+            else {
+                $('#btn_legend__ID').text('Hide legend');
+                $('#legend__ID').show();
+            }
+          });
+          $("#D__ID input[name=GAS_1]").on('click',function(){
+              set_selected_text(1)
+          })
+          $("#D__ID input[name=GAS_2]").on('click',function(){
+              set_selected_text(2)
+          })
+          $("#D__ID input[name=GAS_3]").on('click',function(){
+              set_selected_text(3)
+          })
+          $("#D__ID input[name=GAS_4]").on('click',function(){
+              set_selected_text(4)
+          })
+          $("#D__ID input[name=GAS_5]").on('click',function(){
+              set_selected_text(5)
+          })
+          $("#D__ID input[name=GAS_6]").on('click',function(){
+              set_selected_text(6)
+          })
+          $("#D__ID input[name=GAS_7]").on('click',function(){
+              set_selected_text(7)
+          })
+          $("#D__ID input[name=GAS_8]").on('click',function(){
+              set_selected_text(8)
+          })
+          $("#D__ID input[name=GAS_9]").on('click',function(){
+              set_selected_text(9)
+          })
+          $("#D__ID input[name=GAS_10]").on('click',function(){
+              set_selected_text(10)
+          })
+          $("#D__ID input[name=GAS_11]").on('click',function(){
+              set_selected_text(11)
+          })
+          $("#D__ID input[name=GAS_12]").on('click',function(){
+              set_selected_text(12)
+          })
+          $("#D__ID input[name=GAS_13]").on('click',function(){
+              set_selected_text(13)
+          })
+          $("#D__ID input[name=GAS_14]").on('click',function(){
+              set_selected_text(14)
+          })
+          $("#D__ID input[name=GAS_15]").on('click',function(){
+              set_selected_text(15)
+          })
+          $("#D__ID input[name=GAS_16]").on('click',function(){
+              set_selected_text(16)
+          })
+          $("#D__ID input[name=GAS_17]").on('click',function(){
+              set_selected_text(17)
+          })
+          $("#D__ID input[name=GAS_18]").on('click',function(){
+              set_selected_text(18)
+          })
+          $("#D__ID input[name=GAS_19]").on('click',function(){
+              set_selected_text(19)
+          })
+          $("#D__ID input[name=GAS_20]").on('click',function(){
+              set_selected_text(20)
+          })
+          $("#D__ID input[name=GAS_21]").on('click',function(){
+              set_selected_text(21)
+          })
+          $("#D__ID input[name=GAS_22]").on('click',function(){
+              set_selected_text(22)
+          })
+          $("#D__ID input[name=GAS_23]").on('click',function(){
+              set_selected_text(23)
+          })
+          $("#D__ID input[name=GAS_24]").on('click',function(){
+              set_selected_text(24)
+          })
+          $("#D__ID input[name=GAS_25]").on('click',function(){
+              set_selected_text(25)
+          })
+          $("#D__ID input[name=GAS_26]").on('click',function(){
+              set_selected_text(26)
+          })
+          $("#D__ID input[name=GAS_27]").on('click',function(){
+              set_selected_text(27)
+          })
+          $("#D__ID input[name=GAS_28]").on('click',function(){
+              set_selected_text(28)
+          })
+          $("#D__ID input[name=GAS_29]").on('click',function(){
+              set_selected_text(29)
+          })
+          $("#D__ID input[name=GAS_30]").on('click',function(){
+              set_selected_text(30)
+          })
+          //-------------------------------------
+          var load2=m.load;
+              m.load=function(){
+              load2();
+              for(var i=0;i<8;i++){
+                  set_selected_text(i+1)
+              }
+              $('#D__ID').css('overflow','visible');              
+          }
+          //-------------------------------------
+         var set_selected_text=function(i){
+             $("#gas_sel_"+i+"").css('padding-top','10px').css('color','#EA7859');
+             switch ($("#D__ID input[name=GAS_"+i+"]:checked").val()) {
+                 case '0':
+                     $("#gas_sel_"+i+"").text("Not at all");
+                 break;
+                 case '1':
+                     $("#gas_sel_"+i+"").text("Sometimes");
+                 break;
+                 case '2':
+                     $("#gas_sel_"+i+"").text("Most of the time");
+                 break;
+                 case '3':
+                     $("#gas_sel_"+i+"").text("All of the time");
+                 break;
+                 default:
+                    $("#gas_sel_"+i+"").text("");
+                break;
+             }
+         }
+         //-------------------------------------
+         var before_submit=m.before_submit;
+            m.before_submit=function(data,index){
+              data.GAS_Total=(parseInt(data.GAS_1)+parseInt(data.GAS_2)+parseInt(data.GAS_3)+parseInt(data.GAS_8)+parseInt(data.GAS_9)+parseInt(data.GAS_17)+parseInt(data.GAS_21)+parseInt(data.GAS_22)+parseInt(data.GAS_23)+parseInt(data.GAS_4)+parseInt(data.GAS_5)+parseInt(data.GAS_12)+parseInt(data.GAS_16)+parseInt(data.GAS_18)+parseInt(data.GAS_19)+parseInt(data.GAS_24)+parseInt(data.GAS_25)+parseInt(data.GAS_6)+parseInt(data.GAS_7)+parseInt(data.GAS_10)+parseInt(data.GAS_11)+parseInt(data.GAS_13)+parseInt(data.GAS_14)+parseInt(data.GAS_15)+parseInt(data.GAS_20)).toString();
+              data.GAS_Somatic=(parseInt(data.GAS_1)+parseInt(data.GAS_2)+parseInt(data.GAS_3)+parseInt(data.GAS_8)+parseInt(data.GAS_9)+parseInt(data.GAS_17)+parseInt(data.GAS_21)+parseInt(data.GAS_22)+parseInt(data.GAS_23)).toString();
+              data.GAS_Cognitive=(parseInt(data.GAS_4)+parseInt(data.GAS_5)+parseInt(data.GAS_12)+parseInt(data.GAS_16)+parseInt(data.GAS_18)+parseInt(data.GAS_19)+parseInt(data.GAS_24)+parseInt(data.GAS_25)).toString();
+              data.GAS_Affective=(parseInt(data.GAS_6)+parseInt(data.GAS_7)+parseInt(data.GAS_10)+parseInt(data.GAS_11)+parseInt(data.GAS_13)+parseInt(data.GAS_14)+parseInt(data.GAS_15)+parseInt(data.GAS_20)).toString();
+              return before_submit(data,index);
+          }
+          //-------------------------------------
+      }
+  </script>
+  <style>
+    #submit_box__ID {
+        text-align: right;
+    }
+    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    /*VmInclude:__HOST__/assets/css/style.css*/
+</style>
+</div>

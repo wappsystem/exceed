@@ -1265,7 +1265,7 @@ template {
 }
 #D__ID .box {
     padding: 33px 15px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     background-color: #fbfbfb;
     border-radius: 3px;
     box-shadow: 0 3px 2px rgba(28, 35, 80, 0.05);
@@ -1828,7 +1828,7 @@ template {
         font-size: 40px;
     }
     #D__ID .box {
-        padding: 33px 34px 50px;
+        padding: 33px 34px 10px;
     }
     #D__ID .box .check-list {
         margin: 0 -34px;

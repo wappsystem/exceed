@@ -1,0 +1,19 @@
+<section>
+  VmInclude:__COMPONENT__/g/grid.01.html
+</section>
+<script>
+  function F__ID(){
+      //-------------------------------------
+          /*VmInclude:__COMPONENT__/g/grid.01.js*/
+          /*VmInclude:__HOST__/assets/js/shared-data.js*/
+      //-------------------------------------
+      $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+      //-------------------------------------
+      var fields="GAS_Total,GAS_Somatic,GAS_Cognitive,GAS_Affective,GAS_1,GAS_2,GAS_3,GAS_4,GAS_5,GAS_6,GAS_7,GAS_8,GAS_9,GAS_10,GAS_11,GAS_12,GAS_13,GAS_14,GAS_15,GAS_16,GAS_17,GAS_18,GAS_19,GAS_20,GAS_21,GAS_22,GAS_23,GAS_24,GAS_25,GAS_26,GAS_27,GAS_28,GAS_29,GAS_30";
+      m.fields="_Form,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+      //-------------------------------------
+  }
+</script>
+<style>
+  /*VmInclude:__COMPONENT__/g/grid.01.css*/
+</style>
