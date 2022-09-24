@@ -155,8 +155,6 @@
     m[p+"registration-data"]      ={url:H+"/form-grid/screening/registration-data.html",   Table:"exceed-participant",form_module:"registration-form",task_name:"Participant"};
     m[p+"registration-form"]      ={url:H+"/form-grid/screening/registration-form.html",Table:"exceed-participant",Table2:"exceed-screening", task_name:"Participant" };
     
-    m[p+"registration-parta-form"]      ={url:H+"/form-grid/screening/registration-parta-form.html",Table:"exceed-participant",Table2:"exceed-screening", task_name:"Participant" };
-    
     m[p+"randomisation-check-data"]      ={url:H+"/form-grid/backend/randomisation-check-data.html",   Table:"exceed-progress",task_name:"Randomisation Check"};
     m[p+"progress-new-form"]      ={url:H+"/form-grid/backend/progress-new-form.html",   Table:"exceed-progress",task_name:"Progress form"};
     m[p+"progress-mod-form"]      ={url:H+"/form-grid/backend/progress-mod-form.html",   Table:"exceed-progress",task_name:"Progress form"};
