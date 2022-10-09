@@ -74,8 +74,7 @@
     m[p+"lct-bl-form"]      ={url:H+"/form-grid/questionnaires/neurocog/letter-cancellation-form.html",Table:"exceed-lct-bl", task_name:"Baseline - Letter Cancellation Task" };
     m[p+"nback2-bl-data"]      ={url:H+"/form-grid/questionnaires/neurocog/nback2-data.html",Table:"exceed-nback2-bl",form_module:"nback2-bl-form", task_name:"Baseline - N-Back 2" };
     m[p+"nback2-bl-form"]      ={url:H+"/form-grid/questionnaires/neurocog/nback2-form.html",Table:"exceed-nback2-bl", task_name:"Baseline - N-Back 2" };
-    m[p+"isi-bl-data"]      ={url:H+"/form-grid/questionnaires/isi-data.html",Table:"exceed-isi-bl",form_module:"isi-bl-form", task_name:"Baseline - Insomnia Severity Index" };
-    m[p+"isi-bl-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"exceed-isi-bl", task_name:"Baseline - Insomnia Severity Index" };
+    m[p+"isi-bl-data"]      ={url:H+"/form-grid/questionnaires/isi-bl-data.html",Table:"exceed-screening", task_name:"Baseline - Insomnia Severity Index" };
     m[p+"psqi-bl-data"]      ={url:H+"/form-grid/questionnaires/psqi-data.html",Table:"exceed-psqi-bl",form_module:"psqi-bl-form", task_name:"Baseline - Pittsburgh Sleep Quality Index" };
     m[p+"psqi-bl-form"]      ={url:H+"/form-grid/questionnaires/psqi-form.html",Table:"exceed-psqi-bl", task_name:"Baseline - Pittsburgh Sleep Quality Index" };
     m[p+"ess-bl-data"]      ={url:H+"/form-grid/questionnaires/ess-data.html",Table:"exceed-ess-bl",form_module:"ess-bl-form", task_name:"Baseline - Epworth Sleepiness Scale" };
