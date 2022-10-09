@@ -190,7 +190,8 @@
                 // -------------------------------------------------
                 var param = [];
 				var url='https://prod-02.australiasoutheast.logic.azure.com:443/workflows/df2a2d91ca08424b90e736613ce32f2c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vfTTSvvitkv-ttO0fv656_ZJCwSyQohXsgSObvsQR8g';
-				var sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/f0bf0fd80b8745eb995fe0e3b3c15987/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=8qkbA-R9P0lArdlbWBYIzKCqgiFv1eXJYJ_49X3QmZ8';
+                var sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/f0bf0fd80b8745eb995fe0e3b3c15987/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=8qkbA-R9P0lArdlbWBYIzKCqgiFv1eXJYJ_49X3QmZ8'
+
                 console.log("DATA: "+JSON.stringify(data))
 				param.push(data.email); //0
 				param.push(data.first_name); //1
