@@ -594,12 +594,11 @@
                     }
                     else{
                         if(timepoint=='w3') res.result[0].Data.w3='10';
-                        else if(timepoint=='w8') res.result[0].Data.w8='10';
                         records=res.result[0]
+                        if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1}); }
+                        else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1});}
                     }
                 })
-                if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1}); }
-                else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1});}
 				jQuery.ajaxSetup({async:true});
             }
 

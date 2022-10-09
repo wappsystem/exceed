@@ -46,12 +46,12 @@
 		VmInclude:__HOST__/assets/js/shared-form.js
 		//-------------------------------------
 		var intervals = [];
-		$('#header_0').hide();
-		$('body').css('background','white');
 		//------------------------------------
 		var this_module=$vm.module_list[$vm.vm['__ID'].name];
 		//------------------------------------
 		$('#D__ID').on('load',function(){
+			$('#header').hide();
+			$('body').css('background','white');
 			$('#header').hide();
 			$('#footer').hide();
 			$('#participant_div__ID').hide()
@@ -107,6 +107,7 @@
 					return;
 				}
 				else { 
+					$('#header').show();
 					$vm.refresh=1;
 					window.history.go(-1);
 				}

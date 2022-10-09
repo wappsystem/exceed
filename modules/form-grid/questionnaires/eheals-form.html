@@ -280,12 +280,6 @@
                 before_submit(data, index);
             }
             //---------------------------------------
-            m.after_insert = function (data,index) {
-                var P_record=$vm.vm['__ID'].input.participant_record;
-                if (m.prefix == undefined) { $vm.load_module('progress-new-form', '', {participant_record:P_record,progress:'10',time:'bl'}); }
-                else {$vm.load_module(m.prefix + 'progress-new-form', '', {participant_record:P_record,progress:'10',time:'bl'});}
-            }
-            //-------------------------------------
         }
     </script>
     <style>

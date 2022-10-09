@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 row_participant__ID">
                             <label class=''><span class=''>Group</span>
-                                <input type=text class=form-control name=Group readonly>
+                                <input type=text class=form-control name=group readonly>
                             </label>
                         </div>
                         <div class="col-sm-12 col-lg-4 row_participant__ID">
@@ -95,8 +95,8 @@
                     $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
                         if (res.result.length != 0) {
                             //console.log(JSON.stringify(res.result[0].Data.Group))
-                            data.Group=res.result[0].Data.Group;
-                            index.I3=res.result[0].Data.Group;
+                            data.group=res.result[0].Data.group;
+                            index.I3=res.result[0].Data.group;
                             //if(index.I3=="Control") data.Start_Date=index.I2;
                         }
                     });
@@ -129,7 +129,7 @@
                     }
                     else{
                         record=res.result[0]
-                        record.Data.group=data.Group;
+                        record.Data.group=data.group;
                         //record.Data.Start_date=index.result.I2;
                         record.Data.access_code=data.access_code;
                         //console.log(JSON.stringify(record))

@@ -101,7 +101,9 @@
                     })
                     jQuery.ajaxSetup({async:true});
 		        }
+				$li.addClass('done');
 		        if(status[m].rid==0){
+					$li.removeClass('done');
 					$li.removeClass('li_not_allowed__ID')
 					$li.addClass('li_allowed__ID')
 		            var task_name=$li.html();
@@ -158,6 +160,7 @@
 	.li_allowed__ID{
 		color:rgb(255, 255, 255)!important;
 		cursor:pointer!important;
+		background-color: #625283!important;
 	}
     /*VmInclude:__HOST__/assets/css/style.css*/
     /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/

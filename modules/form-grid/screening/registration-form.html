@@ -82,7 +82,7 @@
                     <div class="text-center">
                         Continue ..<br><br>
                         <i>Click on the link below to continue. Save the link to your favorits so you can easlily find it, if you need to return to the quesstionnaires.</i><br><br>
-                        <a id=asteroind_registration__ID target="_blank" style="color:#000;" ><span style='font-size:1.2rem;font-weight:bold;' id=refnum__ID></span></a>
+                        <a id=exceed_registration__ID target="_blank" style="color:#000;" ><span style='font-size:1.2rem;font-weight:bold;' id=refnum__ID></span></a>
                         <br><br>
                     </div>
                 </div>
@@ -156,22 +156,16 @@
                 }
             })
             //---------------------------------------
-            m.before_submit=function(data,index){
-                data.List='demographic-form,psqi-bl-form,gad7-bl-form,ffs-bl-form,ess-bl-form,bc-cci-bl-form,eq-5d-bl-form,eheals-bl-form'
-            }
-            //---------------------------------------
-           /* m.after_insert = function (data,index) {
+            m.after_insert = function (data,index) {
                 var db=""; 
                 //console.log(JSON.stringify(index) + " - "+index.result.ops[0].UID)
                 if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
                 var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
                 var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
-                var u="?username="+index.result.ops[0].UID+"&password="+$('#F__ID input[name=_Password').val();
-                $('#id__ID').text(index.result.ops[0].UID);
-                $('#password__ID').text($('#F__ID input[name=_Password').val());
+                var u="?username="+index.result.ops[0].UID+"&password="+index.result.ops[0].Data._Password;
                 var q_url=$vm.hosting_path+"/bl_quest.html"+u+db+d+p;
                 $('#refnum__ID').text(q_url);
-                $('#asteroind_registration__ID').attr("href",q_url)
+                $('#exceed_registration__ID').attr("href",q_url)
                 $('#link__ID').show();
 
                 //- UPDATE Screening record with participant UID -----
@@ -180,7 +174,7 @@
                 datascreen.Participant=index.result.ops[0].UID;
                 datascreen.Participant_uid=index.result.ops[0].UID;
                 var tables=$vm.module_list["screening-data"].Table; 
-                console.log("data: "+JSON.stringify(datascreen))             
+                //console.log("data: "+JSON.stringify(datascreen))             
                 $vm.request({cmd:'update',id:rid,table:tables,data:datascreen,index:index},function(res){
                     //-----------------------------
                     if(res.status=="lk"){
@@ -195,8 +189,9 @@
                 });
                 // -------------------------------------------------
                 var param = [];
-				var url='https://prod-16.australiasoutheast.logic.azure.com:443/workflows/0b629b773bb041b4a7d3c32e306f26ea/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OeUNihtrWSKL8eSpsFgINO9DVoWBy5l0C4RmJYACOZE';
-				var sms_url='https://prod-03.australiasoutheast.logic.azure.com:443/workflows/eed8c7b103234b02a09a703cc6f501f2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Z-qKIOUSRbMY-i6_BS32lbZy30kcoPFAZPfh15uGdIE';
+				var url='https://prod-02.australiasoutheast.logic.azure.com:443/workflows/df2a2d91ca08424b90e736613ce32f2c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vfTTSvvitkv-ttO0fv656_ZJCwSyQohXsgSObvsQR8g';
+				var sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/f0bf0fd80b8745eb995fe0e3b3c15987/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=8qkbA-R9P0lArdlbWBYIzKCqgiFv1eXJYJ_49X3QmZ8';
+                console.log("DATA: "+JSON.stringify(data))
 				param.push(data.email); //0
 				param.push(data.first_name); //1
 				param.push(q_url); //2
@@ -238,6 +233,7 @@
                 //SMS alert
 				//------------------------------------
                 if(param[5]=='1' || param[5]=='3'){
+                    console.log("Sending sms")
                     var sms_data = {
                         "emailaddress": "" + param[4].replace(/-/g,'') + "@e2s.directsms.com.au",
                         "first_name": "" + param[1] + "",
@@ -259,7 +255,7 @@
                     sms_xmlHttp.send(JSON.stringify(sms_data));
                     //alert("Registration sms sent" +JSON.stringify(sms_data))
 				}
-			}*/
+			}
             //--------------------------------
 
         }

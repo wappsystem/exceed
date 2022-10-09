@@ -83,8 +83,6 @@ Using the guide above, press the number on your keypad corresponding to the rand
 		VmInclude:__COMPONENT__/f/form.01.js
 		VmInclude:__HOST__/assets/js/shared-form.js
 		//-------------------------------------
-		$('#header_0').hide();
-		$('body').css('background','white');
 		var intervals = [];
 		//------------------------------------
 		var this_module=$vm.module_list[$vm.vm['__ID'].name];
@@ -92,6 +90,8 @@ Using the guide above, press the number on your keypad corresponding to the rand
 		var load2=m.load;
 		m.load=function(){
 			load2();
+			$('#header').hide();
+			$('body').css('background','white');
 			$('#thirdparty_container__ID').css('height',$vm.min_height);
 			third_party("thirdparty_container__ID",data_process);
 		}
@@ -138,6 +138,8 @@ Using the guide above, press the number on your keypad corresponding to the rand
 					return;
 				}
 				else { 
+					//after_insert(m.Table);
+					$('#header').show();
 					$vm.refresh=1;
 					window.history.go(-1);
 				}
@@ -265,6 +267,31 @@ Using the guide above, press the number on your keypad corresponding to the rand
 			//------------------------------------
 		}
 		//------------------------------------
+		var after_insert = function (index) {
+			console.log(index)
+			var timepoint=(index).split('-');
+			timepoint=timepoint[timepoint.length-1];
+			console.log(timepoint)
+			var records={};
+			jQuery.ajaxSetup({async:false});
+			$vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
+				if(res.permission==false){
+					alert("No permission");
+					return;
+				}
+				if(res.result.length==0){
+				}
+				else{
+					if(timepoint=='w16') res.result[0].Data.w16='1';
+					records=res.result[0]
+					if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'1',timepoint:timepoint,goback:1}); }
+					else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'1',timepoint:timepoint,goback:1});}
+				}
+			})
+			jQuery.ajaxSetup({async:true});
+			$('#header').show();
+
+		}
 	}
 </script>
 <style>

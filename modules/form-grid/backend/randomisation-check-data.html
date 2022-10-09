@@ -9,7 +9,7 @@
             //-------------------------------------
             $('#new__ID').hide();
             //-------------------------------------
-            var fields="Progress|bl,Group";
+            var fields="Progress|bl,group";
             m.fields="Participant_ID|Participant,"+fields+"";
             //-------------------------------------
             m.cell_render=function(records,I,field,td){
@@ -25,7 +25,7 @@
                             td.html("")
                         }
                     break;
-                    case 'Group':
+                    case 'group':
                         if(records[I].Data.bl=='10' && records[I].Data.group==""){
                             html="<u style='cursor:pointer'>Randomise</u>"
                         }

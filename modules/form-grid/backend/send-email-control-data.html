@@ -9,7 +9,7 @@
             //-------------------------------------
             $('#title__ID').text('Participants');            
             //-------------------------------------
-            var fields="_Participant_ID|Participant,group,first_name,last_name,phone,email,contact,access_code,bl,Start_Date,w0_email,w3_email,w5_email,w8_email,w8,w8_rem_1,w8_rem_2,w16_email,w16,w16_rem_1,w16_rem_2,w26_email,w26,w26_rem_1,w26_rem_2,ac_email";
+            var fields="_Participant_ID|Participant,group,first_name,last_name,phone,email,contact,access_code,Start_Date,w0_shm_1,w3_shm_2,w3_email,w3,w3_rem_1,w3_rem_2,w5_shm_3,w8_email,w8,w8_rem_1,w8_rem_2,w16_email,w16,w16_rem_1,w16_rem_2,ac_email";
             m.fields=""+fields+",Submit_date,Submitted_by,_Delete";
             //-------------------------------------
             var today;
@@ -49,11 +49,25 @@
                             td.html("")
                         }
                     break;
+                    case 'w3':
+                        var v=records[I].Data.w3;
+                        if(v=='10'){
+                            td.html("<i class='fa fa-smile'></i>");
+                            td.css('color','green')
+                        }
+                        else{
+                            td.html("")
+                        }
+                    break;
                     case 'w8':
                         var v=records[I].Data.w8;
                         if(v=='10'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
+                        }
+                        else if(v=='1'){
+                            td.html("<i class='fa fa-meh'></i>");
+                            td.css('color','orange')
                         }
                         else{
                             td.html("")
@@ -61,16 +75,6 @@
                     break;
                     case 'w16':
                         var v=records[I].Data.w16;
-                        if(v=='10'){
-                            td.html("<i class='fa fa-smile'></i>");
-                            td.css('color','green')
-                        }
-                        else{
-                            td.html("")
-                        }
-                    break;
-                    case 'w26':
-                        var v=records[I].Data.w26;
                         if(v=='10'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
@@ -98,14 +102,14 @@
                                 $vm.load_module_v2('send-email','',{record:records[I],email:'ac_email',title:'Send Access Code'})
                             })
                     break;
-                    case 'w0_email':
+                    case 'w0_shm_1':
                         var s=records[I].Data["Start_Date"]
                         if(s!='' && s!=null && s!=undefined){
                             s=s.substring(0,10);
                             var dt1=$vm.date_yyyymmdd_parse(s);
                             var dt2=$vm.date_add_days(dt1,0);
                             var color='';
-                            s=records[I].Data['w0_email'];
+                            s=records[I].Data['w0_shm_1'];
                             if(s!='' && s!=null && s!=undefined){
                                 html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
                                 html+=' <i style="color:green;font-weight: 900" class="far fa-check-circle"></i>';
@@ -116,7 +120,30 @@
                             }
                             td.html(html);
                             td.find('u').on('click',function(){
-                                $vm.load_module_v2('send-email','',{record:records[I],email:'w0_email',title:'Week 0'})
+                                $vm.load_module_v2('send-email','',{record:records[I],email:'w0_shm_1',title:'Week 0 - Sleep Health Module 1'})
+                            })
+                        }
+                    break;
+                    case 'w3_shm_2':
+                        var s=records[I].Data["Start_Date"]
+                        if(s!='' && s!=null && s!=undefined){
+                            s=s.substring(0,10);
+                            var dt1=$vm.date_yyyymmdd_parse(s);
+                            var dt2=$vm.date_add_days(dt1,21);
+                            var color='';
+                            console.log(dt2-today)
+                            s=records[I].Data['w3_shm_2'];
+                            if(s!='' && s!=null && s!=undefined){
+                                html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                html+=' <i style="color:green;font-weight: 900" class="far fa-check-circle"></i>';
+                            }
+                            else{
+                                if(dt2 > today) html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                else html="<u style='cursor:pointer;color:red'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                            }
+                            td.html(html);
+                            td.find('u').on('click',function(){
+                                $vm.load_module_v2('send-email','',{record:records[I],email:'w3_shm_2',title:'Week 3 - Sleep Health Module 2'})
                             })
                         }
                     break;
@@ -143,14 +170,14 @@
                             })
                         }
                     break;
-                    case 'w5_email':
+                    case 'w3_rem_1':
                         var s=records[I].Data["Start_Date"]
                         if(s!='' && s!=null && s!=undefined){
                             s=s.substring(0,10);
                             var dt1=$vm.date_yyyymmdd_parse(s);
-                            var dt2=$vm.date_add_days(dt1,35);
+                            var dt2=$vm.date_add_days(dt1,26);
                             var color='';
-                            s=records[I].Data['w5_email'];
+                            s=records[I].Data['w3_rem_1'];
                             if(s!='' && s!=null && s!=undefined){
                                 html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
                                 html+=' <i style="color:green;font-weight: 900" class="far fa-check-circle"></i>';
@@ -161,7 +188,51 @@
                             }
                             td.html(html);
                             td.find('u').on('click',function(){
-                                $vm.load_module_v2('send-email','',{record:records[I],email:'w5_email',title:'Week 5'})
+                                $vm.load_module_v2('send-email','',{record:records[I],email:'w3_rem_1',title:'Week 3 Reminder 1'})
+                            })
+                        }
+                    break;
+                    case 'w3_rem_2':
+                        var s=records[I].Data["Start_Date"]
+                        if(s!='' && s!=null && s!=undefined){
+                            s=s.substring(0,10);
+                            var dt1=$vm.date_yyyymmdd_parse(s);
+                            var dt2=$vm.date_add_days(dt1,31);
+                            var color='';
+                            s=records[I].Data['w3_rem_2'];
+                            if(s!='' && s!=null && s!=undefined){
+                                html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                html+=' <i style="color:green;font-weight: 900" class="far fa-check-circle"></i>';
+                            }
+                            else{
+                                if(dt2 > today) html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                else html="<u style='cursor:pointer;color:red'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                            }
+                            td.html(html);
+                            td.find('u').on('click',function(){
+                                $vm.load_module_v2('send-email','',{record:records[I],email:'w3_rem_2',title:'Week 3 Reminder 2'})
+                            })
+                        }
+                    break;
+                    case 'w5_shm_3':
+                        var s=records[I].Data["Start_Date"]
+                        if(s!='' && s!=null && s!=undefined){
+                            s=s.substring(0,10);
+                            var dt1=$vm.date_yyyymmdd_parse(s);
+                            var dt2=$vm.date_add_days(dt1,35);
+                            var color='';
+                            s=records[I].Data['w5_shm_3'];
+                            if(s!='' && s!=null && s!=undefined){
+                                html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                html+=' <i style="color:green;font-weight: 900" class="far fa-check-circle"></i>';
+                            }
+                            else{
+                                if(dt2 > today) html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                else html="<u style='cursor:pointer;color:red'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                            }
+                            td.html(html);
+                            td.find('u').on('click',function(){
+                                $vm.load_module_v2('send-email','',{record:records[I],email:'w5_shm_3',title:'Week 5 - Sleep Health Module 3'})
                             })
                         }
                     break;

@@ -30,7 +30,11 @@
 									</fieldset>
 								</div>
 							</div>
-							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Send Email</button>
+							<div class="form-group">
+								<div class="questiongroup ">
+        							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Send Email</button>
+                                </div>
+                            </div>
 						</form>
 					</div>
 				</div>
@@ -86,28 +90,43 @@
 				var url='';
 				var sms_url='';
 				switch(m.input.email){
-                    case 'w0_email':
+                    case 'ac_email':
+                        if(group=='Treatment'){
+                            console.log("Sending access code")
+                            q_url=$vm.module_list['ac'].url;
+                            url='https://prod-10.australiasoutheast.logic.azure.com:443/workflows/95040a63a7074ae19d3602318925312d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MMdiTcF0dLts30rxuiFuh41OvPquTR22cHcBltRNiuc';
+    					 	sms_url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/9b58b0010a274c00812eb37adb2510ae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=N2FvyC4YwdIaCsVnVv0IOSacHVofNh0jaq_vXYudcrw';
+                        }
+                    break;
+                    case 'w0_shm_1':
                         if(group=='Control'){
+                            //OK
                             //$vm.alert('Send Sleep Health Education Module 1 Email')
                             q_url=$vm.module_list['shm1-w0'].url;
-                            url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/967093c2ea954c84af95649edb650875/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=NSHciFYI-UA0ssd0GvvY1l-e5_u-nikQVGXwg3tfdWQ';
-    					 	sms_url='https://prod-23.australiasoutheast.logic.azure.com:443/workflows/d8ef997811084931a0e7000b6475cb5e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CQtU5SIPDLQxELJJewDrDIiyCMjjDMfsLu4KMvAOPpk';
+                            url='https://prod-24.australiasoutheast.logic.azure.com:443/workflows/dc511733756c484db5bdee6ca32ca7da/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=G2-IyVgK37a5uPvxC4s1UXa9J2Q9bnSNMKdBiZ48u2s';
+    					 	sms_url='https://prod-00.australiasoutheast.logic.azure.com:443/workflows/7d2b2f0d3f054368bea344d81d5c5c4c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=poLsecm1c-10PLMh1e13Jd-C2Hmh1LIRBdgXXDyjifM';
                         }
-                        else{
+                    break;
+                    case 'w3_shm_2':
+                        if(group=='Control'){
+                            //OK
+                            //$vm.alert('Send Sleep Health Education Module 2 Email')
+                            q_url=$vm.module_list['shm2-w3'].url;
+                            url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/e14ad809e9be47218671b61bb3e58019/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wckgH65FkgyvVOv7eRnPZ5V9ArexTiwBxgXSzDSbua4'
+                            sms_url='https://prod-24.australiasoutheast.logic.azure.com:443/workflows/fd58eb6a3d6741b38b1a1a8882a9dd6f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=22xYGKwDdbllur6jkFJcaiO_not0XM5PYSklbyHlqU8'
                         }
                     break;
                     case 'w3_email':
                         if(group=='Control'){
-                            //$vm.alert('Send Sleep Health Education Module 2 Email')
-                            q_url=$vm.module_list['shm2-w3'].url;
-                            url='https://prod-13.australiasoutheast.logic.azure.com:443/workflows/b43204cc935f4443b21a6809f6b9811d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qifncgiTooOZUqOBuE-AP3z6TTRCaYaAWKYLEE6DwgY'
-                            sms_url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/0ac176f9a6074d2780b8945722755952/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0kNfJJt8xwmSLjeTc9WuTiMDttnAFF4HT7sKjJGMPYc'
+                            //OK
+                            q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
+                            url='https://prod-12.australiasoutheast.logic.azure.com:443/workflows/8591bebd51e342b498acea0b31011c88/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fqV-rRuvvq22FfxPGEpYiJn1yIwYRspTIoq1KKkVyEE'
+                            sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/c6334a1b6a4a4a36a4d64106524de972/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OOHAbF5Zvy_Cm92lp8L4DgS_MP4o8GKhyqPx1fL1qkc'
                         }
                         else{
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
-                            //$vm.alert('Send Adverse event check-in link: '+q_url)
-                            url='https://prod-23.australiasoutheast.logic.azure.com:443/workflows/a1a58271e67c45ae9096e4d6ef84deed/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4UF2y7kHuoG1WgQMZeJOnwN1SMdOn6xFZdaKEJaaiq8'
-    					 	sms_url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/b55b92a7bb7f428086077d9cd1d73a64/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cgm3PgZV44Iz1MR9lozb1oDabNMHD8EbTyVTL9Sjx6s';
+                            url='https://prod-05.australiasoutheast.logic.azure.com:443/workflows/8cd5575a4a2f4d0f813f405118253314/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4GApilPVMF33esHANqfXGrtfHnJChAyxWgqvwelnAUY'
+    					 	sms_url='https://prod-25.australiasoutheast.logic.azure.com:443/workflows/9cb4dbf6bcbe4936acefc1395500d796/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Z5BIDX9DM1TGD8AK4-aT8jx2uvj8H_rDYUubLuRPe4g';
                         }
                     break;
                     case 'w3_rem_1':
@@ -116,8 +135,8 @@
                         else{
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
                             //$vm.alert('Send Reminder 1 Adverse event check-in link: '+q_url)
-                            url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/7289c890ba77415984238b00877c3725/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=M3QO3yY8OA_63GFyWaBY57QTur3Z-Tib3qDmMxnekAg';
-    					 	sms_url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/02e5fbe56ec74222b53e04d456f39f1f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=7szIvPoqpMA9222G-TVF3_17JYJ7_SQjZ-K9awuXuKA';
+                            //url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/1c813ae80b4247dd8d5cee95babe3f18/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MG9sqX33oIeZ_n-s-whPjSuqC17MeTkV_q_ldOWEMHU';
+    					 	//sms_url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/02e5fbe56ec74222b53e04d456f39f1f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=7szIvPoqpMA9222G-TVF3_17JYJ7_SQjZ-K9awuXuKA';
                         }
                     break;
                     case 'w3_rem_2':
@@ -126,127 +145,84 @@
                         else{
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
                             //$vm.alert('Send Reminder 2 Adverse event check-in link: '+q_url)
-                            url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/ea7677884cc144b98330aa9566b98611/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5L4OZ9qU2PFBy2Dt-IC5TXqwbIVA0Y0s6j1ZrNjCKWA';
-    					 	sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/a53471b0273e46deb23cd5697beaed42/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wgz6wO8mPSgkcQqBO1UvaYPd3CcyIxxr5A-qTvI2uQ4';
+                            //url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/ea7677884cc144b98330aa9566b98611/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5L4OZ9qU2PFBy2Dt-IC5TXqwbIVA0Y0s6j1ZrNjCKWA';
+    					 	//sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/a53471b0273e46deb23cd5697beaed42/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wgz6wO8mPSgkcQqBO1UvaYPd3CcyIxxr5A-qTvI2uQ4';
                         }
                     break;
-                    case 'w5_email':
+                    case 'w5_shm_3':
                         if(group=='Control'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
+                            //OK
                             q_url=$vm.module_list['shm3-w5'].url;
-                            url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/c5eac82f5f4d4bd6b8a0a90919211a98/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lNyBk_m1vZ2pmwLS6fsjERlBDn62vq2cRo9_RmOQU9M'
-                            sms_url='https://prod-11.australiasoutheast.logic.azure.com:443/workflows/785282ae03894484a54d90fef64bf485/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=jCFwWw_0s4j3gzHHpyEAFSILuAzw5dhdJP7AxpzQp5g'
-                        }
-                        else{
+                            url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/1c813ae80b4247dd8d5cee95babe3f18/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MG9sqX33oIeZ_n-s-whPjSuqC17MeTkV_q_ldOWEMHU'
+                            sms_url='https://prod-12.australiasoutheast.logic.azure.com:443/workflows/5c590db2a5bf4ee9a6f849f2817f284f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Jru_uvmzzc6DZ3WqNLSjGPhwgDmUx1ftMDu_6090JE0'
                         }
                     break;
                     case 'w8_email':
                         q_url=$vm.module_list['oq-w8'].url+u+db+d+p;
                         if(group=='Control'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
-                            url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/0debf489282e4b4ab5c17f85fcebe3fc/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=KgGBP_VTMnb4sM1lt2QnYMdiazSqIwfimmtitTKd4-I'
-                            sms_url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/faf0a6493820420ba045f66a229348df/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=t8FBK6J8oGBac1jvgT7AD5kDNDL5D_QUSl1R5EVq978'
+                            url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/42e05e88ec7644e3bc71c64a662b1c7f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lPMzKGpxJRLNHnxIdmrtYItnSQPdNNpvt8kOkamx6jQ'
+                            sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/7e5d556af0714be09d0a6d325c4f178f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4jh5L5XenpWgQrjkM0kMgUCoIHJisQ614mBIQH_7lT8'
                         }
                         else{
                             //$vm.alert('Send Week 8 questionnaires link: '+q_url)
-                            url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/0debf489282e4b4ab5c17f85fcebe3fc/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=KgGBP_VTMnb4sM1lt2QnYMdiazSqIwfimmtitTKd4-I';
-                            sms_url='https://prod-30.australiasoutheast.logic.azure.com:443/workflows/dd4167d59b4d4102887d6cf75eedffc0/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rIjIRC-uyfKj7Pw1AGzXXIse_HIbsZgQQAHRjZ-_B8A';
+                            url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/54bc269e06784ab2a311e947a86dbb70/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OANOOgRe3GBRyr1QFpc__4ZqwHr3GdzVuIDqfmSWbEI';
+                            sms_url='https://prod-27.australiasoutheast.logic.azure.com:443/workflows/ab5db37565b0495189eb55e44ff1177f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HycOjHoR6EpprhQFKvMcw9H9l0q96ABaY4V1EnRLrBA';
                         }
                     break;
                     case 'w8_rem_1':
                         q_url=$vm.module_list['oq-w8'].url+u+db+d+p;
                         //$vm.alert('Send Week 8 Reminder 1: '+q_url)
                         if(group=='Control'){
-                            url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/b13eba08b9f0457fa6f8897a49d752bd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_YLK4lIASZbJZ1JjOkJu3sb3K8hoZYw3qxS6e_Cl-kQ';
-    					 	sms_url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/92d533eb60374103b1b6b9c846f7b121/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=oqxTNNBMftIw1l4nEt8qVVAHzDUaCvISJNr359nOpXE';
+                         //   url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/b13eba08b9f0457fa6f8897a49d752bd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_YLK4lIASZbJZ1JjOkJu3sb3K8hoZYw3qxS6e_Cl-kQ';
+    					 //	sms_url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/92d533eb60374103b1b6b9c846f7b121/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=oqxTNNBMftIw1l4nEt8qVVAHzDUaCvISJNr359nOpXE';
                         }
                         else {
-					 	    url='https://prod-24.australiasoutheast.logic.azure.com:443/workflows/64c5a36a9a2a475cba165ce3c8d93ddd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=DjsmhP-WpGvPoDa16movDwZezopdooMH4oiUl-gb4fY';
-					 	    sms_url='https://prod-03.australiasoutheast.logic.azure.com:443/workflows/5fa2a7d7dc18459fbc031dc688c68568/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qra4evr4zD7HAuAznJ3jkjdivPOsFopdZCKE_KhMTyA';
+					 	 //   url='https://prod-24.australiasoutheast.logic.azure.com:443/workflows/64c5a36a9a2a475cba165ce3c8d93ddd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=DjsmhP-WpGvPoDa16movDwZezopdooMH4oiUl-gb4fY';
+					 	 //   sms_url='https://prod-03.australiasoutheast.logic.azure.com:443/workflows/5fa2a7d7dc18459fbc031dc688c68568/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qra4evr4zD7HAuAznJ3jkjdivPOsFopdZCKE_KhMTyA';
                         }
                     break;
                     case 'w8_rem_2':
                         q_url=$vm.module_list['oq-w8'].url+u+db+d+p;
                         //$vm.alert('Send Week 8 Reminder 2: '+q_url)
                         if(group=='Control'){
-                            url='https://prod-26.australiasoutheast.logic.azure.com:443/workflows/6bec7e7be27b4784aafdf6c6d5925c42/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=u2AzMTQPOVBAtAA3PecQSq5snqcGLjTTq27W_xm2KXw';
-                            sms_url='https://prod-23.australiasoutheast.logic.azure.com:443/workflows/ddaeeabc47ba42018361014a7849939b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=r4TzRANYcyxPN45OPhVF9k9FJswFhYEPq_3v4eh1naQ';
+                        //    url='https://prod-26.australiasoutheast.logic.azure.com:443/workflows/6bec7e7be27b4784aafdf6c6d5925c42/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=u2AzMTQPOVBAtAA3PecQSq5snqcGLjTTq27W_xm2KXw';
+                        //    sms_url='https://prod-23.australiasoutheast.logic.azure.com:443/workflows/ddaeeabc47ba42018361014a7849939b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=r4TzRANYcyxPN45OPhVF9k9FJswFhYEPq_3v4eh1naQ';
                         }
                         else{
-                            url='https://prod-03.australiasoutheast.logic.azure.com:443/workflows/a5e74be8d0ba4a4d9ed5770344919d39/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=l2ZjzS8uwJP40AyrywT-IaTEnnWagsrN4bjZMkBNK94';
-                            sms_url='https://prod-16.australiasoutheast.logic.azure.com:443/workflows/57b0adee44bf4ef3a95c76b21bb5ed58/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fb2hObTqMney3fwaRwkQtirub3PqkNRLrxgGsXDmff0';
+                         //   url='https://prod-03.australiasoutheast.logic.azure.com:443/workflows/a5e74be8d0ba4a4d9ed5770344919d39/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=l2ZjzS8uwJP40AyrywT-IaTEnnWagsrN4bjZMkBNK94';
+                         //   sms_url='https://prod-16.australiasoutheast.logic.azure.com:443/workflows/57b0adee44bf4ef3a95c76b21bb5ed58/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fb2hObTqMney3fwaRwkQtirub3PqkNRLrxgGsXDmff0';
                         }
                     break;
                     case 'w16_email':
                         q_url=$vm.module_list['oq-w16'].url+u+db+d+p;
                         //$vm.alert('Send Week 16 questionnaires link: '+q_url)
-                        if(group=='Control'){
-                            url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/6ff6a1caccce45699d7322475453d08f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qinMSRBO-29fUFn6b3drVd4qHWFSr2IvEq15Hcqfaqo';
-                            sms_url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/45ee85f9ba8746aebc069cff7de04ad4/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=InDi7L0sta8mLHPN109V8rUx_9u5UXHtSTyXcFknn1U';
-                        }
-                        else{
-                            url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/6ff6a1caccce45699d7322475453d08f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qinMSRBO-29fUFn6b3drVd4qHWFSr2IvEq15Hcqfaqo';
-                            sms_url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/45ee85f9ba8746aebc069cff7de04ad4/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=InDi7L0sta8mLHPN109V8rUx_9u5UXHtSTyXcFknn1U';
-                        }
+                        url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/95dd51b690c54fdbad1e2dc2a8a69aae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qLTIhalCOsvKb5ThZHsXeJ-GLT7i4eeMlhkGbWDQBsA';
+                        sms_url='https://prod-18.australiasoutheast.logic.azure.com:443/workflows/7e1f3f13820b4301b655213002b091ff/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zhFADncEtg3rRikcEeFoB4OajLR02fi7nIpEHe8iQa8';
                     break;
                     case 'w16_rem_1':
                         q_url=$vm.module_list['oq-w16'].url+u+db+d+p;
                         //$vm.alert('Send Week 16 Reminder 1: '+q_url)
                         if(group=='Control'){
-                            url='https://prod-08.australiasoutheast.logic.azure.com:443/workflows/0d10ab013c964501bf0dfe00c24f4110/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LtNuSDw3HLtSMiXh2X8zf-2Hai8K6L2YoDWpSE5LfKk';
-                            sms_url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/54b2ff6a68fc4bbea8cf6a2e960c4f33/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gPoSzZljJJgeuEqIodVg2l8ruS5I7uuXsmtAQSXYk2Y';
+                        //    url='https://prod-08.australiasoutheast.logic.azure.com:443/workflows/0d10ab013c964501bf0dfe00c24f4110/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LtNuSDw3HLtSMiXh2X8zf-2Hai8K6L2YoDWpSE5LfKk';
+                        //    sms_url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/54b2ff6a68fc4bbea8cf6a2e960c4f33/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gPoSzZljJJgeuEqIodVg2l8ruS5I7uuXsmtAQSXYk2Y';
                         }
                         else{
-                            url='https://prod-08.australiasoutheast.logic.azure.com:443/workflows/0d10ab013c964501bf0dfe00c24f4110/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LtNuSDw3HLtSMiXh2X8zf-2Hai8K6L2YoDWpSE5LfKk';
-                            sms_url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/54b2ff6a68fc4bbea8cf6a2e960c4f33/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gPoSzZljJJgeuEqIodVg2l8ruS5I7uuXsmtAQSXYk2Y';
+                        //    url='https://prod-08.australiasoutheast.logic.azure.com:443/workflows/0d10ab013c964501bf0dfe00c24f4110/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LtNuSDw3HLtSMiXh2X8zf-2Hai8K6L2YoDWpSE5LfKk';
+                        //    sms_url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/54b2ff6a68fc4bbea8cf6a2e960c4f33/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gPoSzZljJJgeuEqIodVg2l8ruS5I7uuXsmtAQSXYk2Y';
                         }
                     break;
                     case 'w16_rem_2':
                         q_url=$vm.module_list['oq-w16'].url+u+db+d+p;
                         //$vm.alert('Send Week 16 Reminder 2: '+q_url)
                         if(group=='Control'){
-                            url='https://prod-00.australiasoutheast.logic.azure.com:443/workflows/abeead73577d4888b31b01bff22d9ab8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6dDA99gq9udg7EBhU_g8fMBJ6Geciu2UOJfOWBEmu3Y';
-                            sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/d9678e0091224cb1976fb8ee9c168cce/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O33kfii4JkcxPWg702uWFsyCBm3ZmNiZtyyL2W2yh20';
+                        //    url='https://prod-00.australiasoutheast.logic.azure.com:443/workflows/abeead73577d4888b31b01bff22d9ab8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6dDA99gq9udg7EBhU_g8fMBJ6Geciu2UOJfOWBEmu3Y';
+                        //    sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/d9678e0091224cb1976fb8ee9c168cce/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O33kfii4JkcxPWg702uWFsyCBm3ZmNiZtyyL2W2yh20';
                         }
                         else{
-                            url='https://prod-00.australiasoutheast.logic.azure.com:443/workflows/abeead73577d4888b31b01bff22d9ab8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6dDA99gq9udg7EBhU_g8fMBJ6Geciu2UOJfOWBEmu3Y';
-                            sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/d9678e0091224cb1976fb8ee9c168cce/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O33kfii4JkcxPWg702uWFsyCBm3ZmNiZtyyL2W2yh20';
-                        }
-                    break;
-                    case 'w26_email':
-                        q_url=$vm.module_list['oq-w26'].url+u+db+d+p;
-                        //$vm.alert('Send Week 26 questionnaires link: '+q_url)
-                        if(group=='Control'){
-                            url='https://prod-26.australiasoutheast.logic.azure.com:443/workflows/4661e932510245a18d941e5fb0d787c3/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HIjlB9ke7P4WU8AYd4fI_ZjzxJ9GGjOr4XYA46joGRg';
-                            sms_url='https://prod-28.australiasoutheast.logic.azure.com:443/workflows/a3b4624292974b0fb2eeacabd23500fe/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1vJchO8dHtbL8V2P7Wo__yasg6Nr_McdyFDluYcEIeE';
-                        }
-                        else{
-                            url='https://prod-26.australiasoutheast.logic.azure.com:443/workflows/4661e932510245a18d941e5fb0d787c3/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HIjlB9ke7P4WU8AYd4fI_ZjzxJ9GGjOr4XYA46joGRg';
-                            sms_url='https://prod-28.australiasoutheast.logic.azure.com:443/workflows/a3b4624292974b0fb2eeacabd23500fe/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1vJchO8dHtbL8V2P7Wo__yasg6Nr_McdyFDluYcEIeE';
-                        }
-                    break;
-                    case 'w26_rem_1':
-                        q_url=$vm.module_list['oq-w26'].url+u+db+d+p;
-                        //$vm.alert('Send Week 26 Reminder 1: '+q_url)
-                        if(group=='Control'){
-                            url='https://prod-18.australiasoutheast.logic.azure.com:443/workflows/ead57f41047d48c6b0bc048cfae8a025/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=P_yRN_vtsZgPgC5kLWq_-eBFLo_V0mOEvWIsYh-hi7g';
-                            sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/b77f258e79ec466ba09e6ce87af7e28c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=PC7T64J5t7qSCOrcdfmwkoE61VMzfoCwP2fj68wZqNw';
-                        }
-                        else{
-                            url='https://prod-18.australiasoutheast.logic.azure.com:443/workflows/ead57f41047d48c6b0bc048cfae8a025/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=P_yRN_vtsZgPgC5kLWq_-eBFLo_V0mOEvWIsYh-hi7g';
-                            sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/b77f258e79ec466ba09e6ce87af7e28c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=PC7T64J5t7qSCOrcdfmwkoE61VMzfoCwP2fj68wZqNw';
-                        }
-                    break;
-                    case 'w26_rem_2':
-                        q_url=$vm.module_list['oq-w26'].url+u+db+d+p;
-                        //$vm.alert('Send Week 26 Reminder 2: '+q_url)
-                        if(group=='Control'){
-                            url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/0db157f8322a491f9e052f679424bed6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=p_itFRFAKJ0MNkELCmj-kmSns9KR5-Xf81ZIcqoDRvM';
-                            sms_url='https://prod-26.australiasoutheast.logic.azure.com:443/workflows/12784d73e1ed41deb11880c89c40585b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kxyzIeVvuZ81Ru_8teEIORLbscINeNpy-_h1mEek7QE';
-                        }
-                        else{
-                            url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/0db157f8322a491f9e052f679424bed6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=p_itFRFAKJ0MNkELCmj-kmSns9KR5-Xf81ZIcqoDRvM';
-                            sms_url='https://prod-26.australiasoutheast.logic.azure.com:443/workflows/12784d73e1ed41deb11880c89c40585b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kxyzIeVvuZ81Ru_8teEIORLbscINeNpy-_h1mEek7QE';
+                        //    url='https://prod-00.australiasoutheast.logic.azure.com:443/workflows/abeead73577d4888b31b01bff22d9ab8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6dDA99gq9udg7EBhU_g8fMBJ6Geciu2UOJfOWBEmu3Y';
+                        //    sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/d9678e0091224cb1976fb8ee9c168cce/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O33kfii4JkcxPWg702uWFsyCBm3ZmNiZtyyL2W2yh20';
                         }
                     break;
                     case 'ac_email':
@@ -268,7 +244,8 @@
 				param.push(data.email); //0
 				param.push(data.first_name); //1
 				param.push(q_url); //2
-				param.push(data.access_code); //3
+                if (data.access_code!=undefined) param.push(data.access_code)
+                else param.push(''); //3 Access code
 				param.push(data.phone) //4
 				param.push(data.contact) //5
 				param.push(url) //6
