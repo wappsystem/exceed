@@ -53,9 +53,11 @@
 			//-------------------------------------
 			/*VmInclude: __HOST__/assets/js/form.01.js*/
 			//-------------------------------------
+            var rand_num='';
 			var load = m.load;
 			m.load = function () {
 				load();
+                rand_num='';
 				if (m.input.record == undefined) {
 					$('.row_participant__ID').hide()
 					$('#F__ID input[name=_Password').val($vm.vm_password(8, false));
@@ -79,75 +81,82 @@
 							if (res.result[0].I1 !== undefined) max_I1 = res.result[0].I1
 						}
 						max_I1++;
-						$('#F__ID input[name=Randomisation_Number').val(max_I1);
+						//$('#F__ID input[name=Randomisation_Number').val(max_I1);
+						$('#F__ID input[name=Randomisation_Number').val('COG'+max_I1.toString().padStart(3, "0"));
+						rand_num=max_I1.toString();
 						$('#F__ID input[name=Randomised_by').val($vm.user_name);
 					})
 				}
 			})
 			//-------------------------------------
 			m.before_submit = function (data, index) {
-				var I1 = $('#F__ID input[name=Randomisation_Number').val(); if (I1 != '' && I1 != '-') index.I1 = parseInt(I1);
-				var nd=new Date()
-				index.I2=nd.getFullYear()+"-"+$vm.pad(nd.getMonth()+1,2)+"-"+$vm.pad(nd.getDate(),2);
-                jQuery.ajaxSetup({ async: false });
-                    var tb = $vm.module_list["randomisation-table-data"].Table;
-                    var query={UID:index.I1}
-                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
-                        if (res.result.length != 0) {
-                            //console.log(JSON.stringify(res.result[0].Data.Group))
-                            data.group=res.result[0].Data.group;
-                            index.I3=res.result[0].Data.group;
-                            //if(index.I3=="Control") data.Start_Date=index.I2;
-                        }
-                    });
-                    var tb = $vm.module_list["access-code-data"].Table;
-                    var query={UID:index.I1}
-                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
-                        if (res.result.length != 0) {
-                            //console.log(JSON.stringify(res.result[0].Data.Group))
-                            data.access_code=res.result[0].Data.access_code;
-                        }
-                    });
-                jQuery.ajaxSetup({ async: true });
+                var I1 = rand_num; 
+				if (I1 != '' && I1 != '-') {
+					index.I1 = parseInt(I1);
+                    var nd=new Date()
+                    index.I2=nd.getFullYear()+"-"+$vm.pad(nd.getMonth()+1,2)+"-"+$vm.pad(nd.getDate(),2);
+                    jQuery.ajaxSetup({ async: false });
+                        var tb = $vm.module_list["randomisation-table-data"].Table;
+                        var query={UID:index.I1}
+                        $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                            if (res.result.length != 0) {
+                                //console.log(JSON.stringify(res.result[0].Data.Group))
+                                data.group=res.result[0].Data.group;
+                                index.I3=res.result[0].Data.group;
+                                //if(index.I3=="Digital sleep health education") data.Start_Date=index.I2;
+                            }
+                        });
+                        var tb = $vm.module_list["access-code-data"].Table;
+                        var query={UID:index.I1}
+                        $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                            if (res.result.length != 0) {
+                                //console.log(JSON.stringify(res.result[0].Data.Group))
+                                data.access_code=res.result[0].Data.access_code;
+                            }
+                        });
+                    jQuery.ajaxSetup({ async: true });
+                }
 			}
 			//-------------------------------------
             m.after_update = function (data,index) {
                 //console.log('Data: '+JSON.stringify(data));
                 //console.log(index.result.UID)
-                var pid=(index.result.UID).toString();
-                var record={};
-                var tb = $vm.module_list["progress-mod-form"].Table;
-                query={'Data.Participant':pid}
-                //console.log(query);
-                jQuery.ajaxSetup({async:false});
-                $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
-                    if(res.permission==false){
-                        alert("No permission");
-                        return;
-                    }
-                    if(res.result.length==0){
-                    }
-                    else{
-                        record=res.result[0]
-                        record.Data.group=data.group;
-                        //record.Data.Start_date=index.result.I2;
-                        record.Data.access_code=data.access_code;
-                        //console.log(JSON.stringify(record))
-                        $vm.request({cmd:'update',id:record._id,table:tb,data:record.Data},function(res){
-                            //-----------------------------
-                            if(res.status=="lk"){
-                                $vm.alert("This record is locked.");
-                                return;
-                            }
-                            //-----------------------------
-                            if(res.status=="np"){
-                                alert("No permission to update this record.");
-                                return;
-                            }
-                        })
-                    }
-                })
-                jQuery.ajaxSetup({async:true});
+				if(rand_num!=''){
+                    var pid=(index.result.UID).toString();
+                    var record={};
+                    var tb = $vm.module_list["progress-mod-form"].Table;
+                    query={'Data.Participant':pid}
+                    //console.log(query);
+                    jQuery.ajaxSetup({async:false});
+                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                        if(res.permission==false){
+                            alert("No permission");
+                            return;
+                        }
+                        if(res.result.length==0){
+                        }
+                        else{
+                            record=res.result[0]
+                            record.Data.group=data.group;
+                            //record.Data.Start_date=index.result.I2;
+                            record.Data.access_code=data.access_code;
+                            //console.log(JSON.stringify(record))
+                            $vm.request({cmd:'update',id:record._id,table:tb,data:record.Data},function(res){
+                                //-----------------------------
+                                if(res.status=="lk"){
+                                    $vm.alert("This record is locked.");
+                                    return;
+                                }
+                                //-----------------------------
+                                if(res.status=="np"){
+                                    alert("No permission to update this record.");
+                                    return;
+                                }
+                            })
+                        }
+                    })
+                    jQuery.ajaxSetup({async:true});
+                }
                 $vm.refresh=1;
                 m.change_status++;
                 window.history.go(-1);   
