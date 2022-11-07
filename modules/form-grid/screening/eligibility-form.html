@@ -1462,10 +1462,10 @@
             }
             //--------------------------------
             m.after_insert = function (data,index) {
-                console.log(JSON.stringify(index) + " - "+index.result.ops[0]._id)
+                console.log(JSON.stringify(index) + " - "+index.nr._id)
                 if(registration_ready){
-                    if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:index.result.ops[0]._id}); }
-                    else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:index.result.ops[0].Data,rec_id:index.result.ops[0]._id});
+                    if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:index.nr._id}); }
+                    else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:index.nr.Data,rec_id:index.nr._id});
                 }
             }
             //--------------------------------
