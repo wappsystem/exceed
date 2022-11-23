@@ -1057,13 +1057,46 @@
                     </div>
                     <div class="box" style="text-align:right">
                         <div class="box-item">
-                            <button type="submit" d=1 class="btn btn-primary btn-lg">Submit</button>
+                            <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
                         </div>
                     </div>
                 </div>
             </div>
             <input type="text" name="Participant" style="display:none" />
             <input type="text" name="Participant_uid" style="display:none" />
+            <div id=captcha__ID style="display:none;text-align:center;" >
+                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
+                    <div class="col-lg-1 col-sm-0 "></div>
+                    <div class="col-lg-9 col-sm-12 text-center text-white">
+                        <span style="color:#888"> &nbsp;</span>
+                        <h2>Robot check</h2>
+                    </div>
+                    <div class="col-lg-1 col-sm-0 "></div>
+                </div>
+                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;' >
+                    <h3 class="main_question">To make sure you are not a robot.</h3>
+                    <!-- /Gunnar, a bit of code is required her to only show the success div  below if certain radiobuttons/checkboxes in the eligibility quesionnaire are not checked 
+                        - use the div <div id="unsuccess"> and then copy the contents of the div -->
+                    <div style=''>
+                        <img id="captcha_img__ID" />
+                    </div>
+                    <p>Please type in the number and letters (lower case) in the image in the box below.</p>
+                    <input type=text class="form-control" name=_captcha_code style="width:auto;margin-left:auto;margin-right:auto;" />
+                    <div style="display:none">
+                        <input type=text name=_captcha_hash />
+                        <input type=text name=_captcha_time />
+                    </div>
+                    <p id="captcha_error__ID" style="display:none;color:red">Some letters or numbers are not correct. Please try again</p>
+                    <div id=quest1__ID style='min-height: 180px;' >
+                    </div>
+                    <div class="box" style="text-align:right">
+                        <div class="box-item">
+                            <button type="submit" d=1 class="btn btn-primary btn-lg"  >Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="hover_bkgr_fricc">
                 <span class="helper"></span>
                 <div>
@@ -1080,6 +1113,15 @@
             var N = 5;
             var current_I = 1;
             var registration_ready=false;
+            var notelig=0;
+            //---------------------------------------
+            captcha_func=function(){
+                $vm.request({api:m.api,cmd:'captcha'},function(res){
+                    $('#F__ID input[name=_captcha_hash]').val(res.result.hash);
+                    $('#F__ID input[name=_captcha_time]').val(res.result.time);
+                    $('#captcha_img__ID').prop("src",res.result.img);
+                })
+            };
             //---------------------------------------
             m.before_submit = function (data, index) {
                 data.ISI = scores.ISI;
@@ -1090,6 +1132,8 @@
             }
             //---------------------------------------
             $('#D__ID').on('load', function () {
+                notelig=0;
+                captcha_func();
 
                 //$('#header').css('opacity', '1');
                 $('#s4q1__ID').hide();
@@ -1260,6 +1304,10 @@
                 d = parseInt(d);
                 if (d < 0) show_section(current_I - 1);
                 else {
+                    if(notelig>0){
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                    }
                     //do nothing, m.submit will handle  
                 }
             })
@@ -1361,10 +1409,14 @@
                         $("input[name='smartphone']:checked").val() == 'N' ||
                         $("input[name='shiftworker']:checked").val() != 'N' ||
                         $("input[name='travel2hours']:checked").val() == 'Y'){
+                            notelig=current_I;
+                            $('#S' + current_I + '__ID').hide();
+                            $("#captcha__ID").show();
+                        /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
-                        else{ $vm.load_module(m.prefix + 'not_elig1', '', {}); } 
+                        else{ $vm.load_module(m.prefix + 'not_elig1', '', {}); } */
                     }
                     else {
                         show_section(current_I + 1);
@@ -1378,6 +1430,10 @@
                         $("input[name='heavy_machinery']:checked").val() == 'Y' ||
                         $("input[name='cbt']:checked").val() == 'Y' ||
                         $("input[name='PHQ_9']:checked").val() != '0'){
+                            notelig=current_I;
+                            $('#S' + current_I + '__ID').hide();
+                            $("#captcha__ID").show();
+                        /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined){
@@ -1387,7 +1443,7 @@
                         else{ 
                             if($("input[name='PHQ_9']:checked").val() != '0') {$vm.load_module(m.prefix + 'not_eligphq9', '', {});}
                             else {$vm.load_module(m.prefix + 'not_elig1', '', {})}
-                        } 
+                        } */
                     }
                     else {
                         show_section(current_I + 1);
@@ -1399,10 +1455,14 @@
                     //console.log("All scores: " + JSON.stringify(scores))
                     if ((parseFloat(scores.ISI) < 10) ||
                         (parseFloat(scores.ISI_1) < 3)) {
+                            notelig=current_I;
+                            $('#S' + current_I + '__ID').hide();
+                            $("#captcha__ID").show();
+                        /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
-                        else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {});*/
                     }
                     else {
                         show_section(current_I + 1);
@@ -1415,10 +1475,14 @@
                     ($("input[name='legs_twitch']:checked").val() == 'Y') ||
                     ($("input[name='wrong_times']:checked").val() == 'Y') ||
                     ($("input[name='unusual_behaviours']:checked").val() == 'Y' )) {
+                        notelig=current_I;
+                        $('#S' + current_I + '__ID').hide();
+                        $("#captcha__ID").show();
+                        /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
-                        else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {});*/
                     }
                     else {
                         show_section(current_I + 1);
@@ -1446,27 +1510,69 @@
                         if (q3==0) {/*$vm.alert("You must tick one of the boxes in Q3");*/$('.hover_bkgr_fricc').show(); return;}
                     }
                     if(scores.Cognition_HBA=="Low"){
+                        notelig=current_I;
+                        $('#S' + current_I + '__ID').hide();
+                        $("#captcha__ID").show();
+                        /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
-                        else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {});*/
 
                     }
                     else{
                         registration_ready=true;
+                            notelig=current_I;
+                            $('#S' + current_I + '__ID').hide();
+                            $("#captcha__ID").show();
+                        /*
                         $('#F__ID *').removeAttr('disabled');
-                        old_submit(event);
+                        old_submit(event);*/
                     }
                 }
                 else show_section(current_I + 1);
             }
             //--------------------------------
-            m.after_insert = function (data,index) {
-                console.log(JSON.stringify(index) + " - "+index.nr._id)
-                if(registration_ready){
-                    if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:index.nr._id}); }
-                    else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:index.nr.Data,rec_id:index.nr._id});
+            m.after_insert = function (data,res) {
+                //console.log(JSON.stringify(res) + " - "+notelig)
+                if(registration_ready && notelig>0 && res.status!="captcha-error"){
+                    if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:res.nr._id}); }
+                    else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:res.nr.Data,rec_id:res.nr._id});
                 }
+                else if(notelig==5 && res.status!="captcha-error"){
+                    if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                    else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                }
+                else if(notelig==4 && res.status!="captcha-error"){
+                    if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                    else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                }
+                else if(notelig==3 && res.status!="captcha-error"){
+                    if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                    else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                }
+                else if(notelig==2 && res.status!="captcha-error"){
+                    if (m.prefix == undefined) { 
+                        if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
+                        //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligiosb', '', {});
+                        else $vm.load_module('not_elig1', '', {});
+                    }
+                    else{ 
+                        if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
+                        //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligiosb', '', {});
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {})
+                    }
+                }
+                else if(notelig==1 && res.status!="captcha-error"){
+                    if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                    else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                }
+                else{
+                    captcha_func();
+                    $("#captcha_error__ID").show()
+                    $('#D__ID input[name=_captcha_code]').val('');
+                }
+
             }
             //--------------------------------
             $('#D__ID .hover_bkgr_fricc').click(function(){
