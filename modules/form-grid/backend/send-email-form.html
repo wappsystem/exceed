@@ -91,7 +91,7 @@
 				var sms_url='';
 				switch(m.input.email){
                     case 'ac_email':
-                        if(group=='Treatment'){
+                        if(group=='dBBTi'){
                             console.log("Sending access code")
                             q_url=$vm.module_list['ac'].url;
                             url='https://prod-10.australiasoutheast.logic.azure.com:443/workflows/95040a63a7074ae19d3602318925312d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MMdiTcF0dLts30rxuiFuh41OvPquTR22cHcBltRNiuc';
@@ -99,7 +99,7 @@
                         }
                     break;
                     case 'w0_shm_1':
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //OK
                             //$vm.alert('Send Sleep Health Education Module 1 Email')
                             q_url=$vm.module_list['shm1-w0'].url;
@@ -108,7 +108,7 @@
                         }
                     break;
                     case 'w3_shm_2':
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //OK
                             //$vm.alert('Send Sleep Health Education Module 2 Email')
                             q_url=$vm.module_list['shm2-w3'].url;
@@ -117,7 +117,7 @@
                         }
                     break;
                     case 'w3_email':
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //OK
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
                             url='https://prod-12.australiasoutheast.logic.azure.com:443/workflows/8591bebd51e342b498acea0b31011c88/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fqV-rRuvvq22FfxPGEpYiJn1yIwYRspTIoq1KKkVyEE'
@@ -130,7 +130,7 @@
                         }
                     break;
                     case 'w3_rem_1':
-                    if(group=='Control'){
+                    if(group=='Sleep Health Education'){
                             //OK
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
                             url='https://prod-12.australiasoutheast.logic.azure.com:443/workflows/8591bebd51e342b498acea0b31011c88/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fqV-rRuvvq22FfxPGEpYiJn1yIwYRspTIoq1KKkVyEE'
@@ -143,7 +143,7 @@
                         }
                     break;
                     case 'w3_rem_2':
-                    if(group=='Control'){
+                    if(group=='Sleep Health Education'){
                             //OK
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
                             url='https://prod-12.australiasoutheast.logic.azure.com:443/workflows/8591bebd51e342b498acea0b31011c88/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fqV-rRuvvq22FfxPGEpYiJn1yIwYRspTIoq1KKkVyEE'
@@ -156,7 +156,7 @@
                         }
                     break;
                     case 'w5_shm_3':
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
                             //OK
                             q_url=$vm.module_list['shm3-w5'].url;
@@ -166,7 +166,7 @@
                     break;
                     case 'w8_email':
                         q_url=$vm.module_list['oq-w8'].url+u+db+d+p;
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
                             url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/42e05e88ec7644e3bc71c64a662b1c7f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lPMzKGpxJRLNHnxIdmrtYItnSQPdNNpvt8kOkamx6jQ'
                             sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/7e5d556af0714be09d0a6d325c4f178f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4jh5L5XenpWgQrjkM0kMgUCoIHJisQ614mBIQH_7lT8'
@@ -179,7 +179,7 @@
                     break;
                     case 'w8_rem_1':
                         q_url=$vm.module_list['oq-w8'].url+u+db+d+p;
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
                             url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/42e05e88ec7644e3bc71c64a662b1c7f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lPMzKGpxJRLNHnxIdmrtYItnSQPdNNpvt8kOkamx6jQ'
                             sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/7e5d556af0714be09d0a6d325c4f178f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4jh5L5XenpWgQrjkM0kMgUCoIHJisQ614mBIQH_7lT8'
@@ -192,7 +192,7 @@
                     break;
                     case 'w8_rem_2':
                         q_url=$vm.module_list['oq-w8'].url+u+db+d+p;
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
                             url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/42e05e88ec7644e3bc71c64a662b1c7f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lPMzKGpxJRLNHnxIdmrtYItnSQPdNNpvt8kOkamx6jQ'
                             sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/7e5d556af0714be09d0a6d325c4f178f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4jh5L5XenpWgQrjkM0kMgUCoIHJisQ614mBIQH_7lT8'
@@ -223,7 +223,7 @@
                     break;
                     case 'ac_email':
                         //$vm.alert('Send Access code and link to Sleepfix: '+ data.access_code)
-                        if(group=='Control'){
+                        if(group=='Sleep Health Education'){
                             //$vm.alert('Send Access code and link to Sleepfix: '+ data.access_code)
                             url='https://prod-00.australiasoutheast.logic.azure.com:443/workflows/468e2288856c4c6798737c5e03ae1ccd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=02dlZ_6CNOuvZoEmYwNNaBvxyNzVT3H1l5yZV4w1sRA'
                             sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/06d77eb489714acfb9c7ea477902f4e8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Lx-FiE6fdvEpWZ99NRe5UBMEDPp9Y3yCLRbUPxPg6bc'
