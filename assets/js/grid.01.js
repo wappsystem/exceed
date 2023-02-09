@@ -243,7 +243,33 @@ m.delete=function(rid){
     });
 };
 //-------------------------------
-m.export_records=function(){
+m.export_records=function(fields){
+    var req={api:m.api,cmd:"export",table:m.Table,query:m.query,I1:m.I1,search:$('#keyword__ID').val()}
+    open_model__ID();
+    $vm.request(req,function(N,i,txt){
+        console.log(i+"/"+N);
+        $('#msg__ID').text((100*i/N).toFixed(0)+"%");
+        if(i==-1){
+            var len=txt.length;
+            var n_txt="["+txt.substring(5,len-9)+"]";
+            var o=JSON.parse(n_txt);
+            //console.log(JSON.stringify(o))
+            var o2=[];
+            var fids=fields.split(',')
+            for(var i=0;i<o.length;i++){
+                var oi={};
+                for(var j=0;j<fids.length;j++){
+                    var p=fids[j];
+                    oi[p]=o[i][p];
+                }
+                o2.push(oi);
+            }
+            $vm.download_csv(m.Table+".csv",o2);
+            close_model__ID();
+        }
+    });
+}
+/*m.export_records=function(){
     //var req={cmd:"export",table:m.Table,I1:m.I1,search:$('#keyword__ID').val()}
     var req={api:m.api,cmd:"export",table:m.Table,query:m.query,I1:m.I1,search:$('#keyword__ID').val()}
     open_model__ID();
@@ -258,7 +284,7 @@ m.export_records=function(){
             close_model__ID();
         }
     });
-}
+}*/
 //---------------------------------------------
 m.import_records=function(){
     $('#Import_f__ID').val('');
@@ -376,9 +402,14 @@ m.handleFileSelect=function(evt){
 //-----------------------------------------------
 if(document.getElementById('Import_f__ID')!=null) document.getElementById('Import_f__ID').addEventListener('change', m.handleFileSelect,false);
 //---------------------------------------------
+$('#export_all__ID').on('click',function(){
+    console.log(m)
+    var prefix=""; if(m.prefix!=undefined) prefix=m.prefix;
+    $vm.load_module(prefix+"export-form",'',{tbl:m.Table,title:m.task_name,ex_flds:export_fields,goback:1});
+})
 $('#search__ID').on('click',function(){   m.set_req(); m.request_data(); })
 $('#query__ID').on('click',function(){    m.set_req(); m.request_data(); })
-$('#export__ID').on('click',function(){   m.export_records(); })
+$('#export__ID').on('click',function(){   m.export_records(export_fields); })
 $('#import__ID').on('click',function(){   m.import_records(); })
 $("#p__ID").on('click',function(){  var I=$("#I__ID").text();I--; if(I<0) I=0; $("#I__ID").text(I); m.set_req(); m.request_data();})
 $("#n__ID").on('click',function(){  var I=$("#I__ID").text();I++; if(I>m.max_I) I=m.max_I; $("#I__ID").text(I); m.set_req(); m.request_data();})
