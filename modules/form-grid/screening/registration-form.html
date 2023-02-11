@@ -48,33 +48,31 @@
                                     <input class="form-control" type="text" name="last_name"  >
                             </label><br>
                         </fieldset>
-                        <fieldset class="subquestions">
-                            <label><span class="">Mobile number</span>
+                    </fieldset>
+                    <h3>Contact preference</h3>
+                    <fieldset class="pl-4">
+                        <label class="radiobuttons ">
+                            <input type="radio" name="contact" value="1" required>
+                            <span class="checkmark"></span>Text
+                        </label>
+                        <label class="radiobuttons ">
+                            <input type="radio" name="contact" value="2">
+                            <span class="checkmark"></span>Email 
+                        </label>
+                        <label class="radiobuttons ">
+                            <input type="radio" name="contact" value="3">
+                            <span class="checkmark"></span>Both 
+                        </label>
+                    </fieldset>
+                    <fieldset class="subquestions">
+                            <label><span class="" id="text__ID">Mobile number</span>
                                 <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
                             </label><br>
                         </fieldset>
                         <fieldset class="subquestions">
-                            <label style="width:100%"><span class="">Email Address</span>
+                            <label style="width:100%"><span class="" id="email__ID">Email Address</span>
                                 <input class="form-control" type="email" name="email" required >
                             </label><br>
-                        </fieldset>
-                        <div class="questiongroup box">
-                            <h3>Contact preference</h3>
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="contact" value="1" required>
-                                    <span class="checkmark"></span>Text
-                                </label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="contact" value="2">
-                                    <span class="checkmark"></span>Email 
-                                </label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="contact" value="3">
-                                    <span class="checkmark"></span>Both 
-                                </label>
-                            </fieldset>
-                        </div>
 
                     </div>
                 </div>
@@ -156,7 +154,7 @@
                 }
             })
             //---------------------------------------
-               /*$('#F__ID input[name=contact]').on('change', function () {
+            $('#F__ID input[name=contact]').on('change', function () {
                 console.log($('#F__ID input[name=contact]:checked').val())
                 if($('#F__ID input[name=contact]:checked').val()=='1'){
                     $('#F__ID input[name=phone]').prop('required',true);
@@ -176,7 +174,7 @@
                     $('#email__ID').css('color',"#444645")
                     $('#text__ID').css('color',"#444645")
                 }
-            });*/
+            });
             //---------------------------------------
             m.after_insert = function (data,index) {
                 var db=""; 
