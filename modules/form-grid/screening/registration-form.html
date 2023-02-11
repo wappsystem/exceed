@@ -44,8 +44,8 @@
                             <label><span class="">First name</span>
                                     <input class="form-control" type="text" name="first_name" required >
                             </label><br>
-                            <label><span class="">Family name</span>
-                                    <input class="form-control" type="text" name="last_name" required >
+                            <label><span class="" style="color:#dbdbdb">Family name</span>
+                                    <input class="form-control" type="text" name="last_name"  >
                             </label><br>
                         </fieldset>
                         <fieldset class="subquestions">
@@ -155,6 +155,28 @@
                     $('#mobileNumber__ID').val(mn.substring(0, 4) + '-' + mn.substring(4, 7) + '-' + mn.substring(7, 10))
                 }
             })
+            //---------------------------------------
+               /*$('#F__ID input[name=contact]').on('change', function () {
+                console.log($('#F__ID input[name=contact]:checked').val())
+                if($('#F__ID input[name=contact]:checked').val()=='1'){
+                    $('#F__ID input[name=phone]').prop('required',true);
+                    $('#F__ID input[name=email]').removeAttr('required');
+                    $('#email__ID').css('color',"#dbdbdb")
+                    $('#text__ID').css('color',"#444645")
+                }
+                else if($('#F__ID input[name=contact]:checked').val()=='2'){
+                    $('#F__ID input[name=email]').prop('required',true);
+                    $('#F__ID input[name=phone]').removeAttr('required');
+                    $('#email__ID').css('color',"#444645image.png")
+                    $('#text__ID').css('color',"#dbdbdb")
+                }
+                else if($('#F__ID input[name=contact]:checked').val()=='3'){
+                    $('#F__ID input[name=phone]').prop('required',true);
+                    $('#F__ID input[name=email]').prop('required',true);                    
+                    $('#email__ID').css('color',"#444645")
+                    $('#text__ID').css('color',"#444645")
+                }
+            });*/
             //---------------------------------------
             m.after_insert = function (data,index) {
                 var db=""; 

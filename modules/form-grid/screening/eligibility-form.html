@@ -1385,7 +1385,7 @@
                     var q6=0;
                     if($("#D__ID input[name=CIQ_Q6]:checked").val()=="1") q6=16;
                     console.log("Q2:"+q2+" Q3:"+q3+" Q4:"+q4+" Q5:"+q5+" Q6:"+q6)
-                    if(q2+q3+q4+q5+q6==0) scores.Cognition_HBA="Low";
+                    if(q2+q3+q4+q5+q6==0) scores.Cognition_HBA="Low_q2_q6";
                     else if(q2==1 && q5==8)scores.Cognition_HBA="High ";
                     else if(q2==1 && q6==16)scores.Cognition_HBA="High ";
                     else if(q2==0 && q3==2 && q5==8)scores.Cognition_HBA="High ";
