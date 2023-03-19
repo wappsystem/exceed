@@ -1057,7 +1057,7 @@
                     </div>
                     <div class="box" style="text-align:right">
                         <div class="box-item">
-                            <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
+                            <button type="submit" d=1 class="btn btn-primary btn-lg">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -1133,7 +1133,7 @@
             //---------------------------------------
             $('#D__ID').on('load', function () {
                 notelig=0;
-                captcha_func();
+                //captcha_func();
 
                 //$('#header').css('opacity', '1');
                 $('#s4q1__ID').hide();
@@ -1410,8 +1410,9 @@
                         $("input[name='shiftworker']:checked").val() != 'N' ||
                         $("input[name='travel2hours']:checked").val() == 'Y'){
                             notelig=current_I;
-                            $('#S' + current_I + '__ID').hide();
-                            $("#captcha__ID").show();
+                            $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                            $("#captcha__ID").show();
                         /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
@@ -1431,8 +1432,10 @@
                         $("input[name='cbt']:checked").val() == 'Y' ||
                         $("input[name='PHQ_9']:checked").val() != '0'){
                             notelig=current_I;
-                            $('#S' + current_I + '__ID').hide();
-                            $("#captcha__ID").show();
+                            $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                            $('#S' + current_I + '__ID').hide();
+//                            $("#captcha__ID").show();
                         /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
@@ -1456,8 +1459,10 @@
                     if ((parseFloat(scores.ISI) < 10) ||
                         (parseFloat(scores.ISI_1) < 3)) {
                             notelig=current_I;
-                            $('#S' + current_I + '__ID').hide();
-                            $("#captcha__ID").show();
+                            $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                            $('#S' + current_I + '__ID').hide();
+//                            $("#captcha__ID").show();
                         /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
@@ -1476,8 +1481,10 @@
                     ($("input[name='wrong_times']:checked").val() == 'Y') ||
                     ($("input[name='unusual_behaviours']:checked").val() == 'Y' )) {
                         notelig=current_I;
-                        $('#S' + current_I + '__ID').hide();
-                        $("#captcha__ID").show();
+                        $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                        $('#S' + current_I + '__ID').hide();
+//                        $("#captcha__ID").show();
                         /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
@@ -1511,8 +1518,10 @@
                     }
                     if(scores.Cognition_HBA=="Low"){
                         notelig=current_I;
-                        $('#S' + current_I + '__ID').hide();
-                        $("#captcha__ID").show();
+                        $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                        $('#S' + current_I + '__ID').hide();
+//                        $("#captcha__ID").show();
                         /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
@@ -1523,8 +1532,10 @@
                     else{
                         registration_ready=true;
                             notelig=current_I;
-                            $('#S' + current_I + '__ID').hide();
-                            $("#captcha__ID").show();
+                            $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                            $('#S' + current_I + '__ID').hide();
+//                            $("#captcha__ID").show();
                         /*
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);*/
@@ -1535,23 +1546,23 @@
             //--------------------------------
             m.after_insert = function (data,res) {
                 //console.log(JSON.stringify(res) + " - "+notelig)
-                if(registration_ready && notelig>0 && res.status!="captcha-error"){
+                if(registration_ready && notelig>0){
                     if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:res.nr._id}); }
                     else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:res.nr.Data,rec_id:res.nr._id});
                 }
-                else if(notelig==5 && res.status!="captcha-error"){
+                else if(notelig==5){
                     if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                     else $vm.load_module(m.prefix + 'not_elig1', '', {});
                 }
-                else if(notelig==4 && res.status!="captcha-error"){
+                else if(notelig==4){
                     if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                     else $vm.load_module(m.prefix + 'not_elig1', '', {});
                 }
-                else if(notelig==3 && res.status!="captcha-error"){
+                else if(notelig==3){
                     if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                     else $vm.load_module(m.prefix + 'not_elig1', '', {});
                 }
-                else if(notelig==2 && res.status!="captcha-error"){
+                else if(notelig==2){
                     if (m.prefix == undefined) { 
                         if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
                         //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligiosb', '', {});
@@ -1563,16 +1574,10 @@
                         else $vm.load_module(m.prefix + 'not_elig1', '', {})
                     }
                 }
-                else if(notelig==1 && res.status!="captcha-error"){
+                else if(notelig==1){
                     if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                     else $vm.load_module(m.prefix + 'not_elig1', '', {});
                 }
-                else{
-                    captcha_func();
-                    $("#captcha_error__ID").show()
-                    $('#D__ID input[name=_captcha_code]').val('');
-                }
-
             }
             //--------------------------------
             $('#D__ID .hover_bkgr_fricc').click(function(){
