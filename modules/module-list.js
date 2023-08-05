@@ -24,7 +24,7 @@
                             online_questionnaire_w16:"oq-w16",
     };                   
     m[p+"participant-form"] ={url:H+"/form-grid/participant/participant-form.html",Table:"exceed-participant"},
-    m[p+"notes-data"]       ={url:H+"/form-grid/questionnaires/notes-data.html",Table:"exceed-notes",form_module:"notes-form",router:1},
+    m[p+"notes-data"]       ={url:H+"/form-grid/questionnaires/notes-data.html",Table:"exceed-notes",form_module:"notes-form"},
     m[p+"notes-form"]       ={url:H+"/form-grid/questionnaires/notes-form.html",Table:"exceed-notes"},
     m[p+"oq-bl"] ={url:I+"/bl_quest.html"},
     m[p+"oq-w0"] ={url:I+"/w0_quest_utd.html"},
@@ -39,7 +39,7 @@
 
 
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
-    m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"exceed-screening",router:1 };
+    m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"exceed-screening" };
     m[p+"panel-child"]  ={url:H+"/panels/child.html"}
     m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html"};
     m[p+"w0-panel"]     ={url:H+"/panels/w0_quest.html"};
@@ -89,6 +89,8 @@
     m[p+"eq-5d-bl-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"exceed-eq-5d-bl", task_name:"Baseline - European Quality of Life" };
     m[p+"ffs-bl-data"]      ={url:H+"/form-grid/questionnaires/ffs-data.html",Table:"exceed-ffs-bl",form_module:"ffs-bl-form", task_name:"Baseline - Flinders Fatigue Scale"};
     m[p+"ffs-bl-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-bl", task_name:"Baseline - Flinders Fatigue Scale",tp:'bl' };
+    m[p+"bc-cci-bl-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"exceed-bc-cci-bl",form_module:"bc-cci-bl-form", task_name:"Baseline - BC-CCI"};
+    m[p+"bc-cci-bl-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"exceed-bc-cci-bl", task_name:"Baseline - BC-CCI",tp:'bl' };
 
     m[p+"adverse-event-w3-data"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-data.html",Table:"exceed-adverse-event-w3",form_module:"adverse-event-w3-form", task_name:"Week 3 - Adverse Event Check-in" };
     m[p+"adverse-event-w3-form"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-form.html",Table:"exceed-adverse-event-w3", task_name:"Week 3 - Adverse Event Check-in",tp:'w3' };
@@ -119,6 +121,8 @@
     m[p+"eq-5d-w8-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"exceed-eq-5d-w8", task_name:"Week 8 - European Quality of Life" };
     m[p+"ffs-w8-data"]      ={url:H+"/form-grid/questionnaires/ffs-data.html",Table:"exceed-ffs-w8",form_module:"ffs-w8-form", task_name:"Week 8 - Flinders Fatigue Scale"};
     m[p+"ffs-w8-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-w8", task_name:"Week 8 - Flinders Fatigue Scale",tp:'bl' };
+    m[p+"bc-cci-w8-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"exceed-bc-cci-w8",form_module:"bc-cci-w8-form", task_name:"Week 8 - BC-CCI"};
+    m[p+"bc-cci-w8-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"exceed-bc-cci-w8", task_name:"Week 8 - BC-CCI",tp:'bl' };
 
     m[p+"sdmt-w16-data"]      ={url:H+"/form-grid/questionnaires/neurocog/sdmt-data.html",Table:"exceed-sdmt-w16",form_module:"sdmt-w16-form", task_name:"Week 16 - Symbol Digit Modality Test"};
     m[p+"sdmt-w16-form"]      ={url:H+"/form-grid/questionnaires/neurocog/sdmt-form.html",Table:"exceed-sdmt-w16", task_name:"Week 16 - Symbol Digit Modality Test" };
@@ -144,6 +148,8 @@
     m[p+"eq-5d-w16-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"exceed-eq-5d-w16", task_name:"Week 16 - European Quality of Life" };
     m[p+"ffs-w16-data"]      ={url:H+"/form-grid/questionnaires/ffs-data.html",Table:"exceed-ffs-w16",form_module:"ffs-w16-form", task_name:"Week 16 - Flinders Fatigue Scale"};
     m[p+"ffs-w16-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-w16", task_name:"Week 16 - Flinders Fatigue Scale",tp:'bl' };
+    m[p+"bc-cci-w16-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"exceed-bc-cci-w16",form_module:"bc-cci-w16-form", task_name:"Week 16 - BC-CCI"};
+    m[p+"bc-cci-w16-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"exceed-bc-cci-w16", task_name:"Week 16 - BC-CCI",tp:'bl' };
 
     m[p+"randomisation-table-data"]      ={url:H+"/form-grid/backend/randomisation-table-data.html",   Table:"exceed-randomisation",form_module:"randomisation-table-form",task_name:"Randomisation Table"};
     m[p+"randomisation-table-form"]      ={url:H+"/form-grid/backend/randomisation-table-form.html",Table:"exceed-randomisation", task_name:"Randomisation Table" };
