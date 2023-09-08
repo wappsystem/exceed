@@ -344,7 +344,7 @@
                             </fieldset>
                         </div>
                     </div>
-                    <div class="form-group box">
+                    <!--<div class="form-group box">
                         <fieldset class="subquestions">
                             <h4>Over the last <u>2 weeks</u>, how often have you been bothered by the following problem?</h4>
                         </fieldset>
@@ -381,7 +381,7 @@
                                     target=_blank>beyondblue.org.au</a><br>
                                 If you or someone you know needs immediate help, please call 000</h4>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="box" style="text-align:right">
                         <div class="box-item">
                             <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
@@ -1265,7 +1265,7 @@
                 $('#s1q5__ID').hide();
                 $('#jetlag__ID').removeAttr('required');
                 $('#s4q1__ID').hide();
-                $('#phq9__ID').hide();
+                //$('#phq9__ID').hide();
                 $('#sleep_attacks__ID').removeAttr('required');
                 $('#muscle_weakness__ID').removeAttr('required');
                 $('#hallucinations__ID').removeAttr('required');
@@ -1390,14 +1390,14 @@
                 }
             });
             //---------------------------------------
-            $("#D__ID input[name=PHQ_9]").on('change', function () {
+            /*$("#D__ID input[name=PHQ_9]").on('change', function () {
                 if ($("#D__ID input[name=PHQ_9]:checked").val() != '0') {
                     $('#phq9__ID').show();
                 }
                 else {
                     $('#phq9__ID').hide();
                 }
-            });
+            });*/
             //---------------------------------------
             $("#D__ID input[name=CIQ_Q1]").on('change', function () {
                 if ($("#D__ID input[name=CIQ_Q1]:checked").val() == '1') {
@@ -1575,8 +1575,9 @@
                         //$("input[name='sleep_disorders']:checked").val() == 'Y' ||
                         //$("input[name='medications']:checked").val() == 'Y' ||
                         $("input[name='heavy_machinery']:checked").val() == 'Y' ||
-                        $("input[name='cbt']:checked").val() == 'Y' ||
-                        $("input[name='PHQ_9']:checked").val() != '0'){
+                        $("input[name='cbt']:checked").val() == 'Y' //||
+                        //$("input[name='PHQ_9']:checked").val() != '0'
+                        ){
                             notelig=current_I;
                             $('#F__ID *').removeAttr('disabled');
                             old_submit(event);
@@ -1712,14 +1713,16 @@
                 }
                 else if(notelig==2){
                     if (m.prefix == undefined) { 
-                        if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
+                        /*if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
                         //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligiosb', '', {});
-                        else $vm.load_module('not_elig1', '', {});
+                        else $vm.load_module('not_elig1', '', {});*/
+                        $vm.load_module('not_elig1', '', {});
                     }
                     else{ 
-                        if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
+                        /*if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
                         //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligiosb', '', {});
-                        else $vm.load_module(m.prefix + 'not_elig1', '', {})
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {})*/
+                        $vm.load_module(m.prefix + 'not_elig1', '', {});
                     }
                 }
                 else if(notelig==1){
