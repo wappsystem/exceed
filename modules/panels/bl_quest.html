@@ -3,6 +3,7 @@
         <div class="cta-inner" style="background-image: url(assets/images/bg-03.png)">
           <div class="cta-text"><img src="assets/images/white-logo.png" alt="SleepFix">
             <h2>Questionnaire Portal</h2>
+            <h2>Baseline</h2>
             <p class="text-transparent text-lead">
             </p>
     		<h4 class= "">Please complete each of the following questionnaires.<br><br></h4>
@@ -26,8 +27,8 @@
 		//--------------------------------------------------------
 		$('#D__ID').on('show',function(){
             var record=$vm.vm['__ID'].input.record;
-			id_list='demographic-form,sdmt-bl-form,stroop-colour-bl-form,stroop-text-bl-form,lct-bl-form,nback2-bl-form,psqi-bl-form,ess-bl-form,gas-bl-form,gad7-bl-form,eheals-bl-form,eq-5d-bl-form,ffs-bl-form,bc-cci-bl-form'
-			//id_list='bc-cci-bl-form'
+			id_list='demographic-form,isi-bl-form,bccci-bl-form,eheals-bl-form,gad7-bl-form,ffs-bl-form,eq-5d-bl-form,ess-bl-form,psqi-bl-form,gas-bl-form,sdmt-bl-form,stroop-colour-bl-form,stroop-text-bl-form,lct-bl-form,nback2-bl-form'
+			//id_list='demographic-form,ffs-bl-form'
             if(id_list==undefined){
                 alert("No questionnaire was found");
                 return;
