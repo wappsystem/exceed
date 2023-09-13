@@ -243,13 +243,13 @@
                     <div class="col-lg-1 col-sm-0 "></div>
                 </div>
                 <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;' >    
-                    <div class="form-group box">
+                  <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
                                 <h3>7. Have you been diagnosed with any one or more of the following medical and/or
                                     psychiatric illnesses/disorders?
                                 </h3>
-                                <h4>Major Depressive Disorder, Heart failure, Epilepsy, Bi-polar disorder, Dementia,
+                                <h4 style="color:black">Major Depressive Disorder, Heart failure, Epilepsy, Bi-polar disorder, Dementia,
                                     Mild Cognitive Impairment</h4>
                             </div>
                         </div>
@@ -264,10 +264,10 @@
                             </fieldset>
                         </div>
                     </div>
-                    <!--<div class="form-group box">
+                    <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>7. Have you been diagnosed with any one or more of the following sleep disorders?
+                                <h3>8. Have you been diagnosed with any one or more of the following sleep disorders?
                                 </h3>
                                 <h4>Obstructive Sleep Apnoea, Sleep Behaviour Disorder (i.e sleep talking/walking, REM),
                                     Circadian Rhythm Disorder, Restless leg syndrome, Narcolepsy or Bruxism (teeth
@@ -288,7 +288,7 @@
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>8. Are you currently taking any of the following medications or therapies regularly
+                                <h3>9. Are you currently taking any of the following medications or therapies regularly
                                     (>2 times a week)?
                                 </h3>
                                 <h4>Prescribed sleep medication (e.g. Temaze, Imovane, Stilnox, Restavit),
@@ -306,11 +306,11 @@
                                     <span class="checkmark"></span>No </label>
                             </fieldset>
                         </div>
-                    </div>-->
+                    </div>
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>8. Does your job require you to regularly drive or operate heavy machinery?
+                                <h3>10. Does your job require you to regularly drive or operate heavy machinery?
                                 </h3>
                             </div>
                         </div>
@@ -328,7 +328,7 @@
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>9. Are you currently receiving or have previously received (within the last 12
+                                <h3>11. Are you currently receiving or have previously received (within the last 12
                                     months) psychotherapy for insomnia including Cognitive Behavioural Therapy (CBT)?
                                 </h3>
                             </div>
@@ -344,7 +344,7 @@
                             </fieldset>
                         </div>
                     </div>
-                    <!--<div class="form-group box">
+                    <!-- <div class="form-group box">
                         <fieldset class="subquestions">
                             <h4>Over the last <u>2 weeks</u>, how often have you been bothered by the following problem?</h4>
                         </fieldset>
@@ -369,8 +369,8 @@
                                 </label><br>
                             </fieldset>
                         </div>
-                    </div>
-                    <div id=phq9__ID>
+                    </div> -->
+                    <!-- <div id=phq9__ID>
                         <div class="form-group box">
                             <h4 style='color:red;text-align: center;'>If you are feeling depressed, anxious, or suicidal
                                 please do not hesitate to contact mental wellbeing
@@ -381,7 +381,7 @@
                                     target=_blank>beyondblue.org.au</a><br>
                                 If you or someone you know needs immediate help, please call 000</h4>
                         </div>
-                    </div>-->
+                    </div> -->
                     <div class="box" style="text-align:right">
                         <div class="box-item">
                             <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
@@ -1390,14 +1390,15 @@
                 }
             });
             //---------------------------------------
-            /*$("#D__ID input[name=PHQ_9]").on('change', function () {
-                if ($("#D__ID input[name=PHQ_9]:checked").val() != '0') {
-                    $('#phq9__ID').show();
-                }
-                else {
-                    $('#phq9__ID').hide();
-                }
-            });*/
+            //$("#D__ID input[name=PHQ_9]").val()=="0";
+            // $("#D__ID input[name=PHQ_9]").on('change', function () {
+            //     if ($("#D__ID input[name=PHQ_9]:checked").val() != '0') {
+            //         $('#phq9__ID').show();
+            //     }
+            //     else {
+            //         $('#phq9__ID').hide();
+            //     }
+            // });
             //---------------------------------------
             $("#D__ID input[name=CIQ_Q1]").on('change', function () {
                 if ($("#D__ID input[name=CIQ_Q1]:checked").val() == '1') {
@@ -1575,9 +1576,11 @@
                         //$("input[name='sleep_disorders']:checked").val() == 'Y' ||
                         //$("input[name='medications']:checked").val() == 'Y' ||
                         $("input[name='heavy_machinery']:checked").val() == 'Y' ||
-                        $("input[name='cbt']:checked").val() == 'Y' //||
-                        //$("input[name='PHQ_9']:checked").val() != '0'
-                        ){
+                        $("input[name='cbt']:checked").val() == 'Y')
+                        // $("input[name='cbt']:checked").val() == 'Y' ||
+                        
+                        {
+                        // $("input[name='PHQ_9']:checked").val() != '0'){
                             notelig=current_I;
                             $('#F__ID *').removeAttr('disabled');
                             old_submit(event);
@@ -1694,7 +1697,7 @@
             }
             //--------------------------------
             m.after_insert = function (data,res) {
-                //console.log(JSON.stringify(res) + " - "+notelig)
+                // console.log(JSON.stringify(res) + " - "+notelig)
                 if(registration_ready && notelig>0){
                     if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:res.nr._id}); }
                     else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:res.nr.Data,rec_id:res.nr._id});
@@ -1713,16 +1716,14 @@
                 }
                 else if(notelig==2){
                     if (m.prefix == undefined) { 
-                        /*if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
+                        //if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
                         //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligiosb', '', {});
-                        else $vm.load_module('not_elig1', '', {});*/
                         $vm.load_module('not_elig1', '', {});
                     }
                     else{ 
-                        /*if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
+                        //if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
                         //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligiosb', '', {});
-                        else $vm.load_module(m.prefix + 'not_elig1', '', {})*/
-                        $vm.load_module(m.prefix + 'not_elig1', '', {});
+                        $vm.load_module(m.prefix + 'not_elig1', '', {})
                     }
                 }
                 else if(notelig==1){
