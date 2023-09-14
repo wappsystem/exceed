@@ -21,8 +21,8 @@
                             online_questionnaire_w0:"oq-w0",
                             online_questionnaire_w3:"oq-w3",
                             online_questionnaire_w8:"oq-w8",
-                            online_questionnaire_w16:"oq-w16",
-    };                   
+                            online_questionnaire_w16:"oq-w16"
+                            };                   
     m[p+"participant-form"] ={url:H+"/form-grid/participant/participant-form.html",Table:"exceed-participant"},
     m[p+"notes-data"]       ={url:H+"/form-grid/questionnaires/notes-data.html",Table:"exceed-notes",form_module:"notes-form",router:1},
     m[p+"notes-form"]       ={url:H+"/form-grid/questionnaires/notes-form.html",Table:"exceed-notes"},
@@ -41,11 +41,11 @@
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"exceed-screening",router:1 };
     m[p+"panel-child"]  ={url:H+"/panels/child.html"}
-    m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html",task_name:"Baseline Questionnaires"};
-    m[p+"w0-panel"]     ={url:H+"/panels/w0_quest.html",task_name:"Week 0 Questionnaires"};
-    m[p+"w3-panel"]     ={url:H+"/panels/w3_quest.html",task_name:"Week 3 Questionnaires"};
-    m[p+"w8-panel"]     ={url:H+"/panels/w8_quest.html",task_name:"Week 8 Questionnaires"};
-    m[p+"w16-panel"]     ={url:H+"/panels/w16_quest.html",task_name:"Week 16 Questionnaires"};
+    m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html",task_name:"Baseline Questionnaires Panel"};
+    m[p+"w0-panel"]     ={url:H+"/panels/w0_quest.html",task_name:"Week 0 Questionnaires Panel"};
+    m[p+"w3-panel"]     ={url:H+"/panels/w3_quest.html",task_name:"Week 3 Questionnaires Panel"};
+    m[p+"w8-panel"]     ={url:H+"/panels/w8_quest.html",task_name:"Week 8 Questionnaires Panel"};
+    m[p+"w16-panel"]     ={url:H+"/panels/w16_quest.html",task_name:"Week 16 Questionnaires Panel"};
 
     m[p+"adverse-event-data"] ={url:H+"/form-grid/unscheduled/adverse-event-data.html",Table:"exceed-adverse-event",form_module:"adverse-event-form", task_name:"Adverse event" };
     m[p+"adverse-event-form"] ={url:H+"/form-grid/unscheduled/adverse-event-form.html",Table:"exceed-adverse-event", task_name:"Adverse event" };

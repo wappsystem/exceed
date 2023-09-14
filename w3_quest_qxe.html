@@ -32,14 +32,14 @@
         <!----------------------------------------------->
         <script app code>
             //---------------------------------------------
-            $VmAPI={};$vm.ver=[0.04,0.02]; $vm['jquery-ui-min-js']=1;
+            $VmAPI={};$vm.ver=[0.05,0.02]; $vm['jquery-ui-min-js']=1;
             $vm.flexindex=new FlexSearch({  doc: {id: "id",field: ["title","contents"]}    });
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
             $vm.module_list={
                 header:         {url:$vm.hosting_path+"/modules/sites/participant/header.html"},
                 footer:         {url:$vm.hosting_path+"/modules/sites/participant/footer.html"},
-                home:           {url:$vm.hosting_path+"/modules/sites/participant/home_w3.html",Table:"exceed-participant",router:1},
+                home:           {url:$vm.hosting_path+"/modules/sites/participant/home_w3.html",Table:"exceed-participant",router:1,task_name:"Exceed Portal Entry W3 Questionnaires"},
                 //auth:           {url:$vm.hosting_path+"/modules/system/auth.html"},
                 
                 //query:          {url:$vm.hosting_path+"/modules/system/query.html"},
@@ -88,7 +88,9 @@
             //---------------------------------------------
             $vm.show=function(m_name){
                 var a=window.location.href.split('?/')[0].split('/'); a.pop(); var t=a.pop().replace(/-/g,' ');
-                var title=$vm.module_list[m_name].url.split('/').pop(); document.title=title+" - "+t ;
+                //var title=$vm.module_list[m_name].url.split('/').pop(); 
+                var title=$vm.module_list[m_name].task_name;
+                document.title=title;
                 var info=$vm.module_list[m_name].description;  if(info==undefined) info="Modular distributed microservices web application."; $("meta[name='description']").attr("content", info);
                 if(m_name!="sys_editor") $vm.active_name=m_name;
                 document.getElementById('layout').scrollTop=$vm.module_list[$vm.active_name].scrollTop;
