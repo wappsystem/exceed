@@ -37,43 +37,45 @@
                         </label><br>
                     </div>                              
                 </div>
-                <div class="form-group box">
-                    <h3>Contact details</h3>
-                    <div class="questiongroup ">
-                        <fieldset class="subquestions">
-                            <label><span class="">First name</span>
-                                    <input class="form-control" type="text" name="first_name" required >
-                            </label><br>
-                            <label><span class="" style="color:#dbdbdb">Family name</span>
-                                    <input class="form-control" type="text" name="last_name"  >
-                            </label><br>
+                <div id=contact__ID>
+                    <div class="form-group box">
+                        <h3>Contact details</h3>
+                        <div class="questiongroup ">
+                            <fieldset class="subquestions">
+                                <label><span class="">First name</span>
+                                        <input class="form-control" type="text" name="first_name" required >
+                                </label><br>
+                                <label><span class="" style="color:#dbdbdb">Family name</span>
+                                        <input class="form-control" type="text" name="last_name"  >
+                                </label><br>
+                            </fieldset>
                         </fieldset>
-                    </fieldset>
-                    <h3>Contact preference</h3>
-                    <fieldset class="pl-4">
-                        <label class="radiobuttons ">
-                            <input type="radio" name="contact" value="1" required>
-                            <span class="checkmark"></span>Text
-                        </label>
-                        <label class="radiobuttons ">
-                            <input type="radio" name="contact" value="2">
-                            <span class="checkmark"></span>Email 
-                        </label>
-                        <label class="radiobuttons ">
-                            <input type="radio" name="contact" value="3">
-                            <span class="checkmark"></span>Both 
-                        </label>
-                    </fieldset>
-                    <fieldset class="subquestions">
-                            <label><span class="" id="text__ID">Mobile number</span>
-                                <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
-                            </label><br>
+                        <h3>Contact preference</h3>
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons ">
+                                <input type="radio" name="contact" value="1" required>
+                                <span class="checkmark"></span>Text
+                            </label>
+                            <label class="radiobuttons ">
+                                <input type="radio" name="contact" value="2">
+                                <span class="checkmark"></span>Email 
+                            </label>
+                            <label class="radiobuttons ">
+                                <input type="radio" name="contact" value="3">
+                                <span class="checkmark"></span>Both 
+                            </label>
                         </fieldset>
                         <fieldset class="subquestions">
-                            <label style="width:100%"><span class="" id="email__ID">Email Address</span>
-                                <input class="form-control" type="email" name="email" required >
-                            </label><br>
+                                <label><span class="" id="text__ID">Mobile number</span>
+                                    <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
+                                </label><br>
+                            </fieldset>
+                            <fieldset class="subquestions">
+                                <label style="width:100%"><span class="" id="email__ID">Email Address</span>
+                                    <input class="form-control" type="email" name="email" required >
+                                </label><br>
 
+                        </div>
                     </div>
                 </div>
                 <div class="form-group box" id="link__ID" style="display:none!important">
@@ -88,7 +90,7 @@
                     <input type=text class=form-control name=_Password>
                     <input type=text class=form-control name=List>
                 </div>
-                <div class="box" style="text-align:right">
+                <div id=submit_btn__ID class="box" style="text-align:right">
                     <div class="box-item">
                         <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
                     </div>
@@ -146,6 +148,9 @@
             $('#D__ID').on('load', function () {
                 //console.log(JSON.stringify(m))
                 $('#F__ID input[name=_Password').val($vm.vm_password(8,false));
+                console.log("BB: "+$('#F__ID input[name=Consent]:checked').val())
+                $('#contact__ID').hide();
+                $('#submit_btn__ID').hide();
             });
             //-------------------------------------
             $('#mobileNumber__ID').on('change', function () {
@@ -154,6 +159,17 @@
                     $('#mobileNumber__ID').val(mn.substring(0, 4) + '-' + mn.substring(4, 7) + '-' + mn.substring(7, 10))
                 }
             })
+            $('#F__ID input[name=Consent]').on('change', function () {
+                console.log("AA: "+$('#F__ID input[name=Consent]:checked').val())
+                if($('#F__ID input[name=Consent]:checked').val()=='Yes'){
+                    $('#contact__ID').show();
+                    $('#submit_btn__ID').show();
+                }
+                else{
+                    $('#contact__ID').hide();
+                    $('#submit_btn__ID').hide();
+                }
+            });
             //---------------------------------------
             $('#F__ID input[name=contact]').on('change', function () {
                 console.log($('#F__ID input[name=contact]:checked').val())
