@@ -35,7 +35,7 @@
     m[p+"shm1-w0"] ={url:I+"/nfuo.html"},
     m[p+"shm2-w3"] ={url:I+"/ktpa.html"},
     m[p+"shm3-w5"] ={url:I+"/jvqs.html"},
-    m[p+"ac"] ={url:I+"/DONT_KNOW_THIS_URL.html"},
+    m[p+"ac"] ={url:I+"/assets/pdf/SleepFix_User_Manual_v2_lowres.pdf"},
 
 
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
