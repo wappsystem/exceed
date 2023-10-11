@@ -1039,6 +1039,27 @@
                 data.PSQI = (parseInt(data.PSQIDURAT) + parseInt(data.PSQIDISTB) + parseInt(data.PSQILATEN) + parseInt(data.PSQIDAYDYS) + parseInt(data.PSQIHSE) + parseInt(data.PSQISLPQUAL) + parseInt(data.PSQIMEDS)).toString();
                 return before_submit(data, index);;
             }
+            //---------------------------------------
+            m.after_insert = function (data,index) {
+              var P_record=$vm.vm['__ID'].input.participant_record;
+                var tp=$vm.module_list[$vm.vm['__ID'].name].timepoint;
+                  jQuery.ajaxSetup({async:false});
+                  $vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
+                      if(res.permission==false){
+                          alert("No permission");
+                          return;
+                      }
+                      if(res.result.length==0){
+                      }
+                      else{
+                          records=res.result[0]
+                      }
+                  })
+                  if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'PSQI',time:tp,goback:1,participant_record:P_record}); }
+                  else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'PSQI',time:tp,goback:1,participant_record:P_record});}
+                  jQuery.ajaxSetup({async:true});
+            }
+            //---------------------------------------
         }
     </script>
     <style>

@@ -577,30 +577,27 @@
             //-------------------------------------
             /*VmInclude:__COMPONENT__/f/form.01.js*/
             /*VmInclude:__HOST__/assets/js/shared-form.js*/
-            //-------------------------------------
-            m.after_insert = function (data,index) {
-                console.log(index.nr.Table)
-                var timepoint=(index.nr.Table).split('-');
-                timepoint=timepoint[timepoint.length-1];
-                console.log(timepoint)
-                var records={};
-                jQuery.ajaxSetup({async:false});
-                $vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
-                    if(res.permission==false){
-                        alert("No permission");
-                        return;
-                    }
-                    if(res.result.length==0){
-                    }
-                    else{
-                        if(timepoint=='w3') res.result[0].Data.w3='10';
-                        records=res.result[0]
-                        if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1}); }
-                        else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1});}
-                    }
-                })
-				jQuery.ajaxSetup({async:true});
+          //-------------------------------------
+          m.after_insert = function (data,index) {
+              var P_record=$vm.vm['__ID'].input.participant_record;
+                var tp=$vm.module_list[$vm.vm['__ID'].name].timepoint;
+                  jQuery.ajaxSetup({async:false});
+                  $vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
+                      if(res.permission==false){
+                          alert("No permission");
+                          return;
+                      }
+                      if(res.result.length==0){
+                      }
+                      else{
+                          records=res.result[0]
+                      }
+                  })
+                  if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'AEC',time:tp,goback:1,participant_record:P_record}); }
+                  else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'AEC',time:tp,goback:1,participant_record:P_record});}
+                  jQuery.ajaxSetup({async:true});
             }
+            //---------------------------------------
 
         }
     </script>

@@ -17,7 +17,7 @@
                 switch(field){
                     case 'bl':
                         var v=records[I].Data.bl;
-                        if(v=='10'){
+                        if(v=='GAS'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
                         }
@@ -26,7 +26,7 @@
                         }
                     break;
                     case 'group':
-                        if(records[I].Data.bl=='10' && records[I].Data.group==""){
+                        if(records[I].Data.bl=='GAS' && records[I].Data.group==""){
                             html="<u style='cursor:pointer'>Randomise</u>"
                         }
                         else {

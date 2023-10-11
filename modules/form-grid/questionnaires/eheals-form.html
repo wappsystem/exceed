@@ -279,6 +279,26 @@
                 data.eheals = (parseInt(data.eheals_3) + parseInt(data.eheals_4) + parseInt(data.eheals_5) + parseInt(data.eheals_6) + parseInt(data.eheals_7) + parseInt(data.eheals_8) + parseInt(data.eheals_9) + parseInt(data.eheals_10)).toFixed(0);
                 before_submit(data, index);
             }
+            //-------------------------------------
+            m.after_insert = function (data,index) {
+              var P_record=$vm.vm['__ID'].input.participant_record;
+                var tp=$vm.module_list[$vm.vm['__ID'].name].timepoint;
+                  jQuery.ajaxSetup({async:false});
+                  $vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
+                      if(res.permission==false){
+                          alert("No permission");
+                          return;
+                      }
+                      if(res.result.length==0){
+                      }
+                      else{
+                          records=res.result[0]
+                      }
+                  })
+                  if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'eHeals',time:tp,goback:1,participant_record:P_record}); }
+                  else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'eHeals',time:tp,goback:1,participant_record:P_record});}
+                  jQuery.ajaxSetup({async:true});
+            }
             //---------------------------------------
         }
     </script>

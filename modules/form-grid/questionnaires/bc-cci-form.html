@@ -215,7 +215,7 @@
           }
           //-------------------------------------
          var set_selected_text=function(i){
-             $("#bc_cci_sel_"+i+"").css('padding-top','10px').css('color','#EA7859');
+             $("#bc_cci_sel_"+i+"").css('color','#EA7859');
              switch ($("#D__ID input[name=BC_CCI_"+i+"]:checked").val()) {
                  case '0':
                      $("#bc_cci_sel_"+i+"").text("Not at all");
@@ -230,7 +230,7 @@
                      $("#bc_cci_sel_"+i+"").text("Very much");
                  break;
                  default:
-                    $("#bc_cci_sel_"+i+"").text("");
+                    $("#bc_cci_sel_"+i+"").html('&nbsp;');
                 break;
              }
          }
@@ -240,7 +240,28 @@
               data.BC_CCI=(parseInt(data.BC_CCI_1)+parseInt(data.BC_CCI_2)+parseInt(data.BC_CCI_3)+parseInt(data.BC_CCI_4)+parseInt(data.BC_CCI_5)+parseInt(data.BC_CCI_6)).toString();
               return before_submit(data,index);
           }
+            //-------------------------------------
+            m.after_insert = function (data,index) {
+              var P_record=$vm.vm['__ID'].input.participant_record;
+                var tp=$vm.module_list[$vm.vm['__ID'].name].timepoint;
+                  jQuery.ajaxSetup({async:false});
+                  $vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
+                      if(res.permission==false){
+                          alert("No permission");
+                          return;
+                      }
+                      if(res.result.length==0){
+                      }
+                      else{
+                          records=res.result[0]
+                      }
+                  })
+                  if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'BCCCI',time:tp,goback:1,participant_record:P_record}); }
+                  else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'BCCCI',time:tp,goback:1,participant_record:P_record});}
+                  jQuery.ajaxSetup({async:true});
+            }
           //-------------------------------------
+          
       }
   </script>
   <style>

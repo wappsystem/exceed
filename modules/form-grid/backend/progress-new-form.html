@@ -219,8 +219,8 @@
             }
             //-------------------------------------------
             m.after_insert = function (data,index) {
-                if (m.prefix == undefined) { $vm.load_module('bl-panel', '', {}); }
-                else {$vm.load_module(m.prefix + 'bl-panel', '', {});}
+                if (m.prefix == undefined) { $vm.load_module('bl-panel', '', {record:m.input.participant_record}); }
+                else {$vm.load_module(m.prefix + 'bl-panel', '', {record:m.input.participant_record});}
             }
 
         }

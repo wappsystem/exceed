@@ -19,20 +19,49 @@
             </div>
             <div class="form-group box">
                 <h3>Progress</h3>
-                <div class="questiongroup">
-                    <fieldset class="pl-4">
-                        <input type="text" name="group" class="form-control" placeholder="">
-                    </fieldset>
+                <div class='row px-4'>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>First Name</span>
+                            <input type=text class=form-control name=first_name readonly>
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Last Name</span>
+                            <input type=text class=form-control name=last_name readonly>
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Phone</span>
+                            <input type=text class=form-control name=phone readonly>
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Email</span>
+                            <input type=text class=form-control name=email readonly>
+                        </label>
+                    </div>
                 </div>
-                <div class="questiongroup">
-                    <fieldset class="pl-4">
-                        <input type="text" name="Start_Date" class="form-control" placeholder="">
-                    </fieldset>
-                </div>
-                <div class="questiongroup">
-                    <fieldset class="pl-4">
-                        <input type="text" name="access_code" class="form-control" placeholder="">
-                    </fieldset>
+                <div class='row px-4'>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Contact</span>
+                            <input type=text class=form-control name=contact readonly>
+                        </label>
+                    </div>
+                        <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Start Date</span>
+                            <input type=text class=form-control name=Start_Date readonly>
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Group</span>
+                            <input type=text class=form-control name=group readonly>
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Access Code</span>
+                            <input type=text class=form-control name=access_code readonly>
+                        </label>
+                    </div>
                 </div>
                 <div class='row px-4'>
                     <div class="col-sm-12 col-lg-3 row_participant__ID">
@@ -183,18 +212,22 @@
     <script>
     	function F__ID(){
             /*VmInclude: '__HOST__/assets/js/form.01.js'*/
-            var timepoint="";
+            var time="";
             //-------------------------------------------            
             m.default_load = m.load;
             m.load = function () {
                 m.default_load();
-                timepoint=m.input.timepoint;
+                timepoint=m.input.time;
+                if(timepoint=='bl') $('#F__ID input[name=bl]').val(m.input.progress)
+                else if(timepoint=='w3') $('#F__ID input[name=w3]').val(m.input.progress)
+                else if(timepoint=='w8') $('#F__ID input[name=w8]').val(m.input.progress)
+                else if(timepoint=='w16') $('#F__ID input[name=w16]').val(m.input.progress)
 				$('#submit__ID').click();
             }
             //-------------------------------------------
             m.after_update = function (data,index) {
-                if (m.prefix == undefined) { $vm.load_module(timepoint+'-panel', '', {}); }
-                else {$vm.load_module(m.prefix + timepoint+'-panel', '', {});}
+                if (m.prefix == undefined) { $vm.load_module(timepoint+'-panel', '',{record:m.input.participant_record}); }
+                else {$vm.load_module(m.prefix + timepoint+'-panel', '', {record:m.input.participant_record});}
             }
 //-------------------------------------------
             

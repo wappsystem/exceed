@@ -24,6 +24,11 @@
                     case '_Participant_ID':
                         td.html(records[I].UID);
                     break;
+                    case 'contact':
+                        if(records[I].Data.contact==1) td.html("Text");
+                        else if(records[I].Data.contact==2) td.html("Email");
+                        else if(records[I].Data.contact==3) td.html("Both");
+                        break;
                     case 'Start_Date':
                     var s=records[I].Data.Start_Date
                         if(s!='' && s!=null && s!=undefined){
@@ -41,9 +46,13 @@
                     break;
                     case 'bl':
                         var v=records[I].Data.bl;
-                        if(v=='10'){
+                        if(v=='GAS'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
+                        }
+                        else if(v!=''){
+                            td.html("<i class='fa fa-meh'></i>");
+                            td.css('color','orange')
                         }
                         else{
                             td.html("")
@@ -51,7 +60,7 @@
                     break;
                     case 'w3':
                         var v=records[I].Data.w3;
-                        if(v=='10'){
+                        if(v=='AEC'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
                         }
@@ -61,9 +70,13 @@
                     break;
                     case 'w8':
                         var v=records[I].Data.w8;
-                        if(v=='10'){
+                        if(v=='BCCCI'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
+                        }
+                        else if(v!=''){
+                            td.html("<i class='fa fa-meh'></i>");
+                            td.css('color','orange')
                         }
                         else{
                             td.html("")
@@ -71,21 +84,11 @@
                     break;
                     case 'w16':
                         var v=records[I].Data.w16;
-                        if(v=='10'){
+                        if(v=='BCCCI'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
                         }
-                        else{
-                            td.html("")
-                        }
-                    break;
-                    case 'w26':
-                        var v=records[I].Data.w26;
-                        if(v=='10'){
-                            td.html("<i class='fa fa-smile'></i>");
-                            td.css('color','green')
-                        }
-                        else if(v=='1'){
+                        else if(v!=''){
                             td.html("<i class='fa fa-meh'></i>");
                             td.css('color','orange')
                         }
