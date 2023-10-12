@@ -91,14 +91,12 @@
 				var sms_url='';
 				switch(m.input.email){
                     case 'ac_email': 
-                        if(group=='dBBTi'){
-                            console.log("Sending access code")
-                            q_url=$vm.module_list['ac'].url;
-                            // url='https://prod-10.australiasoutheast.logic.azure.com:443/workflows/95040a63a7074ae19d3602318925312d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MMdiTcF0dLts30rxuiFuh41OvPquTR22cHcBltRNiuc'; //email
-    					 	// sms_url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/9b58b0010a274c00812eb37adb2510ae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=N2FvyC4YwdIaCsVnVv0IOSacHVofNh0jaq_vXYudcrw'; //sms
-                            url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/d069b8f35ca440e9ad646a7dab4416db/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=l8CSTL3as3zy8tx2r_lL9NMftcBqeGTlTd7TQFkBR2U'; //email
-    					 	sms_url='https://prod-25.australiasoutheast.logic.azure.com:443/workflows/4226fb1dee4a42c285f0b1773f21c09d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j1bTOs54K1gk78bU8RS2JhTNhIhjdFUxYY8bp2Yzk1s'; //sms
-                        }
+                        console.log("Sending access code")
+                        q_url=$vm.module_list['ac'].url;
+                        // url='https://prod-10.australiasoutheast.logic.azure.com:443/workflows/95040a63a7074ae19d3602318925312d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MMdiTcF0dLts30rxuiFuh41OvPquTR22cHcBltRNiuc'; //email
+                        // sms_url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/9b58b0010a274c00812eb37adb2510ae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=N2FvyC4YwdIaCsVnVv0IOSacHVofNh0jaq_vXYudcrw'; //sms
+                        url='https://prod-17.australiasoutheast.logic.azure.com:443/workflows/d069b8f35ca440e9ad646a7dab4416db/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=l8CSTL3as3zy8tx2r_lL9NMftcBqeGTlTd7TQFkBR2U'; //email
+                        sms_url='https://prod-25.australiasoutheast.logic.azure.com:443/workflows/4226fb1dee4a42c285f0b1773f21c09d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j1bTOs54K1gk78bU8RS2JhTNhIhjdFUxYY8bp2Yzk1s'; //sms
                     break;
                     case 'w0_shm_1':
                         if(group=='Sleep Health Education'){
@@ -258,21 +256,7 @@
                         // sms_url='https://prod-18.australiasoutheast.logic.azure.com:443/workflows/7e1f3f13820b4301b655213002b091ff/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zhFADncEtg3rRikcEeFoB4OajLR02fi7nIpEHe8iQa8';
                         url='https://prod-12.australiasoutheast.logic.azure.com:443/workflows/e701c5ce0d6b4d438bf101d8f535b239/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CBmNeYI4-FeM37cZIf9kbNEV7uz8z5KbLHWzYbKpq0Q';
                         sms_url='https://prod-19.australiasoutheast.logic.azure.com:443/workflows/153315f2fd35437e83f844282cca6dc6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vDm1kHY1zMJjpcDIFh3y9rrn-YaFmrO1P-gAzy--yAY';
-                    break;
-                    case 'ac_email':
-                        //$vm.alert('Send Access code and link to Sleepfix: '+ data.access_code)
-                        if(group=='Sleep Health Education'){
-                            //$vm.alert('Send Access code and link to Sleepfix: '+ data.access_code)
-                            url='https://prod-00.australiasoutheast.logic.azure.com:443/workflows/468e2288856c4c6798737c5e03ae1ccd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=02dlZ_6CNOuvZoEmYwNNaBvxyNzVT3H1l5yZV4w1sRA'
-                            sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/06d77eb489714acfb9c7ea477902f4e8/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Lx-FiE6fdvEpWZ99NRe5UBMEDPp9Y3yCLRbUPxPg6bc'
-                        }
-                        else{
-                            q_url=$vm.module_list['oq-w0'].url+u+db+d+p;
-                            url='https://prod-28.australiasoutheast.logic.azure.com:443/workflows/d096c2375b344bd2b3310128fee0c3f7/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0HNT3ME6Za6DQxntSdrghBtige7-qbZoARvVCJ6LVEw';
-					 	sms_url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/8653726d208e4f408716bbf6fc4ae34b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=JGjmWlh_tFlMWSlqbIrf1B6aOp2gEZS9UUPktfZoBl4';
-                        }
-                    break;
-                    
+                    break;                    
 				}
                 console.log("DATA: "+JSON.stringify(data))
 				param.push(data.email); //0
