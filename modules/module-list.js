@@ -92,6 +92,8 @@
     m[p+"ffs-bl-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-bl", task_name:"Flinders Fatigue Scale",timepoint:'bl' };
     m[p+"bccci-bl-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"exceed-bc-cci-bl",form_module:"bccci-bl-form", task_name:"British Columbia Cognitive Complaints Inventory (BCCCI)"};
     m[p+"bccci-bl-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"exceed-bc-cci-bl", task_name:"British Columbia Cognitive Complaints Inventory (BCCCI)",timepoint:'bl' };
+    m[p+"gds-bl-data"]      ={url:H+"/form-grid/questionnaires/gds-data.html",Table:"exceed-gds-bl",form_module:"gds-bl-form", task_name:"Geriatric Depression Scale (GDS)"};
+    m[p+"gds-bl-form"]      ={url:H+"/form-grid/questionnaires/gds-form.html",Table:"exceed-gds-bl", task_name:"Geriatric Depression Scale (GDS)",timepoint:'bl' };
    
     m[p+"adverse-event-w3-data"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-data.html",Table:"exceed-adverse-event-w3",form_module:"adverse-event-w3-form", task_name:"Week 3 - Adverse Event Check-in" };
     m[p+"adverse-event-w3-form"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-form.html",Table:"exceed-adverse-event-w3", task_name:"Adverse Event Check-in",timepoint:'w3' };
@@ -124,6 +126,8 @@
     m[p+"ffs-w8-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-w8", task_name:"Flinders Fatigue Scale",timepoint:'w8' };
     m[p+"bccci-w8-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"exceed-bc-cci-w8",form_module:"bccci-w8-form", task_name:"Week 8 - British Columbia Cognitive Complaints Inventory (BCCCI)"};
     m[p+"bccci-w8-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"exceed-bc-cci-w8", task_name:"British Columbia Cognitive Complaints Inventory (BCCCI)",timepoint:'w8' };
+    m[p+"gds-w8-data"]      ={url:H+"/form-grid/questionnaires/gds-data.html",Table:"exceed-gds-w8",form_module:"gds-w8-form", task_name:"Week 8 - Geriatric Depression Scale (GDS)"};
+    m[p+"gds-w8-form"]      ={url:H+"/form-grid/questionnaires/gds-form.html",Table:"exceed-gds-w8", task_name:"Week 8 - Geriatric Depression Scale (GDS)",timepoint:'w8' };
 
 
 
@@ -153,6 +157,8 @@
     m[p+"ffs-w16-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"exceed-ffs-w16", task_name:"Flinders Fatigue Scale",timepoint:'w16' };
     m[p+"bccci-w16-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"exceed-bc-cci-w16",form_module:"bccci-w16-form", task_name:"Week 16 - British Columbia Cognitive Complaints Inventory (BCCCI)"};
     m[p+"bccci-w16-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"exceed-bc-cci-w16", task_name:"British Columbia Cognitive Complaints Inventory (BCCCI)",timepoint:'w16'};
+    m[p+"gds-w16-data"]      ={url:H+"/form-grid/questionnaires/gds-data.html",Table:"exceed-gds-w16",form_module:"gds-w16-form", task_name:"Week 16 - Geriatric Depression Scale (GDS)"};
+    m[p+"gds-w16-form"]      ={url:H+"/form-grid/questionnaires/gds-form.html",Table:"exceed-gds-w16", task_name:"Week 16 - Geriatric Depression Scale (GDS)",timepoint:'w16' };
 
 
     m[p+"randomisation-table-data"]      ={url:H+"/form-grid/backend/randomisation-table-data.html",   Table:"exceed-randomisation",form_module:"randomisation-table-form",task_name:"Randomisation Table"};
